@@ -931,7 +931,7 @@ The PADD.BS instruction adds the least-significant byte of `rs2` to each packed
 
 ==== Encoding
 
-PABD.B is encoded in the OP-IMM-32 major opcode. It uses packed byte elements.
+PABD.B is encoded in the OP-32 major opcode. It uses packed byte elements.
 
 [cols="^,^,^,^,^,^,^,^"]
 |===
