@@ -178,11 +178,15 @@ SUB
 a|
 V
 
+{nbsp}
+
 Common
 
 Common
 
 V
+
+{nbsp}
 
 Zbb
 
@@ -198,17 +202,39 @@ Common
 
 M
 
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
+
 V
 
-I
+{nbsp}
+
+{nbsp}
+
+{nbsp}
 
 I
 
 I
+
+{nbsp}
+
+I
+
+{nbsp}
+
+{nbsp}
+
+{nbsp}
 
 V
 
-common
+Common
 
 a|
 Averaging addition, (a+b)/2
@@ -287,6 +313,10 @@ V
 
 V
 
+{nbsp}
+
+{nbsp}
+
 V
 
 a|
@@ -314,7 +344,11 @@ NSRL
 a|
 V
 
+{nbsp}
+
 V
+
+{nbsp}
 
 V
 
