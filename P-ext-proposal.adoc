@@ -925,7 +925,7 @@ The PADD.BS instruction adds the least-significant byte of `rs2` to each packed
 ==== Notes
 
 * Each 8-bit element addition wraps modulo 2^8.
-* The scalar operand is taken only from bits [7:0] of `rs2`; hig*
+* The scalar operand is taken only from bits [7:0] of `rs2`; higher bits are ignored.
 
 === PABD.B
 
@@ -10999,7 +10999,7 @@ is written to `x(2*rdp+1)`.
 ==== Notes
 
 * If `rdp=0`, the result is not written.
-* The destination is the re*
+* The destination is the register pair `x(2*rdp)` and `x(2*rdp+1)`.
 
 === PWMACC.H (RV32)
 
