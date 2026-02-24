@@ -866,7 +866,7 @@ After ratification, this chapter is expected to be moved to an appendix.
 It is included here to aid understanding of the Sail descriptions in this
 specification.
 
-The Sail code used in this document follows the conventions of the
+The Sail code used in this document is inspired by the conventions of the
 existing RISC-V Sail model.
 
 === Types and Basic Notation
@@ -876,9 +876,9 @@ existing RISC-V Sail model.
   `signed` and `unsigned` convert bit-vectors to integers.
 * The concatenation operator `@` concatenates bit-vectors.
 
-In the RISC-V Sail model, integer registers are represented as XLEN-bit
-bit-vectors and are accessed using `X(N)`, where `N` is a 5-bit register
-index in the range 0–31. Register `X(0)` is architecturally defined to
+Integer registers are represented as XLEN-bit
+bit-vectors and are accessed using `X[N]`, where `N` is a 5-bit register
+index in the range 0–31. Register `X[0]` is architecturally defined to
 always hold the value zero.
 
 === Helper Functions and Operators
@@ -3004,7 +3004,7 @@ if (rd_p != 0):
 
 PWADD.B sign-extends corresponding packed 8-bit elements of `rs1` and `rs2` to
 signed values, adds them, and produces four packed 16-bit results. The 64-bit
-result is written to the register pair `{x(2*rd_p+1), x(2*rd_p)}` when `rd_p != 0`.
+result is written to the register pair `{X[2*rd_p+1], X[2*rd_p]}` when `rd_p != 0`.
 
 === PWADDA.B (RV32)
 
@@ -3153,7 +3153,7 @@ if (rd_p != 0):
 PWSUB.B sign-extends corresponding packed 8-bit elements of `rs1` and `rs2`,
 subtracts them, and produces four packed 16-bit results. When `rd_p != 0`,
 the 64-bit result is written to the destination register pair
-`{x(2*rd_p+1), x(2*rd_p)}`.
+`{X[2*rd_p+1], X[2*rd_p]}`.
 
 === PWSUBA.B (RV32)
 
@@ -4654,7 +4654,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
 
 ==== Notes
 
-* The source is taken from the register pair `{x(2*rs1p+1), x(2*rs1p)}`; if
+* The source is taken from the register pair `{X[2*rs1p+1], X[2*rs1p]}`; if
   `rs1p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
@@ -4748,7 +4748,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
 
 ==== Notes
 
-* The source is taken from the register pair `{x(2*rs1p+1), x(2*rs1p)}`; if
+* The source is taken from the register pair `{X[2*rs1p+1], X[2*rs1p]}`; if
   `rs1p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
@@ -4805,7 +4805,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
 
 ==== Notes
 
-* The source is taken from the register pair `{x(2*rs1p+1), x(2*rs1p)}`; if
+* The source is taken from the register pair `{X[2*rs1p+1], X[2*rs1p]}`; if
   `rs1p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
@@ -4856,7 +4856,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
 
 ==== Notes
 
-* The source is taken from the register pair `{x(2*rs1p+1), x(2*rs1p)}`; if
+* The source is taken from the register pair `{X[2*rs1p+1], X[2*rs1p]}`; if
   `rs1p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
@@ -5657,8 +5657,8 @@ upper 16 bits of the adjusted value to the corresponding 16-bit element of
 
 PMULHU.H:
 
-    let s1 = X(rs1);
-    let s2 = X(rs2);
+    let s1 = X[rs1];
+    let s2 = X[rs2];
     var d : bits(xlen);
     foreach (i from 0 to sizeof(xlen_bytes)/2 - 1) {
         let s1_h = s1[(i*16+15)..(i*16)];
@@ -5666,12 +5666,12 @@ PMULHU.H:
         d[(i*16+15)..(i*16)] =
             to_bits(32, unsigned(s1_h) * unsigned(s2_h))[31..16];
     }
-    X(rd) = d;
+    X[rd] = d;
 
 PMULHRU.H:
 
-    let s1 = X(rs1);
-    let s2 = X(rs2);
+    let s1 = X[rs1];
+    let s2 = X[rs2];
     var d : bits(xlen);
     foreach (i from 0 to sizeof(xlen_bytes)/2 - 1) {
         let s1_h = s1[(i*16+15)..(i*16)];
@@ -5679,12 +5679,12 @@ PMULHRU.H:
         d[(i*16+15)..(i*16)] =
             to_bits(32, unsigned(s1_h) * unsigned(s2_h) + 2^15)[31..16];
     }
-    X(rd) = d;
+    X[rd] = d;
 
 PMULQR.H:
 
-    let s1 = X(rs1);
-    let s2 = X(rs2);
+    let s1 = X[rs1];
+    let s2 = X[rs2];
     var d : bits(xlen);
     foreach (i from 0 to sizeof(xlen_bytes)/2 - 1) {
         let s1_h = s1[(i*16+15)..(i*16)];
@@ -5693,7 +5693,7 @@ PMULQR.H:
             if (s1_h == 0x8000) & (s2_h == 0x8000) then { vxsat = 1; 0x7FFF }
                 else to_bits(32, signed(s1_h) * signed(s2_h) + 2^14)[30..15];
     }
-    X(rd) = d;
+    X[rd] = d;
 
 === PMULHRU.H
 
@@ -10782,7 +10782,7 @@ the corresponding 32-bit element of `rd`.
 ==== Encoding
 
 PMQWACC.H is encoded in a register-pair (rdp) OP-IMM-32 format. It uses `rdp` to
-select the destination register pair `{x(2*rdp+1), x(2*rdp)}`.
+select the destination register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 [cols="^,^,^,^,^,^,^,^"]
 |===
@@ -10825,7 +10825,7 @@ accumulator held in the destination register pair selected by `rdp`.
 
 * If `rdp=0`, the accumulator is treated as zero and the result is not written
   back (i.e., the instruction has no architectural destination).
-* The destination is a register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is a register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === PMQRWACC.H (RV32)
 
@@ -10871,7 +10871,7 @@ result into the 64-bit destination register pair selected by `rdp`.
 
 * If `rdp=0`, the accumulator is treated as zero and the result is not written
   back.
-* The destination is a register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is a register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === MQWACC (RV32)
 
@@ -10915,7 +10915,7 @@ pair selected by `rdp`.
 
 * If `rdp=0`, the accumulator is treated as zero and the result is not written
   back.
-* The destination is a register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is a register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === MQRWACC (RV32)
 
@@ -10958,14 +10958,14 @@ the destination register pair selected by `rdp`.
 
 * If `rdp=0`, the accumulator is treated as zero and the result is not written
   back.
-* The destination is a register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is a register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === PWMULSU.B (RV32)
 
 ==== Encoding
 
 PWMULSU.B is encoded in a register-pair (rdp) OP-IMM-32 format. It writes a 64-bit
-result into the register pair `{x(2*rdp+1), x(2*rdp)}` when `rdp != 0`.
+result into the register pair `{X[2*rdp+1], X[2*rdp]}` when `rdp != 0`.
 
 [cols="^,^,^,^,^,^,^,^"]
 |===
@@ -11000,14 +11000,14 @@ by `rdp`.
 ==== Notes
 
 * If `rdp=0`, the result is not written (no architectural destination).
-* The destination is the register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is the register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === PWMULSU.H (RV32)
 
 ==== Encoding
 
 PWMULSU.H is encoded in a register-pair (rdp) OP-IMM-32 format. It writes two 32-bit
-results into the register pair `{x(2*rdp+1), x(2*rdp)}` when `rdp != 0`.
+results into the register pair `{X[2*rdp+1], X[2*rdp]}` when `rdp != 0`.
 
 [cols="^,^,^,^,^,^,^,^"]
 |===
@@ -11034,13 +11034,13 @@ if (rdp != 0):
 
 The PWMULSU.H instruction multiplies each signed 16-bit halfword of `rs1` by the
 corresponding unsigned 16-bit halfword of `rs2`, producing two 32-bit products.
-The low-halfword product is written to `x(2*rdp)` and the high-halfword product
-is written to `x(2*rdp+1)`.
+The low-halfword product is written to `X[2*rdp]` and the high-halfword product
+is written to `X[2*rdp+1]`.
 
 ==== Notes
 
 * If `rdp=0`, the result is not written.
-* The destination is the register pair `x(2*rdp)` and `x(2*rdp+1)`.
+* The destination is the register pair `X[2*rdp]` and `X[2*rdp+1]`.
 
 === PWMACC.H (RV32)
 
@@ -11205,7 +11205,7 @@ the destination register pair selected by `rdp`.
 ==== Notes
 
 * If `rdp=0`, the result is not written.
-* The destination is the register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is the register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === WMACCSU (RV32)
 
@@ -11251,7 +11251,7 @@ the destination register pair selected by `rdp`.
 
 PM2WADD.H is encoded in a register-pair (rdp) OP-IMM-32 format. It produces a 64-bit
 sum of two halfword products and writes it to the register pair
-`{x(2*rdp+1), x(2*rdp)}` when `rdp != 0`.
+`{X[2*rdp+1], X[2*rdp]}` when `rdp != 0`.
 
 [cols="^,^,^,^,^,^,^,^"]
 |===
@@ -11284,7 +11284,7 @@ writes the 64-bit result to the destination register pair selected by `rdp`.
 ==== Notes
 
 * If `rdp=0`, no result is written.
-* The destination is the register pair `{x(2*rdp+1), x(2*rdp)}`.
+* The destination is the register pair `{X[2*rdp+1], X[2*rdp]}`.
 
 === PM2WADDSU.H (RV32)
 
