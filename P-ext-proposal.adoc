@@ -1669,13 +1669,13 @@ TODO: Add missing PSABS.DH
 
 ===== Encoding
 
-PREDSUM.BS is encoded in the OP-32 major opcode. It performs a reduction
+PREDSUM.BS is encoded in the OP-IMM-32 major opcode. It performs a reduction
 operation using packed byte elements.
 
-[cols="^,^,^,^,^,^,^,^"]
+[cols="^,^,^,^,^,^,^,^,^"]
 |===
-|31|30..27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=001 | w=10 |  rs2  |  rs1  | 001   |  rd  |0111011
+|31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
+|1 | f=001|1 | w=10 |  rs2  |  rs1  | 100   |  rd  |0011011
 |===
 
 ===== Operation
@@ -1760,13 +1760,13 @@ The PREDSUM.WS instruction computes a signed reduction sum of the two packed
 
 ===== Encoding
 
-PREDSUMU.BS is encoded in the OP-32 major opcode. It performs a reduction
+PREDSUMU.BS is encoded in the OP-IMM-32 major opcode. It performs a reduction
 operation using packed byte elements.
 
-[cols="^,^,^,^,^,^,^,^"]
+[cols="^,^,^,^,^,^,^,^,^"]
 |===
-|31|30..27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=011 | w=10 |  rs2  |  rs1  | 001   |  rd  |0111011
+|31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
+|1 | f=011|1 | w=10 |  rs2  |  rs1  | 100   |  rd  |0011011
 |===
 
 ===== Operation
