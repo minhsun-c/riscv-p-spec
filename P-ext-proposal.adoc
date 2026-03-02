@@ -934,7 +934,51 @@ corresponding `rd+`, `rs1+`, or `rs2+` also denotes `x0`.
 === Load Immediate
 
 
+==== PLI.B
+
+TODO: Add missing PLI.B
+
+==== PLI.H
+
+TODO: Add missing PLI.H
+
+==== PLI.W
+
+TODO: Add missing PLI.W
+
+==== PLUI.H
+
+TODO: Add missing PLUI.H
+
+==== PLUI.W
+
+TODO: Add missing PLUI.W
+
+==== PLI.DB
+
+TODO: Add missing PLI.DB
+
+==== PLI.DH
+
+TODO: Add missing PLI.DH
+
+==== PLUI.DH
+
+TODO: Add missing PLUI.DH
+
 === Basic Packed Add
+
+==== PADD.B
+
+TODO: Add missing PADD.B
+
+==== PADD.H
+
+TODO: Add missing PADD.H
+
+==== PADD.W
+
+TODO: Add missing PADD.W
 
 ==== PADD.BS
 
@@ -1036,20 +1080,292 @@ The PADD.WS instruction adds the least-significant word of `rs2` to each packed
 32-bit element of `rs1`.
 
 
+==== PADD.DB
+
+TODO: Add missing PADD.DB
+
+==== PADD.DH
+
+TODO: Add missing PADD.DH
+
+==== PADD.DW
+
+TODO: Add missing PADD.DW
+
+==== PADD.DBS
+
+TODO: Add missing PADD.DBS
+
+==== PADD.DHS
+
+TODO: Add missing PADD.DHS
+
+==== PADD.DWS
+
+TODO: Add missing PADD.DWS
+
 === Basic Packed Subtract
 
+
+==== PSUB.B
+
+TODO: Add missing PSUB.B
+
+==== PSUB.H
+
+TODO: Add missing PSUB.H
+
+==== PSUB.W
+
+TODO: Add missing PSUB.W
+
+==== PSUB.DB
+
+TODO: Add missing PSUB.DB
+
+==== PSUB.DH
+
+TODO: Add missing PSUB.DH
+
+==== PSUB.DW
+
+TODO: Add missing PSUB.DW
 
 === Saturating Add
 
 
+==== PSADD.B
+
+TODO: Add missing PSADD.B
+
+==== PSADD.H
+
+TODO: Add missing PSADD.H
+
+==== PSADD.W
+
+TODO: Add missing PSADD.W
+
+==== PSADDU.B
+
+TODO: Add missing PSADDU.B
+
+==== PSADDU.H
+
+TODO: Add missing PSADDU.H
+
+==== PSADDU.W
+
+TODO: Add missing PSADDU.W
+
+==== SADD
+
+TODO: Add missing SADD
+
+==== SADDU
+
+TODO: Add missing SADDU
+
+==== PSADD.DB
+
+TODO: Add missing PSADD.DB
+
+==== PSADD.DH
+
+TODO: Add missing PSADD.DH
+
+==== PSADD.DW
+
+TODO: Add missing PSADD.DW
+
+==== PSADDU.DB
+
+TODO: Add missing PSADDU.DB
+
+==== PSADDU.DH
+
+TODO: Add missing PSADDU.DH
+
+==== PSADDU.DW
+
+TODO: Add missing PSADDU.DW
+
 === Saturating Subtract
 
+
+==== PSSUB.B
+
+TODO: Add missing PSSUB.B
+
+==== PSSUB.H
+
+TODO: Add missing PSSUB.H
+
+==== PSSUB.W
+
+TODO: Add missing PSSUB.W
+
+==== PSSUBU.B
+
+TODO: Add missing PSSUBU.B
+
+==== PSSUBU.H
+
+TODO: Add missing PSSUBU.H
+
+==== PSSUBU.W
+
+TODO: Add missing PSSUBU.W
+
+==== SSUB
+
+TODO: Add missing SSUB
+
+==== SSUBU
+
+TODO: Add missing SSUBU
+
+==== PSSUB.DB
+
+TODO: Add missing PSSUB.DB
+
+==== PSSUB.DH
+
+TODO: Add missing PSSUB.DH
+
+==== PSSUB.DW
+
+TODO: Add missing PSSUB.DW
+
+==== PSSUBU.DB
+
+TODO: Add missing PSSUBU.DB
+
+==== PSSUBU.DH
+
+TODO: Add missing PSSUBU.DH
+
+==== PSSUBU.DW
+
+TODO: Add missing PSSUBU.DW
 
 === Averaging Add
 
 
+==== PAADD.B
+
+TODO: Add missing PAADD.B
+
+==== PAADD.H
+
+TODO: Add missing PAADD.H
+
+==== PAADD.W
+
+TODO: Add missing PAADD.W
+
+==== PAADDU.B
+
+TODO: Add missing PAADDU.B
+
+==== PAADDU.H
+
+TODO: Add missing PAADDU.H
+
+==== PAADDU.W
+
+TODO: Add missing PAADDU.W
+
+==== AADD
+
+TODO: Add missing AADD
+
+==== AADDU
+
+TODO: Add missing AADDU
+
+==== PAADD.DB
+
+TODO: Add missing PAADD.DB
+
+==== PAADD.DH
+
+TODO: Add missing PAADD.DH
+
+==== PAADD.DW
+
+TODO: Add missing PAADD.DW
+
+==== PAADDU.DB
+
+TODO: Add missing PAADDU.DB
+
+==== PAADDU.DH
+
+TODO: Add missing PAADDU.DH
+
+==== PAADDU.DW
+
+TODO: Add missing PAADDU.DW
+
 === Averaging Subtract
 
+
+==== PASUB.B
+
+TODO: Add missing PASUB.B
+
+==== PASUB.H
+
+TODO: Add missing PASUB.H
+
+==== PASUB.W
+
+TODO: Add missing PASUB.W
+
+==== PASUBU.B
+
+TODO: Add missing PASUBU.B
+
+==== PASUBU.H
+
+TODO: Add missing PASUBU.H
+
+==== PASUBU.W
+
+TODO: Add missing PASUBU.W
+
+==== ASUB
+
+TODO: Add missing ASUB
+
+==== ASUBU
+
+TODO: Add missing ASUBU
+
+==== PASUB.DB
+
+TODO: Add missing PASUB.DB
+
+==== PASUB.DH
+
+TODO: Add missing PASUB.DH
+
+==== PASUB.DW
+
+TODO: Add missing PASUB.DW
+
+==== PASUBU.DB
+
+TODO: Add missing PASUBU.DB
+
+==== PASUBU.DH
+
+TODO: Add missing PASUBU.DH
+
+==== PASUBU.DW
+
+TODO: Add missing PASUBU.DW
 
 === Shift-Add
 
@@ -1267,8 +1583,96 @@ The SSH1SADD instruction performs a signed saturating left shift by 1 on `rs1`,
 followed by a signed saturating add with `rs2`.
 
 
+==== PSH1ADD.DH
+
+TODO: Add missing PSH1ADD.DH
+
+==== PSH1ADD.DW
+
+TODO: Add missing PSH1ADD.DW
+
+==== PSSH1SADD.DH
+
+TODO: Add missing PSSH1SADD.DH
+
+==== PSSH1SADD.DW
+
+TODO: Add missing PSSH1SADD.DW
+
 === Add-Subtract Cross
 
+
+==== PAS.HX
+
+TODO: Add missing PAS.HX
+
+==== PAS.WX
+
+TODO: Add missing PAS.WX
+
+==== PSA.HX
+
+TODO: Add missing PSA.HX
+
+==== PSA.WX
+
+TODO: Add missing PSA.WX
+
+==== PSAS.HX
+
+TODO: Add missing PSAS.HX
+
+==== PSAS.WX
+
+TODO: Add missing PSAS.WX
+
+==== PSSA.HX
+
+TODO: Add missing PSSA.HX
+
+==== PSSA.WX
+
+TODO: Add missing PSSA.WX
+
+==== PAAS.HX
+
+TODO: Add missing PAAS.HX
+
+==== PAAS.WX
+
+TODO: Add missing PAAS.WX
+
+==== PASA.HX
+
+TODO: Add missing PASA.HX
+
+==== PASA.WX
+
+TODO: Add missing PASA.WX
+
+==== PAS.DHX
+
+TODO: Add missing PAS.DHX
+
+==== PSA.DHX
+
+TODO: Add missing PSA.DHX
+
+==== PSAS.DHX
+
+TODO: Add missing PSAS.DHX
+
+==== PSSA.DHX
+
+TODO: Add missing PSSA.DHX
+
+==== PAAS.DHX
+
+TODO: Add missing PAAS.DHX
+
+==== PASA.DHX
+
+TODO: Add missing PASA.DHX
 
 === Absolute Difference
 
@@ -1413,8 +1817,48 @@ The PABDU.H instruction computes the absolute difference of corresponding packed
 result to `rd`.
 
 
+==== PABDSUMU.B
+
+TODO: Add missing PABDSUMU.B
+
+==== PABDSUMAU.B
+
+TODO: Add missing PABDSUMAU.B
+
+==== PABD.DB
+
+TODO: Add missing PABD.DB
+
+==== PABD.DH
+
+TODO: Add missing PABD.DH
+
+==== PABDU.DB
+
+TODO: Add missing PABDU.DB
+
+==== PABDU.DH
+
+TODO: Add missing PABDU.DH
+
 === Saturating Absolute
 
+
+==== PSABS.B
+
+TODO: Add missing PSABS.B
+
+==== PSABS.H
+
+TODO: Add missing PSABS.H
+
+==== PSABS.DB
+
+TODO: Add missing PSABS.DB
+
+==== PSABS.DH
+
+TODO: Add missing PSABS.DH
 
 === Reduction Sum
 
@@ -1604,7 +2048,111 @@ The PREDSUMU.WS instruction computes an unsigned reduction sum of the two packed
 === Min/Max
 
 
+==== PMIN.B
+
+TODO: Add missing PMIN.B
+
+==== PMIN.H
+
+TODO: Add missing PMIN.H
+
+==== PMIN.W
+
+TODO: Add missing PMIN.W
+
+==== PMINU.B
+
+TODO: Add missing PMINU.B
+
+==== PMINU.H
+
+TODO: Add missing PMINU.H
+
+==== PMINU.W
+
+TODO: Add missing PMINU.W
+
+==== PMAX.B
+
+TODO: Add missing PMAX.B
+
+==== PMAX.H
+
+TODO: Add missing PMAX.H
+
+==== PMAX.W
+
+TODO: Add missing PMAX.W
+
+==== PMAXU.B
+
+TODO: Add missing PMAXU.B
+
+==== PMAXU.H
+
+TODO: Add missing PMAXU.H
+
+==== PMAXU.W
+
+TODO: Add missing PMAXU.W
+
+==== PMIN.DB
+
+TODO: Add missing PMIN.DB
+
+==== PMIN.DH
+
+TODO: Add missing PMIN.DH
+
+==== PMIN.DW
+
+TODO: Add missing PMIN.DW
+
+==== PMINU.DB
+
+TODO: Add missing PMINU.DB
+
+==== PMINU.DH
+
+TODO: Add missing PMINU.DH
+
+==== PMINU.DW
+
+TODO: Add missing PMINU.DW
+
+==== PMAX.DB
+
+TODO: Add missing PMAX.DB
+
+==== PMAX.DH
+
+TODO: Add missing PMAX.DH
+
+==== PMAX.DW
+
+TODO: Add missing PMAX.DW
+
+==== PMAXU.DB
+
+TODO: Add missing PMAXU.DB
+
+==== PMAXU.DH
+
+TODO: Add missing PMAXU.DH
+
+==== PMAXU.DW
+
+TODO: Add missing PMAXU.DW
+
 === Comparison
+
+==== PMSEQ.B
+
+TODO: Add missing PMSEQ.B
+
+==== PMSEQ.H
+
+TODO: Add missing PMSEQ.H
 
 ==== PMSEQ.W (RV64)
 
@@ -1634,6 +2182,14 @@ X[rd] = d1 @ d0
 The PMSEQ.W instruction compares corresponding packed 32-bit elements for
 equality and produces a packed word mask in `rd`.
 
+==== PMSLT.B
+
+TODO: Add missing PMSLT.B
+
+==== PMSLT.H
+
+TODO: Add missing PMSLT.H
+
 ==== PMSLT.W (RV64)
 
 ===== Encoding
@@ -1661,6 +2217,14 @@ X[rd] = d1 @ d0
 
 The PMSLT.W instruction performs signed less-than comparisons on corresponding
 packed 32-bit elements and produces a packed word mask in `rd`.
+
+==== PMSLTU.B
+
+TODO: Add missing PMSLTU.B
+
+==== PMSLTU.H
+
+TODO: Add missing PMSLTU.H
 
 ==== PMSLTU.W (RV64)
 
@@ -1763,7 +2327,47 @@ The MSLTU instruction sets `rd` to all ones if `rs1` is less than `rs2` using
 unsigned comparison; otherwise it sets `rd` to zero.
 
 
+==== PMSEQ.DB
+
+TODO: Add missing PMSEQ.DB
+
+==== PMSEQ.DH
+
+TODO: Add missing PMSEQ.DH
+
+==== PMSEQ.DW
+
+TODO: Add missing PMSEQ.DW
+
+==== PMSLT.DB
+
+TODO: Add missing PMSLT.DB
+
+==== PMSLT.DH
+
+TODO: Add missing PMSLT.DH
+
+==== PMSLT.DW
+
+TODO: Add missing PMSLT.DW
+
+==== PMSLTU.DB
+
+TODO: Add missing PMSLTU.DB
+
+==== PMSLTU.DH
+
+TODO: Add missing PMSLTU.DH
+
+==== PMSLTU.DW
+
+TODO: Add missing PMSLTU.DW
+
 === Sign Extension
+
+==== PSEXT.H.B
+
+TODO: Add missing PSEXT.H.B
 
 ==== PSEXT.W.B (RV64)
 
@@ -1816,7 +2420,35 @@ The PSEXT.W.H instruction extracts halfword elements from `rs1`, sign-extends
 them to 32-bit values, and packs them into `rd`.
 
 
+==== PSEXT.DH.B
+
+TODO: Add missing PSEXT.DH.B
+
+==== PSEXT.DW.B
+
+TODO: Add missing PSEXT.DW.B
+
+==== PSEXT.DW.H
+
+TODO: Add missing PSEXT.DW.H
+
 === Saturation/Clipping
+
+==== PSATI.H
+
+TODO: Add missing PSATI.H
+
+==== PSATI.W
+
+TODO: Add missing PSATI.W
+
+==== PUSATI.H
+
+TODO: Add missing PUSATI.H
+
+==== PUSATI.W
+
+TODO: Add missing PUSATI.W
 
 ==== SATI (RV64)
 
@@ -1900,6 +2532,22 @@ determined by the immediate `n` and writes the result to `rd`.
 * `vxsat` is set to 1 if saturation occurs.
 
 
+==== PSATI.DH
+
+TODO: Add missing PSATI.DH
+
+==== PSATI.DW
+
+TODO: Add missing PSATI.DW
+
+==== PUSATI.DH
+
+TODO: Add missing PUSATI.DH
+
+==== PUSATI.DW
+
+TODO: Add missing PUSATI.DW
+
 === Shift Operations
 
 ==== PSLL.BS
@@ -1960,6 +2608,10 @@ X[rd] = d
 The PSLL.HS instruction shifts each packed 16-bit element of `rs1` left by the
 shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
 
+==== PSLL.WS
+
+TODO: Add missing PSLL.WS
+
 ==== PSRL.BS
 
 ===== Encoding
@@ -2017,6 +2669,10 @@ X[rd] = d
 
 The PSRL.HS instruction logically shifts each packed 16-bit element of `rs1`
 right by the shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
+
+==== PSRL.WS
+
+TODO: Add missing PSRL.WS
 
 ==== PSRA.BS
 
@@ -2076,6 +2732,134 @@ X[rd] = d
 The PSRA.HS instruction arithmetically shifts each packed 16-bit element of `rs1`
 right by the shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
 
+
+==== PSRA.WS
+
+TODO: Add missing PSRA.WS
+
+==== PSLLI.B
+
+TODO: Add missing PSLLI.B
+
+==== PSLLI.H
+
+TODO: Add missing PSLLI.H
+
+==== PSLLI.W
+
+TODO: Add missing PSLLI.W
+
+==== PSRLI.B
+
+TODO: Add missing PSRLI.B
+
+==== PSRLI.H
+
+TODO: Add missing PSRLI.H
+
+==== PSRLI.W
+
+TODO: Add missing PSRLI.W
+
+==== PSRAI.B
+
+TODO: Add missing PSRAI.B
+
+==== PSRAI.H
+
+TODO: Add missing PSRAI.H
+
+==== PSRAI.W
+
+TODO: Add missing PSRAI.W
+
+==== PSRARI.H
+
+TODO: Add missing PSRARI.H
+
+==== PSRARI.W
+
+TODO: Add missing PSRARI.W
+
+==== PSLL.DBS
+
+TODO: Add missing PSLL.DBS
+
+==== PSLL.DHS
+
+TODO: Add missing PSLL.DHS
+
+==== PSLL.DWS
+
+TODO: Add missing PSLL.DWS
+
+==== PSRL.DBS
+
+TODO: Add missing PSRL.DBS
+
+==== PSRL.DHS
+
+TODO: Add missing PSRL.DHS
+
+==== PSRL.DWS
+
+TODO: Add missing PSRL.DWS
+
+==== PSRA.DBS
+
+TODO: Add missing PSRA.DBS
+
+==== PSRA.DHS
+
+TODO: Add missing PSRA.DHS
+
+==== PSRA.DWS
+
+TODO: Add missing PSRA.DWS
+
+==== PSLLI.DB
+
+TODO: Add missing PSLLI.DB
+
+==== PSLLI.DH
+
+TODO: Add missing PSLLI.DH
+
+==== PSLLI.DW
+
+TODO: Add missing PSLLI.DW
+
+==== PSRLI.DB
+
+TODO: Add missing PSRLI.DB
+
+==== PSRLI.DH
+
+TODO: Add missing PSRLI.DH
+
+==== PSRLI.DW
+
+TODO: Add missing PSRLI.DW
+
+==== PSRAI.DB
+
+TODO: Add missing PSRAI.DB
+
+==== PSRAI.DH
+
+TODO: Add missing PSRAI.DH
+
+==== PSRAI.DW
+
+TODO: Add missing PSRAI.DW
+
+==== PSRARI.DH
+
+TODO: Add missing PSRARI.DH
+
+==== PSRARI.DW
+
+TODO: Add missing PSRARI.DW
 
 === Saturating/Rounding Shift
 
@@ -2240,6 +3024,14 @@ The PSSHAR.WS instruction performs a signed variable shift on each packed 32-bit
 element of `rs1` using the signed shift amount in `rs2[7:0]`. Right shifts are
 rounded, and left shifts saturate to the signed 32-bit range.
 
+==== PSSLAI.H
+
+TODO: Add missing PSSLAI.H
+
+==== PSSLAI.W
+
+TODO: Add missing PSSLAI.W
+
 ==== SSHA (RV32)
 
 ===== Encoding
@@ -2336,6 +3128,14 @@ to the signed 32-bit range.
 
 * `vxsat` is set to 1 if saturation occurs.
 
+==== SSLAI
+
+TODO: Add missing SSLAI
+
+==== SRARI
+
+TODO: Add missing SRARI
+
 ==== SHA (RV64)
 
 ===== Encoding
@@ -2415,6 +3215,30 @@ The SHAR instruction matches SHA for non-negative shift amounts. For negative
 shift amounts it performs a rounding right shift as specified in the Sail code.
 
 
+==== PSSHA.DHS
+
+TODO: Add missing PSSHA.DHS
+
+==== PSSHA.DWS
+
+TODO: Add missing PSSHA.DWS
+
+==== PSSHAR.DHS
+
+TODO: Add missing PSSHAR.DHS
+
+==== PSSHAR.DWS
+
+TODO: Add missing PSSHAR.DWS
+
+==== PSSLAI.DH
+
+TODO: Add missing PSSLAI.DH
+
+==== PSSLAI.DW
+
+TODO: Add missing PSSLAI.DW
+
 === Pair Operations
 
 ==== PPAIRE.B
@@ -2450,6 +3274,10 @@ The PPAIRE.B instruction forms packed 16-bit elements by pairing the low byte of
 halfword element of `rs2` as the high byte with the low byte of the corresponding
 halfword element of `rs1` as the low byte.
 
+==== PPAIRE.H
+
+TODO: Add missing PPAIRE.H
+
 ==== PPAIREO.B
 
 ===== Encoding
@@ -2481,6 +3309,14 @@ X[rd] = d
 
 The PPAIREO.B instruction pairs the high byte of each halfword element of `rs2` with
 the low byte of the corresponding halfword element of `rs1`, producing packed halfwords.
+
+==== PPAIREO.H
+
+TODO: Add missing PPAIREO.H
+
+==== PPAIREO.W
+
+TODO: Add missing PPAIREO.W
 
 ==== PPAIROE.B
 
@@ -2514,6 +3350,14 @@ X[rd] = d
 The PPAIROE.B instruction pairs the low byte of each halfword element of `rs2` with
 the high byte of the corresponding halfword element of `rs1`, producing packed halfwords.
 
+==== PPAIROE.H
+
+TODO: Add missing PPAIROE.H
+
+==== PPAIROE.W
+
+TODO: Add missing PPAIROE.W
+
 ==== PPAIRO.B
 
 ===== Encoding
@@ -2546,6 +3390,46 @@ X[rd] = d
 The PPAIRO.B instruction pairs the high byte of each halfword element of `rs2` with
 the high byte of the corresponding halfword element of `rs1`, producing packed halfwords.
 
+
+==== PPAIRO.H
+
+TODO: Add missing PPAIRO.H
+
+==== PPAIRO.W
+
+TODO: Add missing PPAIRO.W
+
+==== PPAIRE.DB
+
+TODO: Add missing PPAIRE.DB
+
+==== PPAIRE.DH
+
+TODO: Add missing PPAIRE.DH
+
+==== PPAIREO.DB
+
+TODO: Add missing PPAIREO.DB
+
+==== PPAIREO.DH
+
+TODO: Add missing PPAIREO.DH
+
+==== PPAIROE.DB
+
+TODO: Add missing PPAIROE.DB
+
+==== PPAIROE.DH
+
+TODO: Add missing PPAIROE.DH
+
+==== PPAIRO.DB
+
+TODO: Add missing PPAIRO.DB
+
+==== PPAIRO.DH
+
+TODO: Add missing PPAIRO.DH
 
 === Zip/Unzip and Byte-Reverse
 
@@ -2798,6 +3682,10 @@ X[rd] = s1[15:0] @ s1[31:16] @ s1[47:32] @ s1[63:48]
 The REV16 instruction reverses the order of 16-bit chunks within the 64-bit value in `rs1`.
 
 
+==== REV
+
+TODO: Add missing REV
+
 === Miscellaneous Scalar
 
 ==== ABS
@@ -3035,6 +3923,14 @@ MERGE uses the prior value of `rd` as the mask to select between `rs1` and `rs2`
 
 === Double-wide Scalar Add/Subtract
 
+
+==== ADDD
+
+TODO: Add missing ADDD
+
+==== SUBD
+
+TODO: Add missing SUBD
 
 === Widening Add/Subtract
 
@@ -5118,6 +6014,10 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
   `rs1p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
+==== PNCLIP.BS
+
+TODO: Add missing PNCLIP.BS
+
 ==== PNCLIPRI.B (RV32)
 
 ===== Encoding
@@ -5417,6 +6317,22 @@ from a 64-bit register-pair source using a shift amount from `rs2`. Each rounded
 shifted value is clipped to [0, 255] and packed into `rd`. The `vxsat` sticky
 flag is set if any lane saturates.
 
+==== PNCLIPI.H
+
+TODO: Add missing PNCLIPI.H
+
+==== PNCLIP.HS
+
+TODO: Add missing PNCLIP.HS
+
+==== PNCLIPRI.H
+
+TODO: Add missing PNCLIPRI.H
+
+==== PNCLIPR.HS
+
+TODO: Add missing PNCLIPR.HS
+
 ==== PNCLIPIU.H (RV32)
 
 ===== Encoding
@@ -5497,6 +6413,34 @@ PNCLIPU.HS performs a per-word logical right shift of a 64-bit register-pair
 source using `rs2` as the shift amount, clips each lane to unsigned 16-bit, and
 packs the results into `rd`. The `vxsat` sticky flag is set on saturation.
 
+==== PNCLIPRIU.H
+
+TODO: Add missing PNCLIPRIU.H
+
+==== PNCLIPRU.HS
+
+TODO: Add missing PNCLIPRU.HS
+
+==== NCLIPI
+
+TODO: Add missing NCLIPI
+
+==== NCLIP
+
+TODO: Add missing NCLIP
+
+==== NCLIPRI
+
+TODO: Add missing NCLIPRI
+
+==== NCLIPR
+
+TODO: Add missing NCLIPR
+
+==== NCLIPIU
+
+TODO: Add missing NCLIPIU
+
 ==== NCLIPU (RV32)
 
 ===== Encoding
@@ -5532,6 +6476,14 @@ else:
 NCLIPU performs a 64-bit logical right shift of the register-pair source and clips
 the result to 32-bit unsigned. The `vxsat` sticky flag is set if clipping occurs.
 
+
+==== NCLIPRIU
+
+TODO: Add missing NCLIPRIU
+
+==== NCLIPRU
+
+TODO: Add missing NCLIPRU
 
 === Multiply High (same-width)
 
@@ -5747,6 +6699,10 @@ PMULQR.H:
     }
     X[rd] = d;
 
+==== PMULHU.H
+
+TODO: Add missing PMULHU.H
+
 ==== PMULHRU.H
 
 ===== Encoding
@@ -5789,6 +6745,14 @@ element of `rd`, implementing rounding when extracting the high half.
 * This instruction does not set `vxsat`.
 * The per-lane result corresponds to rounding the unsigned product before
   extracting bits [31:16].
+
+==== PMULH.W
+
+TODO: Add missing PMULH.W
+
+==== PMULHR.W
+
+TODO: Add missing PMULHR.W
 
 ==== PMULHSU.W (RV64)
 
@@ -5930,6 +6894,10 @@ applies rounding, and writes the upper 32 bits of each product to `rd`.
 
 * Rounding is performed by adding 2^31.
 
+==== MULHR
+
+TODO: Add missing MULHR
+
 ==== MULHRSU (RV32)
 
 ===== Encoding
@@ -5993,6 +6961,10 @@ The MULHRU instruction multiplie
 
 === Q-format Multiply
 
+==== PMULQ.H
+
+TODO: Add missing PMULQ.H
+
 ==== PMULQR.H
 
 ===== Encoding
@@ -6042,6 +7014,22 @@ right shift by 15). If both inputs are `0x8000`, the result saturates to
 * The saturation case corresponds to the only overflow scenario for signed Q15
   multiplication: (-1.0)×(-1.0).
 
+
+==== PMULQ.W
+
+TODO: Add missing PMULQ.W
+
+==== PMULQR.W
+
+TODO: Add missing PMULQR.W
+
+==== MULQ
+
+TODO: Add missing MULQ
+
+==== MULQR
+
+TODO: Add missing MULQR
 
 === Multiply-High Accumulate
 
@@ -7918,6 +8906,18 @@ X[rd] = d
 PMULU.H.B11 multiplies the high bytes of each 16-bit lane of `rs1` and `rs2`
 as unsigned 8-bit values, producing packed 16-bit products in `rd`.
 
+==== MUL.H00
+
+TODO: Add missing MUL.H00
+
+==== MUL.H01
+
+TODO: Add missing MUL.H01
+
+==== MUL.H11
+
+TODO: Add missing MUL.H11
+
 ==== MULSU.H00 (RV32)
 
 ===== Encoding
@@ -8052,6 +9052,18 @@ X[rd] = to_bits(32, a * b)
 
 MULU.H11 multiplies `rs1[31:16]` and `rs2[31:16]` as unsigned halfwords and
 writes the 32-bit product to `rd`.
+
+==== PMUL.W.H00
+
+TODO: Add missing PMUL.W.H00
+
+==== PMUL.W.H01
+
+TODO: Add missing PMUL.W.H01
+
+==== PMUL.W.H11
+
+TODO: Add missing PMUL.W.H11
 
 ==== PMULSU.W.H00 (RV64)
 
@@ -8207,6 +9219,18 @@ X[rd] = d1 @ d0
 
 PMULU.W.H11 multiplies, per 32-bit lane, the high halfwords of `rs1` and `rs2`
 as unsigned values and writes packed 32-bit products to `rd`.
+
+==== MUL.W00
+
+TODO: Add missing MUL.W00
+
+==== MUL.W01
+
+TODO: Add missing MUL.W01
+
+==== MUL.W11
+
+TODO: Add missing MUL.W11
 
 ==== MULSU.W00 (RV64)
 
@@ -9539,6 +10563,22 @@ the low×high cross product and subtracting the high×low cross product.
 
 * This instruction reads and writes `rd`.
 
+==== PM2SUB.H
+
+TODO: Add missing PM2SUB.H
+
+==== PM2SUB.HX
+
+TODO: Add missing PM2SUB.HX
+
+==== PM2SADD.H
+
+TODO: Add missing PM2SADD.H
+
+==== PM2SADD.HX
+
+TODO: Add missing PM2SADD.HX
+
 ==== PM2ADD.W (RV64)
 
 ===== Encoding
@@ -9568,6 +10608,10 @@ X[rd] = to_bits(64, a0 * b0) + to_bits(64, a1 * b1)
 
 PM2ADD.W multiplies the low words and high words of `rs1` and `rs2` as signed
 32-bit values and adds the two 64-bit products to produce the result in `rd`.
+
+==== PM2ADDA.W
+
+TODO: Add missing PM2ADDA.W
 
 ==== PM2ADDSU.W (RV64)
 
@@ -9661,6 +10705,10 @@ X[rd] = to_bits(64, a0 * b0) + to_bits(64, a1 * b1)
 
 PM2ADDU.W multiplies corresponding word pairs as unsigned×unsigned and adds the
 two 64-bit products to produce the result in `rd`.
+
+==== PM2ADDAU.W
+
+TODO: Add missing PM2ADDAU.W
 
 ==== PM2ADD.WX (RV64)
 
@@ -9794,6 +10842,14 @@ subtracting the high×low signed word product.
 * This instruction reads and writes `rd`.
 
 
+==== PM2SUB.W
+
+TODO: Add missing PM2SUB.W
+
+==== PM2SUB.WX
+
+TODO: Add missing PM2SUB.WX
+
 === PM4 Horizontal Multiply-Add
 
 ==== PM4ADD.B
@@ -9924,6 +10980,18 @@ X[rd] = d
 The PM4ADDU.B instruction multiplies corresponding packed bytes within each
 32-bit lane as unsigned values and sums the four 32-bit products to produce one
 packed 32-bit result per lane in `rd`.
+
+==== PM4ADDA.B
+
+TODO: Add missing PM4ADDA.B
+
+==== PM4ADDASU.B
+
+TODO: Add missing PM4ADDASU.B
+
+==== PM4ADDAU.B
+
+TODO: Add missing PM4ADDAU.B
 
 ==== PM4ADD.H (RV64)
 
@@ -10096,6 +11164,10 @@ The PM4ADDAU.H instruction adds the PM4ADDU.H sum-of-products result into `rd`.
 
 * This instruction reads and writes `rd`.
 
+
+==== PM4ADDA.H
+
+TODO: Add missing PM4ADDA.H
 
 === Mixed-width Multiply-High
 
@@ -10413,6 +11485,14 @@ the upper 16 bits of the 24-bit product, and accumulates it into `rd`.
 
 * This instruction reads and writes `rd`.
 
+==== MULH.H0
+
+TODO: Add missing MULH.H0
+
+==== MULH.H1
+
+TODO: Add missing MULH.H1
+
 ==== MULHSU.H0 (RV32)
 
 ===== Encoding
@@ -10604,6 +11684,14 @@ accumulates the extracted value into `rd`.
 ===== Notes
 
 * This instruction reads and writes `rd`.
+
+==== PMULH.W.H0
+
+TODO: Add missing PMULH.W.H0
+
+==== PMULH.W.H1
+
+TODO: Add missing PMULH.W.H1
 
 ==== PMULHSU.W.H0 (RV64)
 
@@ -10856,6 +11944,10 @@ the corresponding 32-bit element of `rd`.
 
 === Widening Multiply
 
+==== PWMUL.B
+
+TODO: Add missing PWMUL.B
+
 ==== PWMULSU.B (RV32)
 
 ===== Encoding
@@ -10898,6 +11990,14 @@ by `rdp`.
 * If `rdp=0`, the result is not written (no architectural destination).
 * The destination is the register pair `{X[2*rdp+1], X[2*rdp]}`.
 
+==== PWMULU.B
+
+TODO: Add missing PWMULU.B
+
+==== PWMUL.H
+
+TODO: Add missing PWMUL.H
+
 ==== PWMULSU.H (RV32)
 
 ===== Encoding
@@ -10938,6 +12038,14 @@ is written to `X[2*rdp+1]`.
 * If `rdp=0`, the result is not written.
 * The destination is the register pair `X[2*rdp]` and `X[2*rdp+1]`.
 
+==== PWMULU.H
+
+TODO: Add missing PWMULU.H
+
+==== WMUL
+
+TODO: Add missing WMUL
+
 ==== WMULSU (RV32)
 
 ===== Encoding
@@ -10974,6 +12082,10 @@ the destination register pair selected by `rdp`.
 * If `rdp=0`, the result is not written.
 * The destination is the register pair `{X[2*rdp+1], X[2*rdp]}`.
 
+
+==== WMULU
+
+TODO: Add missing WMULU
 
 === Widening Multiply-Accumulate
 
@@ -11106,6 +12218,10 @@ destination register pair selected by `rdp`.
 * If `rdp=0`, the instruction does not write back; the upper accumulator input is
   treated as zero.
 
+==== WMACC
+
+TODO: Add missing WMACC
+
 ==== WMACCSU (RV32)
 
 ===== Encoding
@@ -11144,6 +12260,10 @@ the destination register pair selected by `rdp`.
 * This instruction reads and writes the destination register pair.
 * If `rdp=0`, the accumulator is treated as zero and no result is written back.
 
+
+==== WMACCU
+
+TODO: Add missing WMACCU
 
 === Widening Q-format Multiply-Accumulate
 
@@ -11641,6 +12761,22 @@ PM2WSUB.HX multiplies cross halfword pairs and computes (h0 of `rs1` × h1 of
 `rs2`) minus (h1 of `rs1` × h0 of `rs2`), writing the 64-bit result to the
 destination register pair selected by `rdp`.
 
+
+==== PM2WADDA.H
+
+TODO: Add missing PM2WADDA.H
+
+==== PM2WADDA.HX
+
+TODO: Add missing PM2WADDA.HX
+
+==== PM2WSUBA.H
+
+TODO: Add missing PM2WSUBA.H
+
+==== PM2WSUBA.HX
+
+TODO: Add missing PM2WSUBA.HX
 
 === RV32 Double-Register Equivalences
 
