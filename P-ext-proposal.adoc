@@ -1,12 +1,14 @@
-image:media/image1.jpeg[media/image1,width=291,height=46]
-
-Preliminary in-progress RISC-V "P" Extension
-
-Version 0.12-draft
+= Preliminary in-progress RISC-V "P" Extension
+:doctype: book
+:toc:
+:toclevels: 3
+:imagesdir: docs-resources/images
+:title-logo-image: image:risc-v_logo.png["RISC-V International Logo",pdfwidth=3.25in,align=center]
+:revnumber: 0.12-draft
 
 This document is in the Development state. Assume anything can change.
 
-Revision History
+== Revision History
 
 [width="100%",cols="12%,16%,16%,56%",options="header",]
 |===
@@ -15,9 +17,6 @@ Revision History
 |0.11 |01/15/2026 |Jiawei |Add encodings, sail codes and descriptions.
 |0.12 |01/17/2026 |Jiawei |Fixed cols format issue.
 |===
-
-:toc:
-:toclevels: 3
 
 == Introduction
 
@@ -118,258 +117,62 @@ overflow (possible only when multiplying two minimum negative values
 maximum positive value, 2^w−1^ − 1. (In contrast, MULH and MULHR can
 never over
 
-[width="100%",cols="19%,22%,59%",options="header",]
+.Standard operations
+[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
 |===
 |*Name* |*Precedent* |*Function*
-a|
-AADD
-
-ABS
-
-ADD
-
-ASUB
-
-CLS
-
-CLZ
-
-DIF
-
-MAX
-
-MIN
-
-MSEQ
-
-MSLT
-
-MUL
-
-MULH
-
-MULHR
-
-MULQ
-
-MULQR
-
-SABS
-
-SADD
-
-SAT
-
-SHA
-
-SHAR
-
-SLL
-
-SRA
-
-SRAR
-
-SRL
-
-SSHA
-
-SSHAR
-
-SSLA
-
-SSUB
-
-SUB
-
-a|
-V
-
-{nbsp}
-
-Common
-
-Common
-
-V
-
-{nbsp}
-
-Zbb
-
-Common
-
-Common
-
-V
-
-V
-
-Common
-
-M
-
-{nbsp}
-
-{nbsp}
-
-{nbsp}
-
-{nbsp}
-
-V
-
-{nbsp}
-
-{nbsp}
-
-{nbsp}
-
-I
-
-I
-
-{nbsp}
-
-I
-
-{nbsp}
-
-{nbsp}
-
-{nbsp}
-
-V
-
-Common
-
-a|
-Averaging addition, (a+b)/2
-
-Absolute value (giving unsigned result, not saturated)
-
-Addition
-
-Averaging subtraction (a – b)/2
-
-Count leading redundant sign bits
-
-Count leading zero bits
-
-Absolute difference [a -b]
-
-Maximum
-
-Minimum
-
-mask-set if equal (result value is all 1s or all 0s)
-
-Mask-set if less than
-
-multiplication (discarding upper bits as necessary)
-
-high multiplication (discarding lower bits as necessary)
-
-MULH with rounding
-
-“Q-format” multiplication, (a × b)>>(width − 1)
-
-MULQ with rounding
-
-saturating absolute value
-
-Saturating addition
-
-saturate to specified bit-width
-
-shift left or right, arithmetic (signed)
-
-SHA with rounding
-
-Shift left, logical
-
-Shift right, arithmetic
-
-SRA with rounding
-
-Shift right, logical
-
-Saturating SHA
-
-saturating SHA with rounding
-
-saturating shift left, arithmetic (signed)
-
-saturating subtraction
-
-subtraction
-
-a|
-WADD
-
-WMUL
-
-WSLA
-
-WSLL
-
-WSUB
-
-a|
-V
-
-V
-
-{nbsp}
-
-{nbsp}
-
-V
-
-a|
-Widening addition (double-width result)
-
-Widening multiplication (double-width result)
-
-widening shift left, arithmetic (signed) (double-width result)
-
-widening shift left, logical (double-width result)
-
-widening subtraction (double-width result)
-
-a|
-NCLIP
-
-NCLIPR
-
-NSRA
-
-NSRAR
-
-NSRL
-
-a|
-V
-
-{nbsp}
-
-V
-
-{nbsp}
-
-V
-
-a|
-narrowing shift right and saturate (double-width input)
-
-NCLIP with rounding (double-width input)
-
-narrowing shift right, arithmetic (double-width input)
-
-NSRA with rounding (double-width input)
-
-narrowing shift right, logical (double-width input)
-
+|AADD |V |Averaging addition, (a+b)/2
+|ABS |{nbsp} |Absolute value (giving unsigned result, not saturated)
+|ADD |Common |Addition
+|ASUB |Common |Averaging subtraction (a – b)/2
+|CLS |V |Count leading redundant sign bits
+|CLZ |{nbsp} |Count leading zero bits
+|DIF |Zbb |Absolute difference [a -b]
+|MAX |Common |Maximum
+|MIN |Common |Minimum
+|MSEQ |V |mask-set if equal (result value is all 1s or all 0s)
+|MSLT |V |Mask-set if less than
+|MUL |Common |multiplication (discarding upper bits as necessary)
+|MULH |M |high multiplication (discarding lower bits as necessary)
+|MULHR |{nbsp} |MULH with rounding
+|MULQ |{nbsp} |”Q-format” multiplication, (a × b)>>(width − 1)
+|MULQR |{nbsp} |MULQ with rounding
+|SABS |{nbsp} |saturating absolute value
+|SADD |V |Saturating addition
+|SAT |{nbsp} |saturate to specified bit-width
+|SHA |{nbsp} |shift left or right, arithmetic (signed)
+|SHAR |{nbsp} |SHA with rounding
+|SLL |I |Shift left, logical
+|SRA |I |Shift right, arithmetic
+|SRAR |{nbsp} |SRA with rounding
+|SRL |I |Shift right, logical
+|SSHA |{nbsp} |Saturating SHA
+|SSHAR |{nbsp} |saturating SHA with rounding
+|SSLA |{nbsp} |saturating shift left, arithmetic (signed)
+|SSUB |V |saturating subtraction
+|SUB |Common |subtraction
+|===
+
+.Widening operations
+[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
+|===
+|*Name* |*Precedent* |*Function*
+|WADD |V |Widening addition (double-width result)
+|WMUL |V |Widening multiplication (double-width result)
+|WSLA |{nbsp} |widening shift left, arithmetic (signed) (double-width result)
+|WSLL |{nbsp} |widening shift left, logical (double-width result)
+|WSUB |V |widening subtraction (double-width result)
+|===
+
+.Narrowing operations
+[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
+|===
+|*Name* |*Precedent* |*Function*
+|NCLIP |V |narrowing shift right and saturate (double-width input)
+|NCLIPR |{nbsp} |NCLIP with rounding (double-width input)
+|NSRA |V |narrowing shift right, arithmetic (double-width input)
+|NSRAR |{nbsp} |NSRA with rounding (double-width input)
+|NSRL |V |narrowing shift right, logical (double-width input)
 |===
 
 === Combining and augmenting operation names
