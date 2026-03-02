@@ -824,13 +824,13 @@ The PADD.BS instruction adds the least-significant byte of `rs2` to each packed
 
 ===== Encoding
 
-PADD.HS is encoded in the OP-32 major opcode with a scalar second source
+PADD.HS is encoded in the OP-IMM-32 major opcode with a scalar second source
 operand and packed halfword elements.
 
 [cols="^,^,^,^,^,^,^,^,^"]
 |===
 |31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=001 |1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0111011
+|1 | f=001 |1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0011011
 |===
 
 ===== Operation
@@ -856,12 +856,12 @@ packed 16-bit element of `rs1`, producing a packed halfword result in `rd`.
 
 ===== Encoding
 
-PADD.WS is encoded in the OP-32 major opcode and is available only in RV64.
+PADD.WS is encoded in the OP-IMM-32 major opcode and is available only in RV64.
 
 [cols="^,^,^,^,^,^,^,^,^"]
 |===
 |31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=001|1 | w=01 |  rs2  |  rs1  | 010   |  rd  |0111011
+|1 | f=001|1 | w=01 |  rs2  |  rs1  | 010   |  rd  |0011011
 |===
 
 ===== Operation
@@ -2357,12 +2357,12 @@ TODO: Add missing PUSATI.DW
 
 ===== Encoding
 
-PSLL.BS is encoded in the OP-32 major opcode.
+PSLL.BS is encoded in the OP-IMM-32 major opcode.
 
 [cols="^,^,^,^,^,^,^,^,^"]
 |===
 |31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=000|1 | w=10 |  rs2  |  rs1  | 010   |  rd  |0111011
+|1 | f=000|1 | w=10 |  rs2  |  rs1  | 010   |  rd  |0011011
 |===
 
 ===== Operation
@@ -2386,12 +2386,12 @@ shift amount in `rs2[4:0]` and writes the packed byte result to `rd`.
 
 ===== Encoding
 
-PSLL.HS is encoded in the OP-32 major opcode.
+PSLL.HS is encoded in the OP-IMM-32 major opcode.
 
 [cols="^,^,^,^,^,^,^,^,^"]
 |===
 |31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=000|1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0111011
+|1 | f=000|1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0011011
 |===
 
 ===== Operation
@@ -2670,12 +2670,12 @@ TODO: Add missing PSRARI.DW
 
 ===== Encoding
 
-PSSHA.HS is encoded in the OP-32 major opcode.
+PSSHA.HS is encoded in the OP-IMM-32 major opcode.
 
 [cols="^,^,^,^,^,^,^,^,^"]
 |===
 |31|30..28|27|26..25|24..20|19..15|14..12|11..7|6..0
-|1 | f=110|1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0111011
+|1 | f=110|1 | w=00 |  rs2  |  rs1  | 010   |  rd  |0011011
 |===
 
 ===== Operation
