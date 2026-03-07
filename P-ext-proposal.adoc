@@ -248,10 +248,8 @@ instruction name may have ‘SU’ suffixed to the operation chain:
 ⟨op-chain⟩ SU.
 
 Suffixing ‘U’ has many obvious precedents for RISC-V: SLTU, MULHU, DIVU,
-etc. The ‘SU’ suffix
-
-applies most often to multiplications, as in instruction MULHSU of the M
-extension.
+etc. The ‘SU’ suffix applies most often to multiplications, as in instruction
+MULHSU of the M extension.
 
 === Conventions for packed-SIMD instruction names
 
