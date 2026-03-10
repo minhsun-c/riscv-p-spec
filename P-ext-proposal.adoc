@@ -97,15 +97,7 @@ product of the arguments. When the two arguments have equal width, w =
 x, this function is the same as computed by instruction MULH of the M
 extension, i.e., the uppermost w bits of the full 2^w-bit^ product of
 the arguments (which can also be described as the full double-width
-product shifted right by w bits). The “Q-format” multiplication, MULQ,
-is similar to MULH, but is applicable only when the two arguments have
-the same width and when both arguments are interpreted as signed values,
-not unsigned. If both arguments are w bits wide, then MULQ computes the
-full double-width product shifted right by w−1bits. If this result would
-be corrupted by overflow (possible only when multiplying two minimum
-negative values −2^w−1^×−2^w−1^), then the result is usually saturated
-implicitly to the maximum positive value, 2^w−1^ − 1. (In contrast, MULH
-and MULHR can never overflow.)
+product shifted right by w bits).
 
 The “Q-format” multiplication, MULQ, is similar to MULH, but is
 applicable only when the two arguments have the same width and when both
@@ -113,9 +105,9 @@ arguments are interpreted as signed values, not unsigned. If both
 arguments are w bits wide, then MULQ computes the full double-width
 product shifted right by w−1bits. If this result would be corrupted by
 overflow (possible only when multiplying two minimum negative values
-−^2w−1^×−2^w−1^), then the result is usually saturated implicitly to the
+−2^w−1^×−2^w−1^), then the result is usually saturated implicitly to the
 maximum positive value, 2^w−1^ − 1. (In contrast, MULH and MULHR can
-never over
+never overflow.)
 
 .Standard operations
 [width=”100%”,cols=”19%,22%,59%”,options=”header”,]
