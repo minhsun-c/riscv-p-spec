@@ -118,7 +118,7 @@ maximum positive value, 2^w−1^ − 1. (In contrast, MULH and MULHR can
 never over
 
 .Standard operations
-[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
+[width="100%",cols="17%,17%,66%",options="header",]
 |===
 |*Name* |*Precedent* |*Function*
 |AADD |V |Averaging addition, (a+b)/2
@@ -154,7 +154,7 @@ never over
 |===
 
 .Widening operations
-[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
+[width="100%",cols="17%,17%,66%",options="header",]
 |===
 |*Name* |*Precedent* |*Function*
 |WADD |V |Widening addition (double-width result)
@@ -165,7 +165,7 @@ never over
 |===
 
 .Narrowing operations
-[width=”100%”,cols=”19%,22%,59%”,options=”header”,]
+[width="100%",cols="17%,17%,66%",options="header",]
 |===
 |*Name* |*Precedent* |*Function*
 |NCLIP |V |narrowing shift right and saturate (double-width input)
