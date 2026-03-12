@@ -11316,7 +11316,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm3 field bits [2:0] encode the 3-bit shift amount for byte elements.
+The `uimm3` field encodes the 3-bit shift amount for byte elements.
 
 ===== Operation
 
@@ -11337,7 +11337,7 @@ pslli.b _rd_, _rs1_, _uimm3_
 ===== Description
 
 PSLLI.B shifts each packed 8-bit element of `rs1` left by the immediate shift
-amount encoded in uimm3[2:0] and writes the packed byte result to `rd`. Bits
+amount encoded in `uimm3` and writes the packed byte result to `rd`. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 
 ==== PSLLI.H
@@ -11362,7 +11362,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -11383,7 +11383,7 @@ pslli.h _rd_, _rs1_, _uimm4_
 ===== Description
 
 PSLLI.H shifts each packed 16-bit element of `rs1` left by the immediate shift
-amount encoded in uimm4[3:0] and writes the packed halfword result to `rd`.
+amount encoded in `uimm4` and writes the packed halfword result to `rd`.
 Bits shifted out are discarded and vacated bit positions are filled with zeros.
 
 ==== PSLLI.W
@@ -11408,7 +11408,7 @@ and an immediate shift amount. Available only in RV64.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -11429,7 +11429,7 @@ pslli.w _rd_, _rs1_, _uimm5_
 ===== Description
 
 PSLLI.W shifts each packed 32-bit element of `rs1` left by the immediate shift
-amount encoded in uimm5[4:0] and writes the packed word result to `rd`. Bits
+amount encoded in `uimm5` and writes the packed word result to `rd`. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 Available only in RV64.
 
@@ -11455,7 +11455,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm3 field bits [2:0] encode the 3-bit shift amount for byte elements.
+The `uimm3` field encodes the 3-bit shift amount for byte elements.
 
 ===== Operation
 
@@ -11476,7 +11476,7 @@ psrli.b _rd_, _rs1_, _uimm3_
 ===== Description
 
 PSRLI.B logically shifts each packed 8-bit element of `rs1` right by the
-immediate shift amount encoded in uimm3[2:0] and writes the packed byte result
+immediate shift amount encoded in `uimm3` and writes the packed byte result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with zeros.
 
@@ -11502,7 +11502,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -11523,7 +11523,7 @@ psrli.h _rd_, _rs1_, _uimm4_
 ===== Description
 
 PSRLI.H logically shifts each packed 16-bit element of `rs1` right by the
-immediate shift amount encoded in uimm4[3:0] and writes the packed halfword
+immediate shift amount encoded in `uimm4` and writes the packed halfword
 result to `rd`. Bits shifted out are discarded and vacated bit positions are
 filled with zeros.
 
@@ -11549,7 +11549,7 @@ and an immediate shift amount. Available only in RV64.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -11570,7 +11570,7 @@ psrli.w _rd_, _rs1_, _uimm5_
 ===== Description
 
 PSRLI.W logically shifts each packed 32-bit element of `rs1` right by the
-immediate shift amount encoded in uimm5[4:0] and writes the packed word result
+immediate shift amount encoded in `uimm5` and writes the packed word result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with zeros. Available only in RV64.
 
@@ -11596,7 +11596,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm3 field bits [2:0] encode the 3-bit shift amount for byte elements.
+The `uimm3` field encodes the 3-bit shift amount for byte elements.
 
 ===== Operation
 
@@ -11617,7 +11617,7 @@ psrai.b _rd_, _rs1_, _uimm3_
 ===== Description
 
 PSRAI.B arithmetically shifts each packed 8-bit element of `rs1` right by the
-immediate shift amount encoded in uimm3[2:0] and writes the packed byte result
+immediate shift amount encoded in `uimm3` and writes the packed byte result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with copies of the sign bit.
 
@@ -11643,7 +11643,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -11664,7 +11664,7 @@ psrai.h _rd_, _rs1_, _uimm4_
 ===== Description
 
 PSRAI.H arithmetically shifts each packed 16-bit element of `rs1` right by the
-immediate shift amount encoded in uimm4[3:0] and writes the packed halfword
+immediate shift amount encoded in `uimm4` and writes the packed halfword
 result to `rd`. Bits shifted out are discarded and vacated bit positions are
 filled with copies of the sign bit.
 
@@ -11690,7 +11690,7 @@ and an immediate shift amount. Available only in RV64.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -11711,7 +11711,7 @@ psrai.w _rd_, _rs1_, _uimm5_
 ===== Description
 
 PSRAI.W arithmetically shifts each packed 32-bit element of `rs1` right by the
-immediate shift amount encoded in uimm5[4:0] and writes the packed word result
+immediate shift amount encoded in `uimm5` and writes the packed word result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with copies of the sign bit. Available only in RV64.
 
@@ -11737,7 +11737,7 @@ and an immediate shift amount.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -11760,7 +11760,7 @@ psrari.h _rd_, _rs1_, _uimm4_
 ===== Description
 
 PSRARI.H arithmetically shifts each packed 16-bit element of `rs1` right by
-the immediate shift amount encoded in uimm4[3:0] with rounding and writes the
+the immediate shift amount encoded in `uimm4` with rounding and writes the
 packed halfword result to `rd`. A rounding bit is added before the shift so that
 the result is rounded to the nearest integer (round-to-nearest, ties round up).
 
@@ -11786,7 +11786,7 @@ and an immediate shift amount. Available only in RV64.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -11809,7 +11809,7 @@ psrari.w _rd_, _rs1_, _uimm5_
 ===== Description
 
 PSRARI.W arithmetically shifts each packed 32-bit element of `rs1` right by
-the immediate shift amount encoded in uimm5[4:0] with rounding and writes the
+the immediate shift amount encoded in `uimm5` with rounding and writes the
 packed word result to `rd`. A rounding bit is added before the shift so that the
 result is rounded to the nearest integer (round-to-nearest, ties round up).
 Available only in RV64.
@@ -12918,7 +12918,7 @@ w-uimm format with word elements. Available only in RV32.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -13194,7 +13194,7 @@ and packed halfword elements.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -13250,7 +13250,7 @@ and word elements. Available only in RV64.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
@@ -13429,7 +13429,7 @@ shift amount is 5 bits.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount.
+The `uimm5` field encodes the 5-bit shift amount.
 
 ===== Operation
 
@@ -13485,7 +13485,7 @@ RV32:
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for RV32.
+The `uimm5` field encodes the 5-bit shift amount for RV32.
 
 RV64:
 
@@ -13504,7 +13504,7 @@ RV64:
 ]}
 ....
 
-The uimm6 field bits [5:0] encode the 6-bit shift amount for RV64.
+The `uimm6` field encodes the 6-bit shift amount for RV64.
 
 ===== Operation
 
@@ -13990,7 +13990,7 @@ immediate format with packed halfword elements. Available only in RV32.
 ]}
 ....
 
-The uimm4 field bits [3:0] encode the 4-bit shift amount for halfword elements.
+The `uimm4` field encodes the 4-bit shift amount for halfword elements.
 
 ===== Operation
 
@@ -14061,7 +14061,7 @@ immediate format with word elements. Available only in RV32.
 ]}
 ....
 
-The uimm5 field bits [4:0] encode the 5-bit shift amount for word elements.
+The `uimm5` field encodes the 5-bit shift amount for word elements.
 
 ===== Operation
 
