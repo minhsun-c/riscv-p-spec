@@ -941,7 +941,8 @@ only for RV32 and uses a register-pair destination `rd_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x2 },
     { bits: 8, name: 'imm[7:0]' },
@@ -986,7 +987,8 @@ exists only for RV32 and uses a register-pair destination `rd_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 3, name: 0x2 },
     { bits: 10, name: 'imm[8:0|9]' },
@@ -1036,7 +1038,8 @@ This instruction exists only for RV32 and uses a register-pair destination
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 3, name: 0x2 },
     { bits: 10, name: 'imm[6|15:7]' },
@@ -1358,7 +1361,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1416,7 +1420,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1474,7 +1479,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1525,7 +1531,8 @@ scalar format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1581,7 +1588,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1637,7 +1645,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1824,7 +1833,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1882,7 +1892,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -1940,7 +1951,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2401,7 +2413,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2472,7 +2485,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2543,7 +2557,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2612,7 +2627,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2680,7 +2696,8 @@ only for RV32 and uses register pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -2747,7 +2764,8 @@ pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3212,7 +3230,8 @@ pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3283,7 +3302,8 @@ register pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3354,7 +3374,8 @@ instruction exists only for RV32 and uses register pairs `rd_p`, `rs1_p`, and
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3414,7 +3435,8 @@ pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3481,7 +3503,8 @@ register pairs `rd_p`, `rs1_p`, and `rs2_p`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3548,7 +3571,8 @@ instruction exists only for RV32 and uses register pairs `rd_p`, `rs1_p`, and
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -3984,7 +4008,8 @@ register-pair format with register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4044,7 +4069,8 @@ register-pair format with register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4105,7 +4131,8 @@ register-pair format with register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4159,7 +4186,8 @@ register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4220,7 +4248,8 @@ double-wide register-pair format with register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4281,7 +4310,8 @@ double-wide register-pair format with register-pair operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4718,7 +4748,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4778,7 +4809,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4838,7 +4870,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4892,7 +4925,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -4952,7 +4986,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -5012,7 +5047,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -5347,7 +5383,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -5406,7 +5443,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -5458,7 +5496,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -5537,7 +5576,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -6311,7 +6351,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -6369,7 +6410,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -6428,7 +6470,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -6498,7 +6541,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -6568,7 +6612,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -6638,7 +6683,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -7001,7 +7047,8 @@ operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -7061,7 +7108,8 @@ operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -7121,7 +7169,8 @@ operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -7181,7 +7230,8 @@ operands.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -7346,7 +7396,8 @@ opcode using the double-wide register-pair format.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -7412,7 +7463,8 @@ opcode using the double-wide register-pair format.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -8267,7 +8319,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8325,7 +8378,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8383,7 +8437,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8434,7 +8489,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8492,7 +8548,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8550,7 +8607,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8601,7 +8659,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8659,7 +8718,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8717,7 +8777,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8768,7 +8829,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8826,7 +8888,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -8884,7 +8947,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9442,7 +9506,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9501,7 +9566,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9560,7 +9626,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9612,7 +9679,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9672,7 +9740,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9732,7 +9801,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9785,7 +9855,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9845,7 +9916,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -9905,7 +9977,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -10078,7 +10151,8 @@ register-pair unary format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -10131,7 +10205,8 @@ register-pair unary format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -10179,7 +10254,8 @@ register-pair unary format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -10557,7 +10633,8 @@ register-pair w-uimm format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -10628,7 +10705,8 @@ immediate format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -10693,7 +10771,8 @@ immediate format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -10761,7 +10840,8 @@ immediate format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -11724,7 +11804,8 @@ scalar format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -11781,7 +11862,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -11838,7 +11920,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -11890,7 +11973,8 @@ scalar format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -11947,7 +12031,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12004,7 +12089,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12056,7 +12142,8 @@ scalar format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12114,7 +12201,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12172,7 +12260,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12224,7 +12313,8 @@ w-uimm format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -12279,7 +12369,8 @@ w-uimm format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -12335,7 +12426,8 @@ w-uimm format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -12385,7 +12477,8 @@ w-uimm format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12441,7 +12534,8 @@ w-uimm format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12497,7 +12591,8 @@ w-uimm format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12548,7 +12643,8 @@ w-uimm format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12604,7 +12700,8 @@ w-uimm format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12660,7 +12757,8 @@ w-uimm format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12711,7 +12809,8 @@ w-uimm format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -12776,7 +12875,8 @@ w-uimm format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -13515,7 +13615,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -13596,7 +13697,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -13671,7 +13773,8 @@ scalar format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -13757,7 +13860,8 @@ scalar format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -13838,7 +13942,8 @@ immediate format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -13907,7 +14012,8 @@ immediate format with word elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -14482,7 +14588,8 @@ register-pair format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14540,7 +14647,8 @@ register-pair format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14598,7 +14706,8 @@ register-pair format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14656,7 +14765,8 @@ register-pair format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14714,7 +14824,8 @@ register-pair format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14772,7 +14883,8 @@ register-pair format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14830,7 +14942,8 @@ register-pair format with packed byte elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -14888,7 +15001,8 @@ register-pair format with packed halfword elements. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0xe },
     { bits: 4, name: 'rs1_p' },
@@ -15275,7 +15389,7 @@ REV16 is a scalar instruction encoded in the OP-IMM major opcode and is availabl
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 7, name: 0x13 },
+    { bits: 7, name: 0x13, attr: ['OP-IMM'] },
     { bits: 5, name: 'rd' },
     { bits: 3, name: 0x5 },
     { bits: 5, name: 'rs1' },
@@ -15312,7 +15426,7 @@ RV32:
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 7, name: 0x13 },
+    { bits: 7, name: 0x13, attr: ['OP-IMM'] },
     { bits: 5, name: 'rd' },
     { bits: 3, name: 0x5 },
     { bits: 5, name: 'rs1' },
@@ -15325,7 +15439,7 @@ RV64:
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 7, name: 0x13 },
+    { bits: 7, name: 0x13, attr: ['OP-IMM'] },
     { bits: 5, name: 'rd' },
     { bits: 3, name: 0x5 },
     { bits: 5, name: 'rs1' },
@@ -15367,7 +15481,7 @@ ABS is encoded in the OP-IMM major opcode.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 7, name: 0x13 },
+    { bits: 7, name: 0x13, attr: ['OP-IMM'] },
     { bits: 5, name: 'rd' },
     { bits: 3, name: 0x1 },
     { bits: 5, name: 'rs1' },
@@ -15434,7 +15548,7 @@ CLS is encoded in the OP-IMM major opcode.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 7, name: 0x13 },
+    { bits: 7, name: 0x13, attr: ['OP-IMM'] },
     { bits: 5, name: 'rd' },
     { bits: 3, name: 0x1 },
     { bits: 5, name: 'rs1' },
@@ -15700,7 +15814,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -15749,7 +15864,8 @@ register-pair format. Available only in RV32.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x0 },
     { bits: 4, name: 'rd_p' },
     { bits: 4, name: 0x6 },
     { bits: 4, name: 'rs1_p' },
@@ -28692,7 +28808,8 @@ result into the register pair `{X[2*rdp+1], X[2*rdp]}` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -28849,7 +28966,8 @@ results into the register pair `{X[2*rdp+1], X[2*rdp]}` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -28998,7 +29116,8 @@ by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29094,7 +29213,8 @@ halfword multiply instruction.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29149,7 +29269,8 @@ signed×unsigned halfword multiply instruction.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29204,7 +29325,8 @@ unsigned×unsigned halfword multiply instruction.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29309,7 +29431,8 @@ of WMULSU.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29412,7 +29535,8 @@ select the destination register pair `{X[2*rdp+1], X[2*rdp]}`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 5, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29474,7 +29598,8 @@ but uses the rounded variant.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 5, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29532,7 +29657,8 @@ MQWACC is encoded in a register-pair (rdp) OP-IMM-32 format and accumulates into
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 5, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29588,7 +29714,8 @@ uses the rounded variant.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 5, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29647,7 +29774,8 @@ sum of two halfword products and writes it to the register pair
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29700,7 +29828,8 @@ pair selected by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29747,7 +29876,8 @@ form of PM2WADDSU.H.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29803,7 +29933,8 @@ register pair selected by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29850,7 +29981,8 @@ form of PM2WADDU.H.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29906,7 +30038,8 @@ selected by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -29955,7 +30088,8 @@ the register pair selected by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
@@ -30003,7 +30137,8 @@ register pair selected by `rdp` when `rdp != 0`.
 [wavedrom, ,svg]
 ....
 {reg:[
-    { bits: 8, name: 0x9b },
+    { bits: 7, name: 0x1b, attr: ['OP-IMM-32'] },
+    { bits: 1, name: 0x1 },
     { bits: 4, name: 'rdp' },
     { bits: 3, name: 0x2 },
     { bits: 5, name: 'rs1' },
