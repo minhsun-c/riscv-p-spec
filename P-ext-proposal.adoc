@@ -177,8 +177,8 @@ names of such instructions:
 
 *Operation chains*: When an instruction performs a chained sequence of
 operations, the instruction name usually contains names for the
-individual operations in left-to-right, first-to-last order: ⟨op1 ⟩ ⟨op2
-⟩ . . . .
+individual operations in left-to-right, first-to-last order: <op1 > <op2
+> . . . .
 
 Some examples of scalar (non-SIMD) instructions that perform chained
 operations are:
@@ -235,10 +235,10 @@ indicated by the letter ‘U’:
 normally interpreted as signed by default. If operands should instead be
 considered unsigned, and this fact is not indicated in some other way,
 then the instruction name may have the letter ‘U’ suffixed to the
-operation chain: ⟨op-chain⟩ U. If the first source operand should be
+operation chain: <op-chain> U. If the first source operand should be
 interpreted as signed and the second operand unsigned, then the
 instruction name may have ‘SU’ suffixed to the operation chain:
-⟨op-chain⟩ SU.
+<op-chain> SU.
 
 Suffixing ‘U’ has many obvious precedents for RISC-V: SLTU, MULHU, DIVU,
 etc. The ‘SU’ suffix applies most often to multiplications, as in instruction
@@ -261,9 +261,9 @@ halfwords, or words) is entirely self-contained and not dependent on
 values from other lanes, then the instruction name usually takes the
 regular form
 
-P⟨operations⟩ . ⟨S⟩
+P<operations> . <S>
 
-where ⟨operations⟩ indicates the per-lane computation and ⟨S⟩ is a
+where <operations> indicates the per-lane computation and <S> is a
 letter for the element width,‘B’ for byte, ‘H’ for halfword, or ‘W’ for
 word.
 
@@ -278,7 +278,7 @@ PMULHSU.H = P MULH SU .H
 
 PMAXU.B = P MAX U .B
 
-PMHRACC.W = P \{MulHR + ACC} .W
+PMHRACC.W = P {MulHR + ACC} .W
 ____
 
 In each case, the specified computation (ADD, MULQ, etc.) is performed
@@ -299,7 +299,7 @@ operand of a packed-SIMD instruction is a scalar value from a register,
 and the instruction otherwise acts as basic packed-SIMD in all other
 respects, then the instruction name usually takes the form
 
-P⟨operations⟩ . ⟨S⟩ S where the added final ‘S’ indicates that the
+P<operations> . <S> S where the added final ‘S’ indicates that the
 second operand is a scalar.
 
 Some examples of instructions with scalar second operands are
@@ -331,13 +331,13 @@ The following are some examples of widening packed-SIMD instructions:
 
 PWADD.B = P WADD .B
 
-PWSUBAU.H = P \{WSUB + Accum} U .H
+PWSUBAU.H = P {WSUB + Accum} U .H
 
-PWMACC.H = P \{WMul + ACC} .H
+PWMACC.H = P {WMul + ACC} .H
 
 PWSLL.BS = P WSLL .BS
 
-PMQRWACC.H = P \{MulQR + WACC} .H
+PMQRWACC.H = P {MulQR + WACC} .H
 
 For these instructions, the appearance of the widening operation in the
 name (WADD, WSUB, WMUL, WSLL, WACC, or an abbreviation) is the
@@ -376,8 +376,8 @@ and destination operands.
 *Double-wide packed-SIMD instructions*: For RV32, when all register
 operands of a packed-SIMD instruction are even-odd register pairs (64
 bits, sources and destination), then the instruction’s suffix for
-element width has the form ‘.D⟨S⟩’ instead of just ‘. ⟨S⟩’, the ‘D’
-standing for doubleword and ⟨S⟩ being one of ‘B’, ‘H’, or ‘W’ as usual.
+element width has the form ‘.D<S>’ instead of just ‘. <S>’, the ‘D’
+standing for doubleword and <S> being one of ‘B’, ‘H’, or ‘W’ as usual.
 
 Some examples of RV32 double-wide packed-SIMD instructions are:
 
@@ -412,7 +412,7 @@ __________________________________________________________________________
 The second operand of an RV32 double-wide packed-SIMD instruction may be
 a scalar from a register. In that case, the second source is a single
 register, not a register pair, and the instruction’s suffix has the
-combined form ‘.D⟨S⟩ S’, where the ‘D’ stands for doubleword and the
+combined form ‘.D<S> S’, where the ‘D’ stands for doubleword and the
 final ‘S’ indicates a scalar second operand.
 
 Examples of RV32 double-wide packed-SIMD instructions with a scalar
@@ -433,34 +433,34 @@ result elements (such as halfword sources with word results), then the
 instruction name may have two suffixes for element widths, in one of
 these forms:
 
-P⟨operations⟩ . ⟨S⟩ . ⟨T⟩⟨n⟩ or
+P<operations> . <S> . <T><n> or
 
-P⟨operations⟩ . ⟨S⟩ . ⟨T⟩⟨n⟩⟨n⟩
+P<operations> . <S> . <T><n><n>
 
-In both cases, ⟨S⟩ specifies the dominant element width, ‘H’ for
-halfword or ‘W’ for word, while ⟨T⟩ is a smaller width within the
+In both cases, <S> specifies the dominant element width, ‘H’ for
+halfword or ‘W’ for word, while <T> is a smaller width within the
 dominant element width, ‘B’ for byte or ‘H’ for halfword. The dominant
 width is the width of the result elements that are written to the
 destination.
 
-For the first form of instruction name, ending in only one ⟨n⟩, the
+For the first form of instruction name, ending in only one <n>, the
 elements from the instruction’s first source operand are the same
 dominant width as the destination, and the sub-element width denoted by
-⟨T⟩ applies only to the second source operand. The final component ⟨n⟩
+<T> applies only to the second source operand. The final component <n>
 is a digit indicating the positions of sub-elements within the dominant
 elements. When the sub-elements are half the size of the dominant
-elements (‘.H.B⟨n⟩’ or ‘.W.H⟨n⟩’), then ⟨n⟩ can be either ‘0’ or ‘1’,
+elements (‘.H.B<n>’ or ‘.W.H<n>’), then <n> can be either ‘0’ or ‘1’,
 indicating respectively the bottom (least-significant) or top
 (most-significant) halves of the dominant element positions. For suffix
-‘.W.B⟨n⟩’, digit ⟨n⟩ can be any of ‘0’, ‘1’, ‘2’, or ‘3’, selecting one
+‘.W.B<n>’, digit <n> can be any of ‘0’, ‘1’, ‘2’, or ‘3’, selecting one
 of the four bytes within each word element.
 
 ____
-For the second form of instruction name with two ⟨n⟩’s, only the
+For the second form of instruction name with two <n>’s, only the
 destination operand has fullwidth elements, while both source operands
-supply smaller sub-elements to the instruction. The first ⟨n⟩ specifies
+supply smaller sub-elements to the instruction. The first <n> specifies
 the sub-element positions from the first source register, and the second
-⟨n⟩ does the same for the second source register.
+<n> does the same for the second source register.
 ____
 
 The following are examples of instructions that extract half-size
@@ -469,7 +469,7 @@ and destination both have the dominant element width:
 
 PMULHSU.H.B0 = P MULH SU .H .B0
 
-PMHACC.W.H1 = P \{MulH + ACC} .W .H1
+PMHACC.W.H1 = P {MulH + ACC} .W .H1
 
 The first example performs high signed×unsigned multiplications (MULHSU)
 of 16-bit halfwords and 8-bit bytes, where the bytes are from the bottom
@@ -481,9 +481,9 @@ second source operand.
 In the next examples, half-size elements are taken from both source
 operands, and only the destination has elements of the dominant width:
 
-PMULU.H.B01 = P \{widening MUL} U .H .B01
+PMULU.H.B01 = P {widening MUL} U .H .B01
 
-PMQRACC.W.H00 = P \{MulQR + ACC} .W .H00
+PMQRACC.W.H00 = P {MulQR + ACC} .W .H00
 
 For instruction PMULU.H.B01, the multiplications are inherently widening
 because the source elements are bytes while the dominant element width
@@ -511,14 +511,14 @@ lanes.
 *Packed-SIMD instructions with horizontal add/subtract of products:*
 When an instruction performs packed-SIMD element-wise multiplications
 and then adds groups of products horizontally (across lanes), these
-additions are indicated in the instruction name by ‘⟨n⟩ ADD’, where ⟨n⟩
+additions are indicated in the instruction name by ‘<n> ADD’, where <n>
 is the number of products being summed, such as ‘2ADD’ or ‘4ADD’.
 Similarly, when an instruction subtracts pairs of products horizontally,
 the subtractions are denoted in the instruction name by ‘2SUB’.
 
 ____
 Such horizontal reductions, whether by addition or subtraction,
-inherently reduce the number of lanes by the specified factor ⟨n⟩,
+inherently reduce the number of lanes by the specified factor <n>,
 causing the element width for the computed result to grow by the same
 factor. When the instruction performs ordinary multiplications, denoted
 in the instruction name by the single letter ‘M’, then these
@@ -530,15 +530,15 @@ ____
 Some examples of packed-SIMD instructions that multiply and add/subtract
 the products horizontally are:
 
-PM2ADD.H = P \{widening Mul + 2-ADD} .H
+PM2ADD.H = P {widening Mul + 2-ADD} .H
 
-PM4ADDASU.B = P \{widening Mul + 4-ADD + Accum} SU .B
+PM4ADDASU.B = P {widening Mul + 4-ADD + Accum} SU .B
 
-PM2SUBA.W = P \{widening Mul + 2-SUB + Accum} .W
+PM2SUBA.W = P {widening Mul + 2-SUB + Accum} .W
 
-PMQR2ADDA.H = P \{MulQR + 2-ADD + Accum} .H
+PMQR2ADDA.H = P {MulQR + 2-ADD + Accum} .H
 
-PM2WADD.H = P \{widening Mul + 2-WADD} .H
+PM2WADD.H = P {widening Mul + 2-WADD} .H
 
 Concerning instruction PMQR2ADDA.H, it was noted earlier that “Q-format”
 multiplications are, by definition, not widening but rather always shift
@@ -569,13 +569,13 @@ Examples of this last rule are these instructions:
 
 PREDSUM.HS = P REDSUM .HS
 
-PDIFSUMAU.B = P \{DIF + SUM + Accum} U .B
+PDIFSUMAU.B = P {DIF + SUM + Accum} U .B
 
 __________________________________________________________________________
 
 The V extension has several instructions that reduce across all vector
-elements, with names of the form VRED⟨op⟩.VS for various reduction
-operations ⟨op⟩. One instance of these instructions is VREDSUM.VS for
+elements, with names of the form VRED<op>.VS for various reduction
+operations <op>. One instance of these instructions is VREDSUM.VS for
 summing all elements of a vector.
 
 __________________________________________________________________________
@@ -593,13 +593,13 @@ instruction name has the usual form for a packed-SIMD instruction but
 with an ‘X’ added to the end to visually represent the swapping of
 elements, like so:
 
-P⟨operations⟩ . ⟨S⟩X
+P<operations> . <S>X
 
 The following are examples of instructions of this type:
 
-PM2ADDA.HX = P \{widening Mul + 2-ADD + Accum} .HX
+PM2ADDA.HX = P {widening Mul + 2-ADD + Accum} .HX
 
-PM2SUB.HX = P \{widening Mul + 2-SUB} .HX
+PM2SUB.HX = P {widening Mul + 2-SUB} .HX
 
 Apart from the ‘X’ at the end, the names of these two examples follow
 the rules specified in Section 3.6 for instructions with horizontal
@@ -614,17 +614,17 @@ instructions are listed in Table 2.
 |===
 |Name |Function at odd positions |Function at even positions
 a|
-PAS.⟨S⟩X
+PAS.<S>X
 
-PSA.⟨S⟩X
+PSA.<S>X
 
-PSAS.⟨S⟩X
+PSAS.<S>X
 
-PSSA.⟨S⟩X
+PSSA.<S>X
 
-PAAS.⟨S⟩.X
+PAAS.<S>.X
 
-PASA.⟨S⟩X
+PASA.<S>X
 
 a|
 Addition
