@@ -723,6 +723,7 @@ corresponding `rd+`, `rs1+`, or `rs2+` also denotes `x0`.
 
 == Detailed Instruction Descriptions
 
+<<<
 === Load Immediate
 
 
@@ -763,6 +764,7 @@ pli.b _rd_, _imm8_
 PLI.B (Packed Load Immediate, Byte) loads an 8-bit immediate into every
 byte element of `rd`.
 
+<<<
 ==== PLI.H
 
 ===== Encoding
@@ -803,6 +805,7 @@ pli.h _rd_, _simm10_
 PLI.H (Packed Load Immediate, Halfword) sign-extends a 10-bit signed immediate
 to 16 bits and replicates it into every halfword element of `rd`.
 
+<<<
 ==== PLI.W
 
 ===== Encoding
@@ -844,6 +847,7 @@ PLI.W (Packed Load Immediate, Word) sign-extends a 10-bit signed immediate
 to 32 bits and replicates it into every word element of `rd`. This instruction
 is available only on RV64.
 
+<<<
 ==== PLUI.H
 
 ===== Encoding
@@ -886,6 +890,7 @@ into the most-significant 10 bits of each 16-bit halfword element, with the
 lower 6 bits set to zero, and replicates the result into every halfword
 element of `rd`.
 
+<<<
 ==== PLUI.W
 
 ===== Encoding
@@ -929,6 +934,7 @@ into the most-significant 10 bits of each 32-bit word element, with the
 lower 22 bits set to zero, and replicates the result into every word element
 of `rd`. This instruction is available only on RV64.
 
+<<<
 ==== PLI.DB
 
 ===== Encoding
@@ -975,6 +981,7 @@ into every byte element of the register pair designated by `rd_p`. This is
 equivalent to performing PLI.B on both the even and odd registers of the
 pair. This instruction is available only on RV32.
 
+<<<
 ==== PLI.DH
 
 ===== Encoding
@@ -1025,6 +1032,7 @@ the register pair designated by `rd_p`. This is equivalent to performing
 PLI.H on both the even and odd registers of the pair. This instruction is
 available only on RV32.
 
+<<<
 ==== PLUI.DH
 
 ===== Encoding
@@ -1077,6 +1085,7 @@ every halfword element of the register pair designated by `rd_p`. This is
 equivalent to performing PLUI.H on both the even and odd registers of the
 pair. This instruction is available only on RV32.
 
+<<<
 === Basic Packed Add
 
 ==== PADD.B
@@ -1123,6 +1132,7 @@ padd.b _rd_, _rs1_, _rs2_
 PADD.B adds corresponding packed 8-bit elements of `rs1` and `rs2` and writes
 the packed byte results to `rd`. Each element addition wraps modulo 2^8.
 
+<<<
 ==== PADD.H
 
 ===== Encoding
@@ -1168,6 +1178,7 @@ PADD.H adds corresponding packed 16-bit halfword elements of `rs1` and `rs2`
 and writes the packed halfword results to `rd`. Each element addition wraps
 modulo 2^16.
 
+<<<
 ==== PADD.W
 
 ===== Encoding
@@ -1211,6 +1222,7 @@ PADD.W adds corresponding packed 32-bit word elements of `rs1` and `rs2` and
 writes the packed word results to `rd`. Each element addition wraps modulo 2^32.
 Available only in RV64.
 
+<<<
 ==== PADD.BS
 
 ===== Encoding
@@ -1261,6 +1273,7 @@ The PADD.BS instruction adds the least-significant byte of `rs2` to each packed
 * Each 8-bit element addition wraps modulo 2^8.
 * The scalar operand is taken only from bits [7:0] of `rs2`; higher bits are ignored.
 
+<<<
 ==== PADD.HS
 
 ===== Encoding
@@ -1306,6 +1319,7 @@ padd.hs _rd_, _rs1_, _rs2_
 The PADD.HS instruction adds the least-significant halfword of `rs2` to each
 packed 16-bit element of `rs1`, producing a packed halfword result in `rd`.
 
+<<<
 ==== PADD.WS (RV64)
 
 ===== Encoding
@@ -1350,6 +1364,7 @@ The PADD.WS instruction adds the least-significant word of `rs2` to each packed
 32-bit element of `rs1`.
 
 
+<<<
 ==== PADD.DB
 
 ===== Encoding
@@ -1409,6 +1424,7 @@ and one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Each element
 addition wraps modulo 2^8. Available only in RV32.
 
+<<<
 ==== PADD.DH
 
 ===== Encoding
@@ -1468,6 +1484,7 @@ and one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Each element
 addition wraps modulo 2^16. Available only in RV32.
 
+<<<
 ==== PADD.DW
 
 ===== Encoding
@@ -1520,6 +1537,7 @@ the odd registers of each pair. All three operands (`rd_p`, `rs1_p`, `rs2_p`)
 are register pairs and must specify even register numbers. Each element addition
 wraps modulo 2^32. Available only in RV32.
 
+<<<
 ==== PADD.DBS
 
 ===== Encoding
@@ -1577,6 +1595,7 @@ The destination (`rd_p`) and first source (`rs1_p`) are register pairs and must
 specify even register numbers; `rs2` is a single register. Each element addition
 wraps modulo 2^8. Available only in RV32.
 
+<<<
 ==== PADD.DHS
 
 ===== Encoding
@@ -1634,6 +1653,7 @@ each pair. The destination (`rd_p`) and first source (`rs1_p`) are register
 pairs and must specify even register numbers; `rs2` is a single register. Each
 element addition wraps modulo 2^16. Available only in RV32.
 
+<<<
 ==== PADD.DWS
 
 ===== Encoding
@@ -1686,6 +1706,7 @@ The destination (`rd_p`) and first source (`rs1_p`) are register pairs and must
 specify even register numbers; `rs2` is a single register. Each element addition
 wraps modulo 2^32. Available only in RV32.
 
+<<<
 === Basic Packed Subtract
 
 
@@ -1734,6 +1755,7 @@ PSUB.B subtracts corresponding packed 8-bit elements of `rs2` from `rs1` and
 writes the packed byte results to `rd`. Each element subtraction wraps modulo
 2^8.
 
+<<<
 ==== PSUB.H
 
 ===== Encoding
@@ -1779,6 +1801,7 @@ PSUB.H subtracts corresponding packed 16-bit halfword elements of `rs2` from
 `rs1` and writes the packed halfword results to `rd`. Each element subtraction
 wraps modulo 2^16.
 
+<<<
 ==== PSUB.W
 
 ===== Encoding
@@ -1822,6 +1845,7 @@ PSUB.W subtracts corresponding packed 32-bit word elements of `rs2` from `rs1`
 and writes the packed word results to `rd`. Each element subtraction wraps
 modulo 2^32. Available only in RV64.
 
+<<<
 ==== PSUB.DB
 
 ===== Encoding
@@ -1881,6 +1905,7 @@ and one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Each element
 subtraction wraps modulo 2^8. Available only in RV32.
 
+<<<
 ==== PSUB.DH
 
 ===== Encoding
@@ -1940,6 +1965,7 @@ even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Each element subtraction wraps modulo 2^16. Available only in RV32.
 
+<<<
 ==== PSUB.DW
 
 ===== Encoding
@@ -1992,6 +2018,7 @@ one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Each element
 subtraction wraps modulo 2^32. Available only in RV32.
 
+<<<
 === Saturating Add
 
 
@@ -2046,6 +2073,7 @@ PSADD.B performs signed saturating addition on packed 8-bit byte elements of
 `rs1` and `rs2`, writing the results to `rd`. Each element result is clamped to
 the range [-128, 127]. Corresponds to KADD8 in the earlier P extension draft.
 
+<<<
 ==== PSADD.H
 
 ===== Encoding
@@ -2098,6 +2126,7 @@ of `rs1` and `rs2`, writing the results to `rd`. Each element result is clamped
 to the range [-32768, 32767]. Corresponds to KADD16 in the earlier P extension
 draft.
 
+<<<
 ==== PSADD.W
 
 ===== Encoding
@@ -2152,6 +2181,7 @@ PSADD.W performs signed saturating addition on packed 32-bit word elements of
 the range [-(2^31), 2^31-1]. Corresponds to KADD32 in the earlier P extension
 draft. Available only in RV64.
 
+<<<
 ==== PSADDU.B
 
 ===== Encoding
@@ -2201,6 +2231,7 @@ PSADDU.B performs unsigned saturating addition on packed 8-bit byte elements of
 `rs1` and `rs2`, writing the results to `rd`. Each element result is clamped to
 the range [0, 255]. Corresponds to UKADD8 in the earlier P extension draft.
 
+<<<
 ==== PSADDU.H
 
 ===== Encoding
@@ -2251,6 +2282,7 @@ elements of `rs1` and `rs2`, writing the results to `rd`. Each element result is
 clamped to the range [0, 65535]. Corresponds to UKADD16 in the earlier P
 extension draft.
 
+<<<
 ==== PSADDU.W
 
 ===== Encoding
@@ -2303,6 +2335,7 @@ PSADDU.W performs unsigned saturating addition on packed 32-bit word elements of
 the range [0, 2^32-1]. Corresponds to UKADD32 in the earlier P extension draft.
 Available only in RV64.
 
+<<<
 ==== SADD
 
 ===== Encoding
@@ -2354,6 +2387,7 @@ and `rs2`, writing the result to `rd`. The result is clamped to the range
 [-(2^(XLEN-1)), 2^(XLEN-1)-1]. Corresponds to KADDW in the earlier P extension
 draft.
 
+<<<
 ==== SADDU
 
 ===== Encoding
@@ -2402,6 +2436,7 @@ SADDU performs unsigned saturating addition of the full XLEN-wide values in
 `rs1` and `rs2`, writing the result to `rd`. The result is clamped to the range
 [0, 2^XLEN-1]. Corresponds to UKADDW in the earlier P extension draft.
 
+<<<
 ==== PSADD.DB
 
 ===== Encoding
@@ -2474,6 +2509,7 @@ All three operands (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must
 specify even register numbers. Each element result is clamped to the range
 [-128, 127]. Available only in RV32.
 
+<<<
 ==== PSADD.DH
 
 ===== Encoding
@@ -2546,6 +2582,7 @@ All three operands (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must
 specify even register numbers. Each element result is clamped to the range
 [-32768, 32767]. Available only in RV32.
 
+<<<
 ==== PSADD.DW
 
 ===== Encoding
@@ -2616,6 +2653,7 @@ even registers and one on the odd registers of each pair. All three operands
 numbers. Each element result is clamped to the range [-(2^31), 2^31-1].
 Available only in RV32.
 
+<<<
 ==== PSADDU.DB
 
 ===== Encoding
@@ -2684,6 +2722,7 @@ All three operands (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must
 specify even register numbers. Each element result is clamped to the range
 [0, 255]. Available only in RV32.
 
+<<<
 ==== PSADDU.DH
 
 ===== Encoding
@@ -2752,6 +2791,7 @@ across a register pair. This is equivalent to performing PSADDU.H on both the
 even and odd registers of the pair. Each element result is clamped to the
 range [0, 2^16-1]. Available only on RV32.
 
+<<<
 ==== PSADDU.DW
 
 ===== Encoding
@@ -2809,6 +2849,7 @@ pair. This is equivalent to performing SADDU on both the even and odd
 registers of the pair. Each element result is clamped to the range
 [0, 2^32-1]. Available only on RV32.
 
+<<<
 === Saturating Subtract
 
 
@@ -2862,6 +2903,7 @@ PSSUB.B performs signed saturating subtraction on corresponding packed 8-bit
 byte elements of `rs1` and `rs2`, writing the results to `rd`. Each element
 result is clamped to the range [-(2^7), 2^7-1].
 
+<<<
 ==== PSSUB.H
 
 ===== Encoding
@@ -2912,6 +2954,7 @@ PSSUB.H performs signed saturating subtraction on corresponding packed 16-bit
 halfword elements of `rs1` and `rs2`, writing the results to `rd`. Each
 element result is clamped to the range [-(2^15), 2^15-1].
 
+<<<
 ==== PSSUB.W
 
 ===== Encoding
@@ -2972,6 +3015,7 @@ PSSUB.W performs signed saturating subtraction on corresponding packed 32-bit
 word elements of `rs1` and `rs2`, writing the results to `rd`. Each element
 result is clamped to the range [-(2^31), 2^31-1]. Available only in RV64.
 
+<<<
 ==== PSSUBU.B
 
 ===== Encoding
@@ -3020,6 +3064,7 @@ PSSUBU.B performs unsigned saturating subtraction on corresponding packed
 8-bit byte elements of `rs1` and `rs2`, writing the results to `rd`. Each
 element result is clamped to the range [0, 2^8-1].
 
+<<<
 ==== PSSUBU.H
 
 ===== Encoding
@@ -3068,6 +3113,7 @@ PSSUBU.H performs unsigned saturating subtraction on corresponding packed
 16-bit halfword elements of `rs1` and `rs2`, writing the results to `rd`.
 Each element result is clamped to the range [0, 2^16-1].
 
+<<<
 ==== PSSUBU.W
 
 ===== Encoding
@@ -3124,6 +3170,7 @@ PSSUBU.W performs unsigned saturating subtraction on corresponding packed
 32-bit word elements of `rs1` and `rs2`, writing the results to `rd`. Each
 element result is clamped to the range [0, 2^32-1]. Available only in RV64.
 
+<<<
 ==== SSUB
 
 ===== Encoding
@@ -3172,6 +3219,7 @@ result to `rd`. The result is clamped to the range [-(2^(XLEN-1)),
 2^(XLEN-1)-1]. On RV32 this is the XLEN-wide scalar form; on RV64 this
 encoding is used by PSSUB.W.
 
+<<<
 ==== SSUBU
 
 ===== Encoding
@@ -3218,6 +3266,7 @@ the result to `rd`. The result is clamped to the range [0, 2^XLEN-1]. On
 RV32 this is the XLEN-wide scalar form; on RV64 this encoding is used by
 PSSUBU.W.
 
+<<<
 ==== PSSUB.DB
 
 ===== Encoding
@@ -3290,6 +3339,7 @@ register pair. This is equivalent to performing PSSUB.B on both the even and
 odd registers of the pair. Each element result is clamped to the range
 [-(2^7), 2^7-1]. Available only on RV32.
 
+<<<
 ==== PSSUB.DH
 
 ===== Encoding
@@ -3362,6 +3412,7 @@ across a register pair. This is equivalent to performing PSSUB.H on both the
 even and odd registers of the pair. Each element result is clamped to the
 range [-(2^15), 2^15-1]. Available only on RV32.
 
+<<<
 ==== PSSUB.DW
 
 ===== Encoding
@@ -3423,6 +3474,7 @@ pair. This is equivalent to performing SSUB on both the even and odd registers
 of the pair. Each element result is clamped to the range [-(2^31), 2^31-1].
 Available only on RV32.
 
+<<<
 ==== PSSUBU.DB
 
 ===== Encoding
@@ -3491,6 +3543,7 @@ across a register pair. This is equivalent to performing PSSUBU.B on both the
 even and odd registers of the pair. Each element result is clamped to the
 range [0, 2^8-1]. Available only on RV32.
 
+<<<
 ==== PSSUBU.DH
 
 ===== Encoding
@@ -3559,6 +3612,7 @@ elements across a register pair. This is equivalent to performing PSSUBU.H on
 both the even and odd registers of the pair. Each element result is clamped to
 the range [0, 2^16-1]. Available only on RV32.
 
+<<<
 ==== PSSUBU.DW
 
 ===== Encoding
@@ -3616,6 +3670,7 @@ register pair. This is equivalent to performing SSUBU on both the even and odd
 registers of the pair. Each element result is clamped to the range
 [0, 2^32-1]. Available only on RV32.
 
+<<<
 === Averaging Add
 
 
@@ -3666,6 +3721,7 @@ byte lane, it adds the signed elements from `rs1` and `rs2` at full precision
 (9 bits), then shifts the result right by 1 (toward negative infinity), and
 writes the lower 8 bits to the corresponding byte of `rd`.
 
+<<<
 ==== PAADD.H
 
 ===== Encoding
@@ -3713,6 +3769,7 @@ For each halfword lane, it adds the signed elements from `rs1` and `rs2` at full
 precision (17 bits), then shifts the result right by 1 (toward negative
 infinity), and writes the lower 16 bits to the corresponding halfword of `rd`.
 
+<<<
 ==== PAADD.W
 
 ===== Encoding
@@ -3766,6 +3823,7 @@ precision (33 bits), then shifts the result right by 1 (toward negative
 infinity), and writes the lower 32 bits to the corresponding word of `rd`.
 Available only in RV64.
 
+<<<
 ==== PAADDU.B
 
 ===== Encoding
@@ -3813,6 +3871,7 @@ each byte lane, it adds the unsigned elements from `rs1` and `rs2` at full
 precision (9 bits), then shifts the result right by 1, and writes the lower
 8 bits to the corresponding byte of `rd`.
 
+<<<
 ==== PAADDU.H
 
 ===== Encoding
@@ -3860,6 +3919,7 @@ elements. For each halfword lane, it adds the unsigned elements from `rs1` and
 `rs2` at full precision (17 bits), then shifts the result right by 1, and writes
 the lower 16 bits to the corresponding halfword of `rd`.
 
+<<<
 ==== PAADDU.W
 
 ===== Encoding
@@ -3912,6 +3972,7 @@ For each word lane, it adds the unsigned elements from `rs1` and `rs2` at full
 precision (33 bits), then shifts the result right by 1, and writes the lower
 32 bits to the corresponding word of `rd`. Available only in RV64.
 
+<<<
 ==== AADD
 
 ===== Encoding
@@ -3954,6 +4015,7 @@ the signed values in `rs1` and `rs2` at full precision (33 bits), then shifts
 the result right by 1 (toward negative infinity), and writes the lower 32 bits
 to `rd`. Available only in RV32; the RV64 counterpart is PAADD.W.
 
+<<<
 ==== AADDU
 
 ===== Encoding
@@ -3996,6 +4058,7 @@ adds the unsigned values in `rs1` and `rs2` at full precision (33 bits), then
 shifts the result right by 1, and writes the lower 32 bits to `rd`. Available
 only in RV32; the RV64 counterpart is PAADDU.W.
 
+<<<
 ==== PAADD.DB
 
 ===== Encoding
@@ -4057,6 +4120,7 @@ addition on packed 8-bit elements across register pairs. It is equivalent to
 performing PAADD.B independently on both the even and odd registers of the
 source and destination pairs. This instruction is available only on RV32.
 
+<<<
 ==== PAADD.DH
 
 ===== Encoding
@@ -4119,6 +4183,7 @@ is equivalent to performing PAADD.H independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PAADD.DW
 
 ===== Encoding
@@ -4174,6 +4239,7 @@ addition on packed 32-bit word elements across register pairs. It is equivalent
 to performing AADD independently on both the even and odd registers of the
 source and destination pairs. This instruction is available only on RV32.
 
+<<<
 ==== PAADDU.DB
 
 ===== Encoding
@@ -4236,6 +4302,7 @@ equivalent to performing PAADDU.B independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PAADDU.DH
 
 ===== Encoding
@@ -4298,6 +4365,7 @@ pairs. It is equivalent to performing PAADDU.H independently on both the even
 and odd registers of the source and destination pairs. This instruction is
 available only on RV32.
 
+<<<
 ==== PAADDU.DW
 
 ===== Encoding
@@ -4353,6 +4421,7 @@ averaging addition on packed 32-bit word elements across register pairs. It is
 equivalent to performing AADDU independently on both the even and odd registers
 of the source and destination pairs. This instruction is available only on RV32.
 
+<<<
 === Averaging Subtract
 
 
@@ -4404,6 +4473,7 @@ in `rs1` at full precision (9 bits), then shifts the result right by 1 (toward
 negative infinity), and writes the lower 8 bits to the corresponding byte of
 `rd`.
 
+<<<
 ==== PASUB.H
 
 ===== Encoding
@@ -4452,6 +4522,7 @@ the signed element in `rs1` at full precision (17 bits), then shifts the result
 right by 1 (toward negative infinity), and writes the lower 16 bits to the
 corresponding halfword of `rd`.
 
+<<<
 ==== PASUB.W
 
 ===== Encoding
@@ -4505,6 +4576,7 @@ element in `rs1` at full precision (33 bits), then shifts the result right by 1
 (toward negative infinity), and writes the lower 32 bits to the corresponding
 word of `rd`. Available only in RV64.
 
+<<<
 ==== PASUBU.B
 
 ===== Encoding
@@ -4552,6 +4624,7 @@ For each byte lane, it subtracts the unsigned element in `rs2` from the unsigned
 element in `rs1` at full precision (9 bits), then shifts the result right by 1,
 and writes the lower 8 bits to the corresponding byte of `rd`.
 
+<<<
 ==== PASUBU.H
 
 ===== Encoding
@@ -4600,6 +4673,7 @@ from the unsigned element in `rs1` at full precision (17 bits), then shifts the
 result right by 1, and writes the lower 16 bits to the corresponding halfword
 of `rd`.
 
+<<<
 ==== PASUBU.W
 
 ===== Encoding
@@ -4653,6 +4727,7 @@ the unsigned element in `rs1` at full precision (33 bits), then shifts the
 result right by 1, and writes the lower 32 bits to the corresponding word of
 `rd`. Available only in RV64.
 
+<<<
 ==== ASUB
 
 ===== Encoding
@@ -4695,6 +4770,7 @@ subtracts the signed value in `rs2` from `rs1` at full precision (33 bits), then
 shifts the result right by 1 (toward negative infinity), and writes the lower
 32 bits to `rd`. Available only in RV32; the RV64 counterpart is PASUB.W.
 
+<<<
 ==== ASUBU
 
 ===== Encoding
@@ -4737,6 +4813,7 @@ subtracts the unsigned value in `rs2` from `rs1` at full precision (33 bits),
 then shifts the result right by 1, and writes the lower 32 bits to `rd`.
 Available only in RV32; the RV64 counterpart is PASUBU.W.
 
+<<<
 ==== PASUB.DB
 
 ===== Encoding
@@ -4798,6 +4875,7 @@ equivalent to performing PASUB.B independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PASUB.DH
 
 ===== Encoding
@@ -4859,6 +4937,7 @@ It is equivalent to performing PASUB.H independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PASUB.DW
 
 ===== Encoding
@@ -4914,6 +4993,7 @@ is equivalent to performing ASUB independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PASUBU.DB
 
 ===== Encoding
@@ -4975,6 +5055,7 @@ It is equivalent to performing PASUBU.B independently on both the even and odd
 registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 ==== PASUBU.DH
 
 ===== Encoding
@@ -5036,6 +5117,7 @@ register pairs. It is equivalent to performing PASUBU.H independently on both
 the even and odd registers of the source and destination pairs. This instruction
 is available only on RV32.
 
+<<<
 ==== PASUBU.DW
 
 ===== Encoding
@@ -5091,6 +5173,7 @@ pairs. It is equivalent to performing ASUBU independently on both the even and
 odd registers of the source and destination pairs. This instruction is available
 only on RV32.
 
+<<<
 === Shift-Add
 
 ==== PSH1ADD.H
@@ -5138,6 +5221,7 @@ psh1add.h _rd_, _rs1_, _rs2_
 The PSH1ADD.H instruction computes, for each packed 16-bit element,
 `(rs1_h << 1) + rs2_h`, and writes the packed halfword result to `rd`.
 
+<<<
 ==== PSH1ADD.W (RV64)
 
 ===== Encoding
@@ -5181,6 +5265,7 @@ psh1add.w _rd_, _rs1_, _rs2_
 The PSH1ADD.W instruction computes, for each packed 32-bit element,
 `(rs1_w << 1) + rs2_w`.
 
+<<<
 ==== PSSH1SADD.H
 
 ===== Encoding
@@ -5252,6 +5337,7 @@ written to `rd`.
 * `vxsat` is set to 1 if saturation occurs in any element, either during the
   shift-left-by-1 step or during the subsequent add.
 
+<<<
 ==== PSSH1SADD.W (RV64)
 
 ===== Encoding
@@ -5316,6 +5402,7 @@ The PSSH1SADD.W instruction performs a signed saturating left shift by 1 on each
 packed 32-bit element of `rs1`, followed by a signed saturating add with the
 corresponding element of `rs2`.
 
+<<<
 ==== SSH1SADD (RV32)
 
 ===== Encoding
@@ -5372,6 +5459,7 @@ The SSH1SADD instruction performs a signed saturating left shift by 1 on `rs1`,
 followed by a signed saturating add with `rs2`.
 
 
+<<<
 ==== PSH1ADD.DH
 
 ===== Encoding
@@ -5432,6 +5520,7 @@ element from `rs2`, wrapping modulo 2^16. It is equivalent to performing
 PSH1ADD.H independently on both the even and odd registers of the source and
 destination pairs. This instruction is available only on RV32.
 
+<<<
 ==== PSH1ADD.DW
 
 ===== Encoding
@@ -5485,6 +5574,7 @@ shifts the element from `rs1` left by 1 and adds the corresponding element from
 on both the even and odd registers of the source and destination pairs. This
 instruction is available only on RV32.
 
+<<<
 ==== PSSH1SADD.DH
 
 ===== Encoding
@@ -5565,6 +5655,7 @@ equivalent to performing PSSH1SADD.H independently on both the even and odd
 registers of the source and destination pairs. Sets `vxsat` on saturation. This
 instruction is available only on RV32.
 
+<<<
 ==== PSSH1SADD.DW
 
 ===== Encoding
@@ -5639,6 +5730,7 @@ equivalent to performing SSH1SADD independently on both the even and odd
 registers of the source and destination pairs. Sets `vxsat` on saturation. This
 instruction is available only on RV32.
 
+<<<
 === Add-Subtract Cross
 
 
@@ -5696,6 +5788,7 @@ halfword of `rs1` is added to the even halfword of `rs2`, while the odd (upper)
 halfword of `rs1` has the odd halfword of `rs2` subtracted from it. Results
 wrap modulo 2^16. This instruction is useful for complex number arithmetic.
 
+<<<
 ==== PAS.WX
 
 ===== Encoding
@@ -5748,6 +5841,7 @@ word of `rs2`, while the odd (upper) word of `rs1` has the odd word of `rs2`
 subtracted from it. Results wrap modulo 2^32. This instruction is useful for
 complex number arithmetic. Available only in RV64.
 
+<<<
 ==== PSA.HX
 
 ===== Encoding
@@ -5802,6 +5896,7 @@ halfword of `rs1` has the even halfword of `rs2` subtracted from it, while the
 odd (upper) halfword of `rs1` is added to the odd halfword of `rs2`. Results
 wrap modulo 2^16. This instruction is useful for complex number arithmetic.
 
+<<<
 ==== PSA.WX
 
 ===== Encoding
@@ -5854,6 +5949,7 @@ packed 32-bit word pairs. The even (lower) word of `rs1` has the even word of
 odd word of `rs2`. Results wrap modulo 2^32. This instruction is useful for
 complex number arithmetic. Available only in RV64.
 
+<<<
 ==== PSAS.HX
 
 ===== Encoding
@@ -5919,6 +6015,7 @@ while the odd (upper) halfword is computed as a signed saturating subtraction.
 Results are clamped to the range [-2^15, 2^15-1]. Sets `vxsat` on saturation.
 This instruction is useful for complex number arithmetic.
 
+<<<
 ==== PSAS.WX
 
 ===== Encoding
@@ -5982,6 +6079,7 @@ saturating subtraction. Results are clamped to the range [-2^31, 2^31-1]. Sets
 `vxsat` on saturation. This instruction is useful for complex number arithmetic.
 Available only in RV64.
 
+<<<
 ==== PSSA.HX
 
 ===== Encoding
@@ -6047,6 +6145,7 @@ while the odd (upper) halfword is computed as a signed saturating addition.
 Results are clamped to the range [-2^15, 2^15-1]. Sets `vxsat` on saturation.
 This instruction is useful for complex number arithmetic.
 
+<<<
 ==== PSSA.WX
 
 ===== Encoding
@@ -6110,6 +6209,7 @@ signed saturating addition. Results are clamped to the range [-2^31, 2^31-1].
 Sets `vxsat` on saturation. This instruction is useful for complex number
 arithmetic. Available only in RV64.
 
+<<<
 ==== PAAS.HX
 
 ===== Encoding
@@ -6167,6 +6267,7 @@ the even (lower) halfword of `rs1` has the odd (upper) halfword of `rs2`
 subtracted at full precision and the result is shifted right by 1. The truncated
 results are written to the corresponding halfwords of `rd`.
 
+<<<
 ==== PAAS.WX
 
 ===== Encoding
@@ -6225,6 +6326,7 @@ word of `rs2` subtracted at full precision and the result is shifted right by 1.
 The truncated results are written to the corresponding words of `rd`. Available
 only in RV64.
 
+<<<
 ==== PASA.HX
 
 ===== Encoding
@@ -6282,6 +6384,7 @@ the even (lower) halfword of `rs1` is added to the odd (upper) halfword of
 `rs2` at full precision and the result is shifted right by 1. The truncated
 results are written to the corresponding halfwords of `rd`.
 
+<<<
 ==== PASA.WX
 
 ===== Encoding
@@ -6340,6 +6443,7 @@ upper word of `rs2` at full precision and the result is shifted right by 1. The
 truncated results are written to the corresponding words of `rd`. Available only
 in RV64.
 
+<<<
 ==== PAS.DHX
 
 ===== Encoding
@@ -6399,6 +6503,7 @@ register pairs and must specify even register numbers. For each pair of
 halfwords, the upper halfword is added cross with the lower halfword of the
 other operand, and vice versa with subtraction. Available only in RV32.
 
+<<<
 ==== PSA.DHX
 
 ===== Encoding
@@ -6459,6 +6564,7 @@ halfwords, the upper halfword of `rs1` has the lower halfword of `rs2`
 subtracted, and the lower halfword of `rs1` is added with the upper halfword
 of `rs2`. Available only in RV32.
 
+<<<
 ==== PSAS.DHX
 
 ===== Encoding
@@ -6530,6 +6636,7 @@ registers and one on the odd registers of each pair. All three operands (`rd_p`,
 Results are saturated to the signed 16-bit range [-2^15, 2^15-1]. If saturation
 occurs, the overflow flag `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PSSA.DHX
 
 ===== Encoding
@@ -6601,6 +6708,7 @@ registers and one on the odd registers of each pair. All three operands (`rd_p`,
 Results are saturated to the signed 16-bit range [-2^15, 2^15-1]. If saturation
 occurs, the overflow flag `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PAAS.DHX
 
 ===== Encoding
@@ -6672,6 +6780,7 @@ registers and one on the odd registers of each pair. All three operands (`rd_p`,
 Each result is computed at full precision and then shifted right by 1 (toward
 negative infinity). Available only in RV32.
 
+<<<
 ==== PASA.DHX
 
 ===== Encoding
@@ -6743,6 +6852,7 @@ registers and one on the odd registers of each pair. All three operands (`rd_p`,
 Each result is computed at full precision and then shifted right by 1 (toward
 negative infinity). Available only in RV32.
 
+<<<
 === Absolute Difference
 
 ==== PABD.B
@@ -6794,6 +6904,7 @@ to `rd`.
 
 * Signed ordering is used to determine the magnitude of each element difference.
 
+<<<
 ==== PABD.H
 
 ===== Encoding
@@ -6839,6 +6950,7 @@ The PABD.H instruction computes the absolute difference of corresponding packed
 16-bit elements of `rs1` and `rs2`, using signed comparison, and writes the
 result to `rd`.
 
+<<<
 ==== PABDU.B
 
 ===== Encoding
@@ -6888,6 +7000,7 @@ result to `rd`.
 
 * Unsigned ordering is used to determine the magnitude of each element difference.
 
+<<<
 ==== PABDU.H
 
 ===== Encoding
@@ -6934,6 +7047,7 @@ The PABDU.H instruction computes the absolute difference of corresponding packed
 result to `rd`.
 
 
+<<<
 ==== PABDSUMU.B
 
 ===== Encoding
@@ -6984,6 +7098,7 @@ differences are summed into a single scalar result written to `rd`. This
 instruction is commonly used in motion estimation and image processing
 algorithms.
 
+<<<
 ==== PABDSUMAU.B
 
 ===== Encoding
@@ -7035,6 +7150,7 @@ the current value of `rd`. This accumulating form is useful for iteratively
 computing the sum of absolute differences across multiple register-widths of
 data, as commonly needed in motion estimation and image processing algorithms.
 
+<<<
 ==== PABD.DB
 
 ===== Encoding
@@ -7096,6 +7212,7 @@ of the source and destination pairs. For each byte lane, the signed absolute
 difference |rs1[i] - rs2[i]| is computed. This instruction is available only
 on RV32.
 
+<<<
 ==== PABD.DH
 
 ===== Encoding
@@ -7157,6 +7274,7 @@ registers of the source and destination pairs. For each halfword lane, the
 signed absolute difference |rs1[i] - rs2[i]| is computed. This instruction is
 available only on RV32.
 
+<<<
 ==== PABDU.DB
 
 ===== Encoding
@@ -7218,6 +7336,7 @@ registers of the source and destination pairs. For each byte lane, the unsigned
 absolute difference |rs1[i] - rs2[i]| is computed. This instruction is
 available only on RV32.
 
+<<<
 ==== PABDU.DH
 
 ===== Encoding
@@ -7279,6 +7398,7 @@ even and odd registers of the source and destination pairs. For each halfword
 lane, the unsigned absolute difference |rs1[i] - rs2[i]| is computed. This
 instruction is available only on RV32.
 
+<<<
 === Saturating Absolute
 
 
@@ -7333,6 +7453,7 @@ results to `rd`. If an element is -128 (the most negative value), the result
 saturates to 127 and the overflow flag `vxsat` is set. For all other values,
 the result is the standard absolute value.
 
+<<<
 ==== PSABS.H
 
 ===== Encoding
@@ -7384,6 +7505,7 @@ the results to `rd`. If an element is -32768 (the most negative value), the
 result saturates to 32767 and the overflow flag `vxsat` is set. For all other
 values, the result is the standard absolute value.
 
+<<<
 ==== PSABS.DB
 
 ===== Encoding
@@ -7451,6 +7573,7 @@ odd registers of the source and destination pairs. If an element is -128 (the
 most negative value), the result saturates to 127 and the overflow flag `vxsat`
 is set. This instruction is available only on RV32.
 
+<<<
 ==== PSABS.DH
 
 ===== Encoding
@@ -7518,6 +7641,7 @@ even and odd registers of the source and destination pairs. If an element is
 -32768 (the most negative value), the result saturates to 32767 and the overflow
 flag `vxsat` is set. This instruction is available only on RV32.
 
+<<<
 === Reduction Sum
 
 ==== PREDSUM.BS
@@ -7566,6 +7690,7 @@ The PREDSUM.BS instruction computes a signed reduction sum of packed 8-bit
 elements in `rs1`. Each element is sign-extended to XLEN and accumulated into
 the initial value in `rs2`. The final sum is written to `rd`.
 
+<<<
 ==== PREDSUM.HS
 
 ===== Encoding
@@ -7610,6 +7735,7 @@ predsum.hs _rd_, _rs1_, _rs2_
 The PREDSUM.HS instruction computes a signed reduction sum of packed 16-bit
 elements in `rs1`, accumulating into the initial value in `rs2`.
 
+<<<
 ==== PREDSUM.WS (RV64)
 
 ===== Encoding
@@ -7650,6 +7776,7 @@ predsum.ws _rd_, _rs1_, _rs2_
 The PREDSUM.WS instruction computes a signed reduction sum of the two packed
 32-bit elements in `rs1`, accumulating into `rs2`.
 
+<<<
 ==== PREDSUMU.BS
 
 ===== Encoding
@@ -7696,6 +7823,7 @@ The PREDSUMU.BS instruction computes an unsigned reduction sum of packed 8-bit
 elements in `rs1`. Each element is zero-extended to XLEN and accumulated into
 the initial value in `rs2`. The final sum is written to `rd`.
 
+<<<
 ==== PREDSUMU.HS
 
 ===== Encoding
@@ -7740,6 +7868,7 @@ predsumu.hs _rd_, _rs1_, _rs2_
 The PREDSUMU.HS instruction computes an unsigned reduction sum of packed 16-bit
 elements in `rs1`, accumulating into the initial value in `rs2`.
 
+<<<
 ==== PREDSUMU.WS (RV64)
 
 ===== Encoding
@@ -7781,6 +7910,7 @@ The PREDSUMU.WS instruction computes an unsigned reduction sum of the two packed
 32-bit elements in `rs1`, accumulating into `rs2`.
 
 
+<<<
 === Min/Max
 
 
@@ -7828,6 +7958,7 @@ pmin.b _rd_, _rs1_, _rs2_
 PMIN.B computes the signed minimum of corresponding packed 8-bit byte elements
 of `rs1` and `rs2` and writes the packed byte results to `rd`.
 
+<<<
 ==== PMIN.H
 
 ===== Encoding
@@ -7872,6 +8003,7 @@ pmin.h _rd_, _rs1_, _rs2_
 PMIN.H computes the signed minimum of corresponding packed 16-bit halfword
 elements of `rs1` and `rs2` and writes the packed halfword results to `rd`.
 
+<<<
 ==== PMIN.W
 
 ===== Encoding
@@ -7915,6 +8047,7 @@ PMIN.W computes the signed minimum of corresponding packed 32-bit word elements
 of `rs1` and `rs2` and writes the packed word results to `rd`. Available only
 in RV64.
 
+<<<
 ==== PMINU.B
 
 ===== Encoding
@@ -7959,6 +8092,7 @@ pminu.b _rd_, _rs1_, _rs2_
 PMINU.B computes the unsigned minimum of corresponding packed 8-bit byte
 elements of `rs1` and `rs2` and writes the packed byte results to `rd`.
 
+<<<
 ==== PMINU.H
 
 ===== Encoding
@@ -8003,6 +8137,7 @@ pminu.h _rd_, _rs1_, _rs2_
 PMINU.H computes the unsigned minimum of corresponding packed 16-bit halfword
 elements of `rs1` and `rs2` and writes the packed halfword results to `rd`.
 
+<<<
 ==== PMINU.W
 
 ===== Encoding
@@ -8046,6 +8181,7 @@ PMINU.W computes the unsigned minimum of corresponding packed 32-bit word
 elements of `rs1` and `rs2` and writes the packed word results to `rd`.
 Available only in RV64.
 
+<<<
 ==== PMAX.B
 
 ===== Encoding
@@ -8090,6 +8226,7 @@ pmax.b _rd_, _rs1_, _rs2_
 PMAX.B computes the signed maximum of corresponding packed 8-bit byte elements
 of `rs1` and `rs2` and writes the packed byte results to `rd`.
 
+<<<
 ==== PMAX.H
 
 ===== Encoding
@@ -8134,6 +8271,7 @@ pmax.h _rd_, _rs1_, _rs2_
 PMAX.H computes the signed maximum of corresponding packed 16-bit halfword
 elements of `rs1` and `rs2` and writes the packed halfword results to `rd`.
 
+<<<
 ==== PMAX.W
 
 ===== Encoding
@@ -8177,6 +8315,7 @@ PMAX.W computes the signed maximum of corresponding packed 32-bit word elements
 of `rs1` and `rs2` and writes the packed word results to `rd`. Available only
 in RV64.
 
+<<<
 ==== PMAXU.B
 
 ===== Encoding
@@ -8221,6 +8360,7 @@ pmaxu.b _rd_, _rs1_, _rs2_
 PMAXU.B computes the unsigned maximum of corresponding packed 8-bit byte
 elements of `rs1` and `rs2` and writes the packed byte results to `rd`.
 
+<<<
 ==== PMAXU.H
 
 ===== Encoding
@@ -8265,6 +8405,7 @@ pmaxu.h _rd_, _rs1_, _rs2_
 PMAXU.H computes the unsigned maximum of corresponding packed 16-bit halfword
 elements of `rs1` and `rs2` and writes the packed halfword results to `rd`.
 
+<<<
 ==== PMAXU.W
 
 ===== Encoding
@@ -8308,6 +8449,7 @@ PMAXU.W computes the unsigned maximum of corresponding packed 32-bit word
 elements of `rs1` and `rs2` and writes the packed word results to `rd`.
 Available only in RV64.
 
+<<<
 ==== PMIN.DB
 
 ===== Encoding
@@ -8367,6 +8509,7 @@ and one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Available
 only in RV32.
 
+<<<
 ==== PMIN.DH
 
 ===== Encoding
@@ -8426,6 +8569,7 @@ even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMIN.DW
 
 ===== Encoding
@@ -8478,6 +8622,7 @@ registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMINU.DB
 
 ===== Encoding
@@ -8537,6 +8682,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMINU.DH
 
 ===== Encoding
@@ -8596,6 +8742,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMINU.DW
 
 ===== Encoding
@@ -8648,6 +8795,7 @@ registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMAX.DB
 
 ===== Encoding
@@ -8707,6 +8855,7 @@ and one on the odd registers of each pair. All three operands (`rd_p`, `rs1_p`,
 `rs2_p`) are register pairs and must specify even register numbers. Available
 only in RV32.
 
+<<<
 ==== PMAX.DH
 
 ===== Encoding
@@ -8766,6 +8915,7 @@ even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMAX.DW
 
 ===== Encoding
@@ -8818,6 +8968,7 @@ registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMAXU.DB
 
 ===== Encoding
@@ -8877,6 +9028,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMAXU.DH
 
 ===== Encoding
@@ -8936,6 +9088,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PMAXU.DW
 
 ===== Encoding
@@ -8988,6 +9141,7 @@ registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 === Comparison
 
 ==== PMSEQ.B
@@ -9036,6 +9190,7 @@ byte elements of `rs1` and `rs2`. For each element position, if the elements
 are equal the result byte is set to all ones (0xFF); otherwise it is set to
 all zeros (0x00). The packed results are written to `rd`.
 
+<<<
 ==== PMSEQ.H
 
 ===== Encoding
@@ -9082,6 +9237,7 @@ PMSEQ.H (Packed Mask Set-if-Equal, Halfword) compares corresponding packed
 elements are equal the result halfword is set to all ones (0xFFFF); otherwise
 it is set to all zeros (0x0000). The packed results are written to `rd`.
 
+<<<
 ==== PMSEQ.W (RV64)
 
 ===== Encoding
@@ -9122,6 +9278,7 @@ pmseq.w _rd_, _rs1_, _rs2_
 The PMSEQ.W instruction compares corresponding packed 32-bit elements for
 equality and produces a packed word mask in `rd`.
 
+<<<
 ==== PMSLT.B
 
 ===== Encoding
@@ -9168,6 +9325,7 @@ elements of `rs1` and `rs2`. For each element, if the signed value of `rs1` is
 less than the signed value of `rs2`, the corresponding byte in `rd` is set to
 all-ones (0xFF); otherwise it is set to all-zeros (0x00).
 
+<<<
 ==== PMSLT.H
 
 ===== Encoding
@@ -9214,6 +9372,7 @@ halfword elements of `rs1` and `rs2`. For each element, if the signed value of
 `rs1` is less than the signed value of `rs2`, the corresponding halfword in `rd`
 is set to all-ones (0xFFFF); otherwise it is set to all-zeros (0x0000).
 
+<<<
 ==== PMSLT.W (RV64)
 
 ===== Encoding
@@ -9254,6 +9413,7 @@ pmslt.w _rd_, _rs1_, _rs2_
 The PMSLT.W instruction performs signed less-than comparisons on corresponding
 packed 32-bit elements and produces a packed word mask in `rd`.
 
+<<<
 ==== PMSLTU.B
 
 ===== Encoding
@@ -9300,6 +9460,7 @@ byte elements of `rs1` and `rs2`. For each element, if the unsigned value of
 `rs1` is less than the unsigned value of `rs2`, the corresponding byte in `rd` is
 set to all-ones (0xFF); otherwise it is set to all-zeros (0x00).
 
+<<<
 ==== PMSLTU.H
 
 ===== Encoding
@@ -9346,6 +9507,7 @@ halfword elements of `rs1` and `rs2`. For each element, if the unsigned value of
 `rs1` is less than the unsigned value of `rs2`, the corresponding halfword in
 `rd` is set to all-ones (0xFFFF); otherwise it is set to all-zeros (0x0000).
 
+<<<
 ==== PMSLTU.W (RV64)
 
 ===== Encoding
@@ -9386,6 +9548,7 @@ pmsltu.w _rd_, _rs1_, _rs2_
 The PMSLTU.W instruction performs unsigned less-than comparisons on corresponding
 packed 32-bit elements and produces a packed word mask in `rd`.
 
+<<<
 ==== MSEQ (RV32)
 
 ===== Encoding
@@ -9422,6 +9585,7 @@ mseq _rd_, _rs1_, _rs2_
 The MSEQ instruction sets `rd` to all ones if `rs1` equals `rs2`; otherwise it
 sets `rd` to zero.
 
+<<<
 ==== MSLT (RV32)
 
 ===== Encoding
@@ -9458,6 +9622,7 @@ mslt _rd_, _rs1_, _rs2_
 The MSLT instruction sets `rd` to all ones if `rs1` is less than `rs2` using
 signed comparison; otherwise it sets `rd` to zero.
 
+<<<
 ==== MSLTU (RV32)
 
 ===== Encoding
@@ -9495,6 +9660,7 @@ The MSLTU instruction sets `rd` to all ones if `rs1` is less than `rs2` using
 unsigned comparison; otherwise it sets `rd` to zero.
 
 
+<<<
 ==== PMSEQ.DB
 
 ===== Encoding
@@ -9555,6 +9721,7 @@ even registers and one on the odd registers of each pair. All three operands
 numbers. For each element, the result is all-ones (0xFF) if the elements are
 equal, or all-zeros (0x00) otherwise. Available only in RV32.
 
+<<<
 ==== PMSEQ.DH
 
 ===== Encoding
@@ -9615,6 +9782,7 @@ even registers and one on the odd registers of each pair. All three operands
 numbers. For each element, the result is all-ones (0xFFFF) if the elements are
 equal, or all-zeros (0x0000) otherwise. Available only in RV32.
 
+<<<
 ==== PMSEQ.DW
 
 ===== Encoding
@@ -9668,6 +9836,7 @@ even registers and one on the odd registers of each pair. All three operands
 numbers. For each element, the result is all-ones (0xFFFFFFFF) if the elements
 are equal, or all-zeros (0x00000000) otherwise. Available only in RV32.
 
+<<<
 ==== PMSLT.DB
 
 ===== Encoding
@@ -9729,6 +9898,7 @@ register numbers. For each element, the result is all-ones (0xFF) if the signed
 `rs1` element is less than the signed `rs2` element, or all-zeros (0x00)
 otherwise. Available only in RV32.
 
+<<<
 ==== PMSLT.DH
 
 ===== Encoding
@@ -9790,6 +9960,7 @@ register numbers. For each element, the result is all-ones (0xFFFF) if the signe
 `rs1` element is less than the signed `rs2` element, or all-zeros (0x0000)
 otherwise. Available only in RV32.
 
+<<<
 ==== PMSLT.DW
 
 ===== Encoding
@@ -9844,6 +10015,7 @@ numbers. For each element, the result is all-ones (0xFFFFFFFF) if the signed
 `rs1` element is less than the signed `rs2` element, or all-zeros (0x00000000)
 otherwise. Available only in RV32.
 
+<<<
 ==== PMSLTU.DB
 
 ===== Encoding
@@ -9905,6 +10077,7 @@ even register numbers. For each element, the result is all-ones (0xFF) if the
 unsigned `rs1` element is less than the unsigned `rs2` element, or all-zeros
 (0x00) otherwise. Available only in RV32.
 
+<<<
 ==== PMSLTU.DH
 
 ===== Encoding
@@ -9966,6 +10139,7 @@ even register numbers. For each element, the result is all-ones (0xFFFF) if the
 unsigned `rs1` element is less than the unsigned `rs2` element, or all-zeros
 (0x0000) otherwise. Available only in RV32.
 
+<<<
 ==== PMSLTU.DW
 
 ===== Encoding
@@ -10020,6 +10194,7 @@ numbers. For each element, the result is all-ones (0xFFFFFFFF) if the unsigned
 `rs1` element is less than the unsigned `rs2` element, or all-zeros (0x00000000)
 otherwise. Available only in RV32.
 
+<<<
 === Sign Extension
 
 ==== PSEXT.H.B
@@ -10067,6 +10242,7 @@ PSEXT.H.B sign-extends packed 8-bit byte elements from the lower byte of each
 upper byte of each halfword input is ignored; only the lower byte is
 sign-extended.
 
+<<<
 ==== PSEXT.W.B (RV64)
 
 ===== Encoding
@@ -10103,6 +10279,7 @@ psext.w.b _rd_, _rs1_
 The PSEXT.W.B instruction extracts byte elements from `rs1`, sign-extends them
 to 32-bit values, and packs them into `rd`.
 
+<<<
 ==== PSEXT.W.H (RV64)
 
 ===== Encoding
@@ -10140,6 +10317,7 @@ The PSEXT.W.H instruction extracts halfword elements from `rs1`, sign-extends
 them to 32-bit values, and packs them into `rd`.
 
 
+<<<
 ==== PSEXT.DH.B
 
 ===== Encoding
@@ -10194,6 +10372,7 @@ the even registers and one on the odd registers of each pair. Both operands
 (`rd_p`, `rs1_p`) are register pairs and must specify even register numbers.
 Available only in RV32.
 
+<<<
 ==== PSEXT.DW.B
 
 ===== Encoding
@@ -10243,6 +10422,7 @@ even registers and one on the odd registers of each pair. Both operands (`rd_p`,
 `rs1_p`) are register pairs and must specify even register numbers. Available
 only in RV32.
 
+<<<
 ==== PSEXT.DW.H
 
 ===== Encoding
@@ -10292,6 +10472,7 @@ even registers and one on the odd registers of each pair. Both operands (`rd_p`,
 `rs1_p`) are register pairs and must specify even register numbers. Available
 only in RV32.
 
+<<<
 === Saturation/Clipping
 
 ==== PSATI.H
@@ -10351,6 +10532,7 @@ If an element exceeds the range, the result is clamped to the nearest bound and
 the `vxsat` overflow flag is set. Elements already within range are passed
 through unchanged.
 
+<<<
 ==== PSATI.W
 
 ===== Encoding
@@ -10408,6 +10590,7 @@ element exceeds the range, the result is clamped to the nearest bound and the
 `vxsat` overflow flag is set. Elements already within range are passed through
 unchanged. Available only in RV64.
 
+<<<
 ==== PUSATI.H
 
 ===== Encoding
@@ -10464,6 +10647,7 @@ immediate. Negative values are clamped to zero and values exceeding the maximum
 are clamped to 2^n - 1. When clamping occurs, the `vxsat` overflow flag is set.
 Elements already within range are passed through unchanged.
 
+<<<
 ==== PUSATI.W
 
 ===== Encoding
@@ -10520,7 +10704,8 @@ Negative values are clamped to zero and values exceeding the maximum are clamped
 to 2^n - 1. When clamping occurs, the `vxsat` overflow flag is set. Elements
 already within range are passed through unchanged. Available only in RV64.
 
-==== SATI
+<<<
+==== SATI (RV64)
 
 ===== Encoding
 
@@ -10616,7 +10801,8 @@ immediate `uimm5` or `uimm6` and writes the result to `rd`.
 
 * `vxsat` is set to 1 if saturation occurs.
 
-==== USATI
+<<<
+==== USATI (RV64)
 
 ===== Encoding
 
@@ -10711,6 +10897,7 @@ determined by the immediate `uimm5` or `uimm6` and writes the result to `rd`.
 * `vxsat` is set to 1 if saturation occurs.
 
 
+<<<
 ==== PSATI.DH
 
 ===== Encoding
@@ -10784,6 +10971,7 @@ element is saturated to the signed range [-(2^n), 2^n - 1], where n is specified
 by the 4-bit unsigned immediate. When clamping occurs, the `vxsat` overflow flag
 is set. Available only in RV32.
 
+<<<
 ==== PSATI.DW
 
 ===== Encoding
@@ -10851,6 +11039,7 @@ saturation occurs, `vxsat` is set. The destination (`rd_p`) and source
 (`rs1_p`) are register pairs and must specify even register numbers. Available
 only in RV32.
 
+<<<
 ==== PUSATI.DH
 
 ===== Encoding
@@ -10921,6 +11110,7 @@ element is clamped to the range [0, 2^n - 1] where `n` is encoded in the
 and source (`rs1_p`) are register pairs and must specify even register numbers.
 Available only in RV32.
 
+<<<
 ==== PUSATI.DW
 
 ===== Encoding
@@ -10987,6 +11177,7 @@ element is clamped to the range [0, 2^n - 1] where `n` is encoded in the
 and source (`rs1_p`) are register pairs and must specify even register numbers.
 Available only in RV32.
 
+<<<
 === Shift Operations
 
 ==== PSLL.BS
@@ -11031,6 +11222,7 @@ psll.bs _rd_, _rs1_, _rs2_
 The PSLL.BS instruction shifts each packed 8-bit element of `rs1` left by the
 shift amount in `rs2[4:0]` and writes the packed byte result to `rd`.
 
+<<<
 ==== PSLL.HS
 
 ===== Encoding
@@ -11073,6 +11265,7 @@ psll.hs _rd_, _rs1_, _rs2_
 The PSLL.HS instruction shifts each packed 16-bit element of `rs1` left by the
 shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
 
+<<<
 ==== PSLL.WS
 
 ===== Encoding
@@ -11118,6 +11311,7 @@ amount in `rs2[4:0]` and writes the packed word result to `rd`. Bits shifted
 out are discarded and vacated bit positions are filled with zeros. Available
 only in RV64.
 
+<<<
 ==== PSRL.BS
 
 ===== Encoding
@@ -11160,6 +11354,7 @@ psrl.bs _rd_, _rs1_, _rs2_
 The PSRL.BS instruction logically shifts each packed 8-bit element of `rs1`
 right by the shift amount in `rs2[4:0]` and writes the packed byte result to `rd`.
 
+<<<
 ==== PSRL.HS
 
 ===== Encoding
@@ -11202,6 +11397,7 @@ psrl.hs _rd_, _rs1_, _rs2_
 The PSRL.HS instruction logically shifts each packed 16-bit element of `rs1`
 right by the shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
 
+<<<
 ==== PSRL.WS
 
 ===== Encoding
@@ -11247,6 +11443,7 @@ scalar shift amount in `rs2[4:0]` and writes the packed word result to `rd`.
 Bits shifted out are discarded and vacated bit positions are filled with zeros.
 Available only in RV64.
 
+<<<
 ==== PSRA.BS
 
 ===== Encoding
@@ -11289,6 +11486,7 @@ psra.bs _rd_, _rs1_, _rs2_
 The PSRA.BS instruction arithmetically shifts each packed 8-bit element of `rs1`
 right by the shift amount in `rs2[4:0]` and writes the packed byte result to `rd`.
 
+<<<
 ==== PSRA.HS
 
 ===== Encoding
@@ -11332,6 +11530,7 @@ The PSRA.HS instruction arithmetically shifts each packed 16-bit element of `rs1
 right by the shift amount in `rs2[4:0]` and writes the packed halfword result to `rd`.
 
 
+<<<
 ==== PSRA.WS
 
 ===== Encoding
@@ -11377,6 +11576,7 @@ scalar shift amount in `rs2[4:0]` and writes the packed word result to `rd`.
 Bits shifted out are discarded and vacated bit positions are filled with copies
 of the sign bit. Available only in RV64.
 
+<<<
 ==== PSLLI.B
 
 ===== Encoding
@@ -11423,6 +11623,7 @@ PSLLI.B shifts each packed 8-bit element of `rs1` left by the immediate shift
 amount encoded in `uimm3` and writes the packed byte result to `rd`. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 
+<<<
 ==== PSLLI.H
 
 ===== Encoding
@@ -11469,6 +11670,7 @@ PSLLI.H shifts each packed 16-bit element of `rs1` left by the immediate shift
 amount encoded in `uimm4` and writes the packed halfword result to `rd`.
 Bits shifted out are discarded and vacated bit positions are filled with zeros.
 
+<<<
 ==== PSLLI.W
 
 ===== Encoding
@@ -11516,6 +11718,7 @@ amount encoded in `uimm5` and writes the packed word result to `rd`. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 Available only in RV64.
 
+<<<
 ==== PSRLI.B
 
 ===== Encoding
@@ -11563,6 +11766,7 @@ immediate shift amount encoded in `uimm3` and writes the packed byte result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with zeros.
 
+<<<
 ==== PSRLI.H
 
 ===== Encoding
@@ -11610,6 +11814,7 @@ immediate shift amount encoded in `uimm4` and writes the packed halfword
 result to `rd`. Bits shifted out are discarded and vacated bit positions are
 filled with zeros.
 
+<<<
 ==== PSRLI.W
 
 ===== Encoding
@@ -11657,6 +11862,7 @@ immediate shift amount encoded in `uimm5` and writes the packed word result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with zeros. Available only in RV64.
 
+<<<
 ==== PSRAI.B
 
 ===== Encoding
@@ -11704,6 +11910,7 @@ immediate shift amount encoded in `uimm3` and writes the packed byte result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with copies of the sign bit.
 
+<<<
 ==== PSRAI.H
 
 ===== Encoding
@@ -11751,6 +11958,7 @@ immediate shift amount encoded in `uimm4` and writes the packed halfword
 result to `rd`. Bits shifted out are discarded and vacated bit positions are
 filled with copies of the sign bit.
 
+<<<
 ==== PSRAI.W
 
 ===== Encoding
@@ -11798,6 +12006,7 @@ immediate shift amount encoded in `uimm5` and writes the packed word result
 to `rd`. Bits shifted out are discarded and vacated bit positions are filled
 with copies of the sign bit. Available only in RV64.
 
+<<<
 ==== PSRARI.H
 
 ===== Encoding
@@ -11847,6 +12056,7 @@ the immediate shift amount encoded in `uimm4` with rounding and writes the
 packed halfword result to `rd`. A rounding bit is added before the shift so that
 the result is rounded to the nearest integer (round-to-nearest, ties round up).
 
+<<<
 ==== PSRARI.W
 
 ===== Encoding
@@ -11897,6 +12107,7 @@ packed word result to `rd`. A rounding bit is added before the shift so that the
 result is rounded to the nearest integer (round-to-nearest, ties round up).
 Available only in RV64.
 
+<<<
 ==== PSLL.DBS
 
 ===== Encoding
@@ -11955,6 +12166,7 @@ pairs and must specify even register numbers; `rs2` is a single register. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 Available only in RV32.
 
+<<<
 ==== PSLL.DHS
 
 ===== Encoding
@@ -12013,6 +12225,7 @@ pairs and must specify even register numbers; `rs2` is a single register. Bits
 shifted out are discarded and vacated bit positions are filled with zeros.
 Available only in RV32.
 
+<<<
 ==== PSLL.DWS
 
 ===== Encoding
@@ -12066,6 +12279,7 @@ must specify even register numbers; `rs2` is a single register. Bits shifted out
 are discarded and vacated bit positions are filled with zeros. Available only in
 RV32.
 
+<<<
 ==== PSRL.DBS
 
 ===== Encoding
@@ -12124,6 +12338,7 @@ are register pairs and must specify even register numbers; `rs2` is a single
 register. Bits shifted out are discarded and vacated bit positions are filled
 with zeros. Available only in RV32.
 
+<<<
 ==== PSRL.DHS
 
 ===== Encoding
@@ -12182,6 +12397,7 @@ are register pairs and must specify even register numbers; `rs2` is a single
 register. Bits shifted out are discarded and vacated bit positions are filled
 with zeros. Available only in RV32.
 
+<<<
 ==== PSRL.DWS
 
 ===== Encoding
@@ -12235,6 +12451,7 @@ of each pair. The destination (`rd_p`) and first source (`rs1_p`) are register
 pairs and must specify even register numbers; `rs2` is a single register.
 Available only in RV32.
 
+<<<
 ==== PSRA.DBS
 
 ===== Encoding
@@ -12294,6 +12511,7 @@ are register pairs and must specify even register numbers; `rs2` is a single
 register. Each element is sign-extended before shifting. Available only in
 RV32.
 
+<<<
 ==== PSRA.DHS
 
 ===== Encoding
@@ -12353,6 +12571,7 @@ the odd registers of each pair. The destination (`rd_p`) and first source
 a single register. Each element is sign-extended before shifting. Available
 only in RV32.
 
+<<<
 ==== PSRA.DWS
 
 ===== Encoding
@@ -12406,6 +12625,7 @@ of each pair. The destination (`rd_p`) and first source (`rs1_p`) are register
 pairs and must specify even register numbers; `rs2` is a single register.
 Each element is sign-extended before shifting. Available only in RV32.
 
+<<<
 ==== PSLLI.DB
 
 ===== Encoding
@@ -12463,6 +12683,7 @@ the even registers and one on the odd registers of each pair. The destination
 (`rd_p`) and source (`rs1_p`) are register pairs and must specify even register
 numbers. Vacated bits are filled with zeros. Available only in RV32.
 
+<<<
 ==== PSLLI.DH
 
 ===== Encoding
@@ -12521,6 +12742,7 @@ pair. The destination (`rd_p`) and source (`rs1_p`) are register pairs and
 must specify even register numbers. Vacated bits are filled with zeros.
 Available only in RV32.
 
+<<<
 ==== PSLLI.DW
 
 ===== Encoding
@@ -12573,6 +12795,7 @@ even registers and one on the odd registers of each pair. The destination
 (`rd_p`) and source (`rs1_p`) are register pairs and must specify even register
 numbers. Vacated bits are filled with zeros. Available only in RV32.
 
+<<<
 ==== PSRLI.DB
 
 ===== Encoding
@@ -12631,6 +12854,7 @@ pair. The destination (`rd_p`) and source (`rs1_p`) are register pairs and
 must specify even register numbers. Vacated bits are filled with zeros.
 Available only in RV32.
 
+<<<
 ==== PSRLI.DH
 
 ===== Encoding
@@ -12689,6 +12913,7 @@ pair. The destination (`rd_p`) and source (`rs1_p`) are register pairs and
 must specify even register numbers. Vacated bits are filled with zeros.
 Available only in RV32.
 
+<<<
 ==== PSRLI.DW
 
 ===== Encoding
@@ -12742,6 +12967,7 @@ destination (`rd_p`) and source (`rs1_p`) are register pairs and must specify
 even register numbers. Vacated bits are filled with zeros. Available only in
 RV32.
 
+<<<
 ==== PSRAI.DB
 
 ===== Encoding
@@ -12800,6 +13026,7 @@ of each pair. The destination (`rd_p`) and source (`rs1_p`) are register pairs
 and must specify even register numbers. Each element is sign-extended before
 shifting. Available only in RV32.
 
+<<<
 ==== PSRAI.DH
 
 ===== Encoding
@@ -12858,6 +13085,7 @@ the odd registers of each pair. The destination (`rd_p`) and source (`rs1_p`)
 are register pairs and must specify even register numbers. Each element is
 sign-extended before shifting. Available only in RV32.
 
+<<<
 ==== PSRAI.DW
 
 ===== Encoding
@@ -12911,6 +13139,7 @@ each pair. The destination (`rd_p`) and source (`rs1_p`) are register pairs
 and must specify even register numbers. Each element is sign-extended before
 shifting. Available only in RV32.
 
+<<<
 ==== PSRARI.DH
 
 ===== Encoding
@@ -12978,6 +13207,7 @@ and source (`rs1_p`) are register pairs and must specify even register numbers.
 The shifted-out bit immediately below the least-significant result bit is
 added for rounding. Available only in RV32.
 
+<<<
 ==== PSRARI.DW
 
 ===== Encoding
@@ -13040,6 +13270,7 @@ and one on the odd registers of each pair. The destination (`rd_p`) and source
 shifted-out bit immediately below the least-significant result bit is added
 for rounding. Available only in RV32.
 
+<<<
 === Saturating/Rounding Shift
 
 ==== PSSHA.HS
@@ -13116,6 +13347,7 @@ to the signed 16-bit range.
 
 * `vxsat` is set to 1 if saturation occurs in any element.
 
+<<<
 ==== PSSHA.WS (RV64)
 
 ===== Encoding
@@ -13150,6 +13382,7 @@ The PSSHA.WS instruction performs a signed variable shift on each packed 32-bit
 element of `rs1` using the signed shift amount in `rs2[7:0]`. Left shifts
 saturate to the signed 32-bit range.
 
+<<<
 ==== PSSHAR.HS
 
 ===== Encoding
@@ -13221,6 +13454,7 @@ rounded, and left shifts saturate to the signed 16-bit range.
 
 * `vxsat` is set to 1 if saturation occurs in any element.
 
+<<<
 ==== PSSHAR.WS (RV64)
 
 ===== Encoding
@@ -13255,6 +13489,7 @@ The PSSHAR.WS instruction performs a signed variable shift on each packed 32-bit
 element of `rs1` using the signed shift amount in `rs2[7:0]`. Right shifts are
 rounded, and left shifts saturate to the signed 32-bit range.
 
+<<<
 ==== PSSLAI.H
 
 ===== Encoding
@@ -13311,6 +13546,7 @@ If the shifted result overflows the signed 16-bit range [-2^15, 2^15-1], the
 result is saturated to the nearest boundary and the `vxsat` flag is set. The
 packed halfword results are written to `rd`.
 
+<<<
 ==== PSSLAI.W
 
 ===== Encoding
@@ -13367,6 +13603,7 @@ the shifted result overflows the signed 32-bit range [-2^31, 2^31-1], the
 result is saturated to the nearest boundary and the `vxsat` flag is set. The
 packed word results are written to `rd`. Available only in RV64.
 
+<<<
 ==== SSHA (RV32)
 
 ===== Encoding
@@ -13425,6 +13662,7 @@ ssha _rd_, _rs1_, _rs2_
 The SSHA instruction performs a signed variable shift of `rs1` using the signed
 shift amount in `rs2[7:0]`. Left shifts saturate to the signed 32-bit range.
 
+<<<
 ==== SSHAR (RV32)
 
 ===== Encoding
@@ -13489,6 +13727,7 @@ to the signed 32-bit range.
 
 * `vxsat` is set to 1 if saturation occurs.
 
+<<<
 ==== SSLAI
 
 ===== Encoding
@@ -13544,6 +13783,7 @@ shift amount and writes the result to `rd` with signed saturation. If the
 shifted result overflows the signed XLEN-wide range, the result is clamped
 to the nearest boundary and the `vxsat` overflow flag is set.
 
+<<<
 ==== SRARI
 
 ===== Encoding
@@ -13619,6 +13859,7 @@ rounding bit is added before the final shift so that the result is rounded
 to the nearest integer (round-to-nearest, ties round up). When the shift
 amount is zero the source value is written unchanged.
 
+<<<
 ==== SHA (RV64)
 
 ===== Encoding
@@ -13671,6 +13912,7 @@ The SHA instruction performs a signed variable shift of `rs1` using the signed
 shift amount in `rs2[7:0]`. Negative shift amounts shift right; non-negative
 shift amounts shift left.
 
+<<<
 ==== SHAR (RV64)
 
 ===== Encoding
@@ -13724,6 +13966,7 @@ The SHAR instruction matches SHA for non-negative shift amounts. For negative
 shift amounts it performs a rounding right shift as specified in the Sail code.
 
 
+<<<
 ==== PSSHA.DHS
 
 ===== Encoding
@@ -13806,6 +14049,7 @@ pair. The destination (`rd_p`) and first source (`rs1_p`) are register pairs
 and must specify even register numbers; `rs2` is a single register. Available
 only in RV32.
 
+<<<
 ==== PSSHA.DWS
 
 ===== Encoding
@@ -13882,6 +14126,7 @@ pair. The destination (`rd_p`) and first source (`rs1_p`) are register pairs
 and must specify even register numbers; `rs2` is a single register. Available
 only in RV32.
 
+<<<
 ==== PSSHAR.DHS
 
 ===== Encoding
@@ -13969,6 +14214,7 @@ of each pair. The destination (`rd_p`) and first source (`rs1_p`) are register
 pairs and must specify even register numbers; `rs2` is a single register.
 Available only in RV32.
 
+<<<
 ==== PSSHAR.DWS
 
 ===== Encoding
@@ -14051,6 +14297,7 @@ pair. The destination (`rd_p`) and first source (`rs1_p`) are register pairs
 and must specify even register numbers; `rs2` is a single register. Available
 only in RV32.
 
+<<<
 ==== PSSLAI.DH
 
 ===== Encoding
@@ -14122,6 +14369,7 @@ Both operands (`rd_p`, `rs1_p`) are register pairs and must specify even registe
 numbers. If any result overflows the signed 16-bit range, it is saturated and the
 `vxsat` flag is set. Available only in RV32.
 
+<<<
 ==== PSSLAI.DW
 
 ===== Encoding
@@ -14191,6 +14439,7 @@ Both operands (`rd_p`, `rs1_p`) are register pairs and must specify even registe
 numbers. If any result overflows the signed 32-bit range, it is saturated and the
 `vxsat` flag is set. Available only in RV32.
 
+<<<
 === Pair Operations
 
 ==== PPAIRE.B
@@ -14239,6 +14488,7 @@ The PPAIRE.B instruction forms packed 16-bit elements by pairing the low byte of
 halfword element of `rs2` as the high byte with the low byte of the corresponding
 halfword element of `rs1` as the low byte.
 
+<<<
 ==== PPAIRE.H
 
 ===== Encoding
@@ -14287,6 +14537,7 @@ corresponding 32-bit word of `rd`. Within each 32-bit group, the lower halfword
 comes from `rs1` and the upper halfword comes from `rs2`. On RV32, this
 instruction is an alias for PACK.
 
+<<<
 ==== PPAIREO.B
 
 ===== Encoding
@@ -14332,6 +14583,7 @@ ppaireo.b _rd_, _rs1_, _rs2_
 The PPAIREO.B instruction pairs the high byte of each halfword element of `rs2` with
 the low byte of the corresponding halfword element of `rs1`, producing packed halfwords.
 
+<<<
 ==== PPAIREO.H
 
 ===== Encoding
@@ -14379,6 +14631,7 @@ word of `rs2`, and packs them together into the corresponding 32-bit word of
 `rd`. Within each 32-bit group, the lower halfword comes from the even position
 of `rs1` and the upper halfword comes from the odd position of `rs2`.
 
+<<<
 ==== PPAIREO.W
 
 ===== Encoding
@@ -14424,6 +14677,7 @@ PPAIREO.W (Pack Pair Even-Odd Words) extracts the even (lower) 32-bit word from
 lower word of the result comes from the even position of `rs1` and the upper word
 comes from the odd position of `rs2`. Available only in RV64.
 
+<<<
 ==== PPAIROE.B
 
 ===== Encoding
@@ -14469,6 +14723,7 @@ ppairoe.b _rd_, _rs1_, _rs2_
 The PPAIROE.B instruction pairs the low byte of each halfword element of `rs2` with
 the high byte of the corresponding halfword element of `rs1`, producing packed halfwords.
 
+<<<
 ==== PPAIROE.H
 
 ===== Encoding
@@ -14516,6 +14771,7 @@ of `rs2`, and packs them together into the corresponding 32-bit word of `rd`.
 Within each 32-bit group, the lower halfword comes from the odd position of
 `rs1` and the upper halfword comes from the even position of `rs2`.
 
+<<<
 ==== PPAIROE.W
 
 ===== Encoding
@@ -14561,6 +14817,7 @@ PPAIROE.W (Pack Pair Odd-Even Words) extracts the odd (upper) 32-bit word from
 lower word of the result comes from the odd position of `rs1` and the upper word
 comes from the even position of `rs2`. Available only in RV64.
 
+<<<
 ==== PPAIRO.B
 
 ===== Encoding
@@ -14607,6 +14864,7 @@ The PPAIRO.B instruction pairs the high byte of each halfword element of `rs2` w
 the high byte of the corresponding halfword element of `rs1`, producing packed halfwords.
 
 
+<<<
 ==== PPAIRO.H
 
 ===== Encoding
@@ -14654,6 +14912,7 @@ PPAIRO.H (Pack Pair Odd Halfwords) extracts the odd (upper) halfword from each
 odd position of `rs1` and the upper halfword comes from the odd position of
 `rs2`.
 
+<<<
 ==== PPAIRO.W
 
 ===== Encoding
@@ -14699,6 +14958,7 @@ PPAIRO.W (Pack Pair Odd Words) extracts the odd (upper) 32-bit word from both
 from the odd position of `rs1` and the upper word comes from the odd position of
 `rs2`. Available only in RV64.
 
+<<<
 ==== PPAIRE.DB
 
 ===== Encoding
@@ -14758,6 +15018,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIRE.DH
 
 ===== Encoding
@@ -14817,6 +15078,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIREO.DB
 
 ===== Encoding
@@ -14876,6 +15138,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIREO.DH
 
 ===== Encoding
@@ -14935,6 +15198,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIROE.DB
 
 ===== Encoding
@@ -14994,6 +15258,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIROE.DH
 
 ===== Encoding
@@ -15053,6 +15318,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIRO.DB
 
 ===== Encoding
@@ -15112,6 +15378,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== PPAIRO.DH
 
 ===== Encoding
@@ -15171,6 +15438,7 @@ the even registers and one on the odd registers of each pair. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 === Zip/Unzip and Byte-Reverse
 
 ==== ZIP8P (RV64)
@@ -15215,6 +15483,7 @@ zip8p _rd_, _rs1_, _rs2_
 The ZIP8P instruction interleaves bytes from `rs2` and `rs1` to form a packed 64-bit result:
 for each byte position, the corresponding byte from `rs2` is placed above the byte from `rs1`.
 
+<<<
 ==== ZIP8HP (RV64)
 
 ===== Encoding
@@ -15257,6 +15526,7 @@ zip8hp _rd_, _rs1_, _rs2_
 The ZIP8HP instruction interleaves bytes from the high 32-bit halves of `rs2` and
 `rs1` to form a 64-bit result.
 
+<<<
 ==== UNZIP8P (RV64)
 
 ===== Encoding
@@ -15299,6 +15569,7 @@ unzip8p _rd_, _rs1_, _rs2_
 The UNZIP8P instruction de-interleaves bytes from `rs2` and `rs1` to form a 64-bit
 result containing selected byte lanes from each source.
 
+<<<
 ==== UNZIP8HP (RV64)
 
 ===== Encoding
@@ -15341,6 +15612,7 @@ unzip8hp _rd_, _rs1_, _rs2_
 The UNZIP8HP instruction de-interleaves bytes from `rs2` and `rs1` using the
 high-part byte selection pattern and forms a 64-bit result.
 
+<<<
 ==== ZIP16P (RV64)
 
 ===== Encoding
@@ -15381,6 +15653,7 @@ zip16p _rd_, _rs1_, _rs2_
 The ZIP16P instruction interleaves 16-bit chunks from `rs2` and `rs1` to form a
 64-bit result.
 
+<<<
 ==== ZIP16HP (RV64)
 
 ===== Encoding
@@ -15421,6 +15694,7 @@ zip16hp _rd_, _rs1_, _rs2_
 The ZIP16HP instruction interleaves 16-bit chunks from the high 32-bit halves of
 `rs2` and `rs1` to form a 64-bit result.
 
+<<<
 ==== UNZIP16P (RV64)
 
 ===== Encoding
@@ -15461,6 +15735,7 @@ unzip16p _rd_, _rs1_, _rs2_
 The UNZIP16P instruction de-interleaves 16-bit chunks from `rs2` and `rs1` and
 forms a 64-bit result.
 
+<<<
 ==== UNZIP16HP (RV64)
 
 ===== Encoding
@@ -15501,6 +15776,7 @@ unzip16hp _rd_, _rs1_, _rs2_
 The UNZIP16HP instruction de-interleaves 16-bit chunks from the high 32-bit halves
 of `rs2` and `rs1` and forms a 64-bit result.
 
+<<<
 ==== REV16 (RV64)
 
 ===== Encoding
@@ -15535,6 +15811,7 @@ rev16 _rd_, _rs1_
 The REV16 instruction reverses the order of 16-bit chunks within the 64-bit value in `rs1`.
 
 
+<<<
 ==== REV
 
 ===== Encoding
@@ -15591,6 +15868,7 @@ REV reverses the bit order of the full XLEN-wide value in `rs1` and writes
 the result to `rd`. Bit 0 of the source becomes bit XLEN-1 of the result,
 bit 1 becomes bit XLEN-2, and so on.
 
+<<<
 === Miscellaneous Scalar
 
 ==== ABS
@@ -15626,6 +15904,7 @@ abs _rd_, _rs1_, _imm12_
 
 ABS writes the absolute value of `X[rs1]` to `rd`.
 
+<<<
 ==== ABSW (RV64)
 
 ===== Encoding
@@ -15660,6 +15939,7 @@ absw _rd_, _rs1_, _simm12_
 ABSW writes the absolute value of the low 32 bits of `rs1` (treated as signed)
 to `rd`, sign-extended to XLEN.
 
+<<<
 ==== CLS
 
 ===== Encoding
@@ -15701,6 +15981,7 @@ cls _rd_, _rs1_, _imm12_
 
 CLS returns the count `c` produced by the Sail reference algorithm.
 
+<<<
 ==== CLSW (RV64)
 
 ===== Encoding
@@ -15739,6 +16020,7 @@ clsw _rd_, _rs1_, _imm12_
 CLSW applies the CLS definition to the low 32 bits of `rs1` and writes the count
 as an XLEN value.
 
+<<<
 ==== SLX
 
 ===== Encoding
@@ -15776,6 +16058,7 @@ slx _rd_, _rs1_, _rs2_
 SLX shifts the 2*XLEN-bit concatenation `X[rd] @ X[rs1]` left by `shamt` and
 writes the upper XLEN bits to `rd`.
 
+<<<
 ==== SRX
 
 ===== Encoding
@@ -15813,6 +16096,7 @@ srx _rd_, _rs1_, _rs2_
 SRX shifts the 2*XLEN-bit concatenation `X[rs1] @ X[rd]` right by `shamt` and
 writes the lower XLEN bits to `rd`.
 
+<<<
 ==== MVM
 
 ===== Encoding
@@ -15849,6 +16133,7 @@ mvm _rd_, _rs1_, _rs2_
 
 MVM merges `rs1` and the prior value of `rd` under control of the mask `rs2`.
 
+<<<
 ==== MVMN
 
 ===== Encoding
@@ -15885,6 +16170,7 @@ mvmn _rd_, _rs1_, _rs2_
 
 MVMN is like MVM, but swaps the roles of `rs1` and the prior `rd` value.
 
+<<<
 ==== MERGE
 
 ===== Encoding
@@ -15922,6 +16208,7 @@ merge _rd_, _rs1_, _rs2_
 MERGE uses the prior value of `rd` as the mask to select between `rs1` and `rs2`.
 
 
+<<<
 === Double-wide Scalar Add/Subtract
 
 
@@ -15975,6 +16262,7 @@ written back to the register pair designated by `rd_p`. All three operands
 (`rd_p`, `rs1_p`, `rs2_p`) are register pairs and must specify even register
 numbers. Available only in RV32.
 
+<<<
 ==== SUBD
 
 ===== Encoding
@@ -16024,6 +16312,7 @@ forming a 64-bit value (even register = low word, odd register = high word).
 The 64-bit difference is written to the register pair designated by `rd_p`.
 All pair operands must specify even register numbers. Available only in RV32.
 
+<<<
 === Widening Add/Subtract
 
 ==== PWADD.B (RV32)
@@ -16075,6 +16364,7 @@ PWADD.B sign-extends corresponding packed 8-bit elements of `rs1` and `rs2` to
 signed values, adds them, and produces four packed 16-bit results. The 64-bit
 result is written to the register pair `{X[2*rd_p+1], X[2*rd_p]}` when `rd_p != 0`.
 
+<<<
 ==== PWADDA.B (RV32)
 
 ===== Encoding
@@ -16126,6 +16416,7 @@ PWADDA.B performs the same packed byte-to-halfword signed additions as PWADD.B,
 then adds each 16-bit result into the corresponding 16-bit element of the
 destination register pair.
 
+<<<
 ==== PWADDU.B (RV32)
 
 ===== Encoding
@@ -16175,6 +16466,7 @@ PWADDU.B zero-extends corresponding packed 8-bit elements of `rs1` and `rs2` to
 unsigned values, adds them, and produces four packed 16-bit results, written to
 the destination register pair when `rd_p != 0`.
 
+<<<
 ==== PWADDAU.B (RV32)
 
 ===== Encoding
@@ -16226,6 +16518,7 @@ PWADDAU.B performs the same packed byte-to-halfword unsigned additions as PWADDU
 then adds each 16-bit result into the corresponding 16-bit element of the
 destination register pair.
 
+<<<
 ==== PWSUB.B (RV32)
 
 ===== Encoding
@@ -16276,6 +16569,7 @@ subtracts them, and produces four packed 16-bit results. When `rd_p != 0`,
 the 64-bit result is written to the destination register pair
 `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== PWSUBA.B (RV32)
 
 ===== Encoding
@@ -16328,6 +16622,7 @@ PWSUBA.B performs the same packed byte-to-halfword signed subtraction as
 PWSUB.B, then adds each 16-bit result into the corresponding 16-bit element
 of the destination register pair.
 
+<<<
 ==== PWSUBU.B (RV32)
 
 ===== Encoding
@@ -16377,6 +16672,7 @@ PWSUBU.B zero-extends corresponding packed 8-bit elements of `rs1` and `rs2`,
 subtracts them as unsigned values, and produces four packed 16-bit results,
 written to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== PWSUBAU.B (RV32)
 
 ===== Encoding
@@ -16429,6 +16725,7 @@ PWSUBAU.B performs the same packed byte-to-halfword unsigned subtraction as
 PWSUBU.B, then adds each 16-bit result into the corresponding 16-bit element
 of the destination register pair.
 
+<<<
 ==== PWADD.H (RV32)
 
 ===== Encoding
@@ -16474,6 +16771,7 @@ pwadd.h _rd_p_, _rs1_, _rs2_
 PWADD.H sign-extends each 16-bit halfword element of `rs1` and `rs2`, adds them,
 and writes two 32-bit results to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== PWADDA.H (RV32)
 
 ===== Encoding
@@ -16522,6 +16820,7 @@ pwadda.h _rd_p_, _rs1_, _rs2_
 PWADDA.H performs PWADD.H and adds each 32-bit result into the corresponding
 32-bit element of the destination register pair.
 
+<<<
 ==== PWADDU.H (RV32)
 
 ===== Encoding
@@ -16566,6 +16865,7 @@ pwaddu.h _rd_p_, _rs1_, _rs2_
 PWADDU.H zero-extends each 16-bit halfword element of `rs1` and `rs2`, adds them,
 and writes two 32-bit results to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== PWADDAU.H (RV32)
 
 ===== Encoding
@@ -16614,6 +16914,7 @@ pwaddau.h _rd_p_, _rs1_, _rs2_
 PWADDAU.H performs PWADDU.H and accumulates the two 32-bit results into the
 destination register pair.
 
+<<<
 ==== PWSUB.H (RV32)
 
 ===== Encoding
@@ -16658,6 +16959,7 @@ pwsub.h _rd_p_, _rs1_, _rs2_
 PWSUB.H sign-extends each 16-bit halfword element, subtracts element-wise, and
 writes two 32-bit results to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== PWSUBA.H (RV32)
 
 ===== Encoding
@@ -16706,6 +17008,7 @@ pwsuba.h _rd_p_, _rs1_, _rs2_
 PWSUBA.H performs PWSUB.H and accumulates the two 32-bit results into the
 destination register pair.
 
+<<<
 ==== PWSUBU.H (RV32)
 
 ===== Encoding
@@ -16751,6 +17054,7 @@ PWSUBU.H zero-extends each 16-bit halfword element, subtracts element-wise as
 unsigned values, and writes two 32-bit results to the destination register pair
 when `rd_p != 0`.
 
+<<<
 ==== PWSUBAU.H (RV32)
 
 ===== Encoding
@@ -16799,6 +17103,7 @@ pwsubau.h _rd_p_, _rs1_, _rs2_
 PWSUBAU.H performs PWSUBU.H and accumulates the two 32-bit results into the
 destination register pair.
 
+<<<
 ==== WADD (RV32)
 
 ===== Encoding
@@ -16840,6 +17145,7 @@ wadd _rd_p_, _rs1_, _rs2_
 WADD adds `rs1` and `rs2` as signed XLEN values and writes the 64-bit sum to the
 destination register pair when `rd_p != 0`.
 
+<<<
 ==== WADDA (RV32)
 
 ===== Encoding
@@ -16882,6 +17188,7 @@ wadda _rd_p_, _rs1_, _rs2_
 WADDA performs WADD and accumulates the 64-bit result into the destination
 register pair.
 
+<<<
 ==== WADDU (RV32)
 
 ===== Encoding
@@ -16923,6 +17230,7 @@ waddu _rd_p_, _rs1_, _rs2_
 WADDU adds `rs1` and `rs2` as unsigned XLEN values and writes the 64-bit sum to
 the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WADDAU (RV32)
 
 ===== Encoding
@@ -16965,6 +17273,7 @@ waddau _rd_p_, _rs1_, _rs2_
 WADDAU performs WADDU and accumulates the 64-bit result into the destination
 register pair.
 
+<<<
 ==== WSUB (RV32)
 
 ===== Encoding
@@ -17006,6 +17315,7 @@ wsub _rd_p_, _rs1_, _rs2_
 WSUB subtracts `rs2` from `rs1` as signed XLEN values and writes the 64-bit
 difference to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WSUBA (RV32)
 
 ===== Encoding
@@ -17048,6 +17358,7 @@ wsuba _rd_p_, _rs1_, _rs2_
 WSUBA performs WSUB and accumulates the 64-bit result into the destination
 register pair.
 
+<<<
 ==== WSUBU (RV32)
 
 ===== Encoding
@@ -17089,6 +17400,7 @@ wsubu _rd_p_, _rs1_, _rs2_
 WSUBU subtracts `rs2` from `rs1` as unsigned XLEN values and writes the 64-bit
 difference to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WSUBAU (RV32)
 
 ===== Encoding
@@ -17132,6 +17444,7 @@ WSUBAU performs WSUBU and accumulates the 64-bit result into the destination
 register pair.
 
 
+<<<
 === Widening Shift
 
 ==== PWSLLI.B (RV32)
@@ -17182,6 +17495,7 @@ pwslli.b _rd_p_, _rs1_, _uimm4_
 PWSLLI.B widens each 8-bit element of `rs1` to 16 bits by zero-extension, then
 shifts left by an immediate amount, producing four 16-bit results.
 
+<<<
 ==== PWSLL.BS (RV32)
 
 ===== Encoding
@@ -17229,6 +17543,7 @@ pwsll.bs _rd_p_, _rs1_, _rs2_
 PWSLL.BS widens each 8-bit element of `rs1` to 16 bits by zero-extension, then
 shifts left by the amount in `rs2` (low 5 bits), producing four 16-bit results.
 
+<<<
 ==== PWSLAI.B (RV32)
 
 ===== Encoding
@@ -17276,6 +17591,7 @@ pwslai.b _rd_p_, _rs1_, _uimm4_
 PWSLAI.B widens each 8-bit element of `rs1` to 16 bits by sign-extension, then
 shifts left by an immediate amount, producing four 16-bit results.
 
+<<<
 ==== PWSLA.BS (RV32)
 
 ===== Encoding
@@ -17323,6 +17639,7 @@ pwsla.bs _rd_p_, _rs1_, _rs2_
 PWSLA.BS widens each 8-bit element of `rs1` to 16 bits by sign-extension, then
 shifts left by the amount in `rs2` (low 5 bits), producing four 16-bit results.
 
+<<<
 ==== PWSLLI.H (RV32)
 
 ===== Encoding
@@ -17369,6 +17686,7 @@ pwslli.h _rd_p_, _rs1_, _uimm5_
 PWSLLI.H widens each 16-bit element of `rs1` to 32 bits by zero-extension, then
 shifts left by an immediate amount, producing two 32-bit results.
 
+<<<
 ==== PWSLL.HS (RV32)
 
 ===== Encoding
@@ -17415,6 +17733,7 @@ pwsll.hs _rd_p_, _rs1_, _rs2_
 PWSLL.HS widens each 16-bit element of `rs1` to 32 bits by zero-extension, then
 shifts left by the amount in `rs2` (low 5 bits).
 
+<<<
 ==== PWSLAI.H (RV32)
 
 ===== Encoding
@@ -17461,6 +17780,7 @@ pwslai.h _rd_p_, _rs1_, _uimm5_
 PWSLAI.H widens each 16-bit element of `rs1` to 32 bits by sign-extension, then
 shifts left by an immediate amount.
 
+<<<
 ==== PWSLA.HS (RV32)
 
 ===== Encoding
@@ -17507,6 +17827,7 @@ pwsla.hs _rd_p_, _rs1_, _rs2_
 PWSLA.HS widens each 16-bit element of `rs1` to 32 bits by sign-extension, then
 shifts left by the amount in `rs2` (low 5 bits).
 
+<<<
 ==== WSLL (RV32)
 
 ===== Encoding
@@ -17550,6 +17871,7 @@ wsll _rd_p_, _rs1_, _rs2_
 WSLL zero-extends `rs1` to 64 bits, shifts left by the amount in `rs2` (low 6 bits),
 and writes the 64-bit result to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WSLLI (RV32)
 
 ===== Encoding
@@ -17593,6 +17915,7 @@ wslli _rd_p_, _rs1_, _uimm6_
 WSLLI zero-extends `rs1` to 64 bits, shifts left by an immediate amount, and
 writes the 64-bit result to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WSLA (RV32)
 
 ===== Encoding
@@ -17636,6 +17959,7 @@ wsla _rd_p_, _rs1_, _rs2_
 WSLA sign-extends `rs1` to 64 bits, shifts left by the amount in `rs2` (low 6 bits),
 and writes the 64-bit result to the destination register pair when `rd_p != 0`.
 
+<<<
 ==== WSLAI (RV32)
 
 ===== Encoding
@@ -17680,6 +18004,7 @@ WSLAI sign-extends `rs1` to 64 bits, shifts left by an immediate amount, and
 writes the 64-bit result to the destination register pair when `rd_p != 0`.
 
 
+<<<
 === Widening Zip
 
 ==== WZIP8P (RV32)
@@ -17732,6 +18057,7 @@ arranged as two 32-bit halves. The lower destination register receives the
 interleaving of bytes [15:0], and the upper destination register receives the
 interleaving of bytes [31:16].
 
+<<<
 ==== WZIP16P (RV32)
 
 ===== Encoding
@@ -17782,6 +18108,7 @@ The lower destination register receives `{rs2[15:0], rs1[15:0]}`, and the upper
 destination register receives `{rs2[31:16], rs1[31:16]}`.
 
 
+<<<
 === Reduction Sum (double-wide)
 
 ==== PREDSUM.DBS (RV32)
@@ -17835,6 +18162,7 @@ PREDSUM.DBS adds the eight signed 8-bit elements contained in the 64-bit source
 register pair `rs1_p` to the signed scalar value in `rs2`, and writes the low
 32 bits of the resulting sum to `rd`.
 
+<<<
 ==== PREDSUMU.DBS (RV32)
 
 ===== Encoding
@@ -17883,6 +18211,7 @@ PREDSUMU.DBS adds the eight unsigned 8-bit elements contained in the 64-bit
 source register pair `rs1_p` to the unsigned scalar value in `rs2`, and writes
 the low 32 bits of the resulting sum to `rd`.
 
+<<<
 ==== PREDSUM.DHS (RV32)
 
 ===== Encoding
@@ -17931,6 +18260,7 @@ PREDSUM.DHS adds the four signed 16-bit elements contained in the 64-bit source
 register pair `rs1_p` to the signed scalar value in `rs2`, and writes the low
 32 bits of the resulting sum to `rd`.
 
+<<<
 ==== PREDSUMU.DHS (RV32)
 
 ===== Encoding
@@ -17980,6 +18310,7 @@ source register pair `rs1_p` to the unsigned scalar value in `rs2`, and writes
 the low 32 bits of the resulting sum to `rd`.
 
 
+<<<
 === Narrowing Shift
 
 ==== PNSRLI.B (RV32)
@@ -18031,6 +18362,7 @@ PNSRLI.B extracts four 16-bit lanes from a 64-bit register-pair source, performs
 a logical right shift by an immediate amount, and packs the low byte of each
 shifted lane into `rd`.
 
+<<<
 ==== PNSRL.BS (RV32)
 
 ===== Encoding
@@ -18077,6 +18409,7 @@ PNSRL.BS performs a per-lane logical right shift of four 16-bit lanes taken from
 a 64-bit register-pair source, using a shift amount from `rs2`. The low byte of
 each shifted lane is packed into `rd`.
 
+<<<
 ==== PNSRAI.B (RV32)
 
 ===== Encoding
@@ -18126,6 +18459,7 @@ PNSRAI.B extracts four 16-bit lanes from a 64-bit register-pair source, performs
 an arithmetic right shift by an immediate amount, and packs the low byte of each
 shifted lane into `rd`.
 
+<<<
 ==== PNSRA.BS (RV32)
 
 ===== Encoding
@@ -18172,6 +18506,7 @@ PNSRA.BS performs a per-lane arithmetic right shift of four 16-bit lanes taken
 from a 64-bit register-pair source, using a shift amount from `rs2`. The low
 byte of each shifted lane is packed into `rd`.
 
+<<<
 ==== PNSRARI.B (RV32)
 
 ===== Encoding
@@ -18222,6 +18557,7 @@ PNSRARI.B performs a per-lane rounded arithmetic right shift of four 16-bit lane
 from a 64-bit register-pair source using an immediate shift amount, and packs
 the resulting bytes into `rd`.
 
+<<<
 ==== PNSRAR.BS (RV32)
 
 ===== Encoding
@@ -18269,6 +18605,7 @@ PNSRAR.BS performs a per-lane rounded arithmetic right shift of four 16-bit lane
 from a 64-bit register-pair source using a shift amount from `rs2`, and packs
 the resulting bytes into `rd`.
 
+<<<
 ==== PNSRLI.H (RV32)
 
 ===== Encoding
@@ -18317,6 +18654,7 @@ PNSRLI.H performs a logical right shift of each 32-bit word lane in a 64-bit
 register-pair source by an immediate amount, then packs the low 16 bits of each
 shifted word into `rd`.
 
+<<<
 ==== PNSRL.HS (RV32)
 
 ===== Encoding
@@ -18363,6 +18701,7 @@ PNSRL.HS performs a logical right shift of each 32-bit word lane in a 64-bit
 register-pair source by a shift amount from `rs2`, then packs the low 16 bits of
 each shifted word into `rd`.
 
+<<<
 ==== PNSRAI.H (RV32)
 
 ===== Encoding
@@ -18411,6 +18750,7 @@ PNSRAI.H performs an arithmetic right shift of each 32-bit word lane in a 64-bit
 register-pair source by an immediate amount, then packs the low 16 bits of each
 shifted word into `rd`.
 
+<<<
 ==== PNSRA.HS (RV32)
 
 ===== Encoding
@@ -18457,6 +18797,7 @@ PNSRA.HS performs an arithmetic right shift of each 32-bit word lane in a 64-bit
 register-pair source by a shift amount from `rs2`, then packs the low 16 bits of
 each shifted word into `rd`.
 
+<<<
 ==== PNSRARI.H (RV32)
 
 ===== Encoding
@@ -18505,6 +18846,7 @@ PNSRARI.H performs a per-word *rounded* arithmetic right shift of the 64-bit
 register-pair source by an immediate amount. The low 16 bits of each rounded
 shifted word are packed into `rd`.
 
+<<<
 ==== PNSRAR.HS (RV32)
 
 ===== Encoding
@@ -18552,6 +18894,7 @@ PNSRAR.HS performs a per-word *rounded* arithmetic right shift of a 64-bit
 register-pair source using a shift amount from `rs2`, and packs 16-bit results
 into `rd`.
 
+<<<
 ==== NSRLI (RV32)
 
 ===== Encoding
@@ -18595,6 +18938,7 @@ nsrli _rd_, _rs1_p_, _uimm6_
 NSRLI performs a 64-bit logical right shift of the register-pair source by an
 immediate amount and returns the low 32 bits.
 
+<<<
 ==== NSRL (RV32)
 
 ===== Encoding
@@ -18635,6 +18979,7 @@ nsrl _rd_, _rs1_p_, _rs2_
 NSRL performs a 64-bit logical right shift of the register-pair source by a shift
 amount from `rs2` and returns the low 32 bits.
 
+<<<
 ==== NSRAI (RV32)
 
 ===== Encoding
@@ -18676,6 +19021,7 @@ nsrai _rd_, _rs1_p_, _uimm6_
 NSRAI performs a 64-bit arithmetic right shift of the register-pair source by an
 immediate amount and returns the low 32 bits.
 
+<<<
 ==== NSRA (RV32)
 
 ===== Encoding
@@ -18716,6 +19062,7 @@ nsra _rd_, _rs1_p_, _rs2_
 NSRA performs a 64-bit arithmetic right shift of the register-pair source by a
 shift amount from `rs2` and returns the low 32 bits.
 
+<<<
 ==== NSRARI (RV32)
 
 ===== Encoding
@@ -18758,6 +19105,7 @@ nsrari _rd_, _rs1_p_, _uimm6_
 NSRARI performs a 64-bit *rounded* arithmetic right shift of the register-pair
 source by an immediate amount and returns the rounded low 32-bit result.
 
+<<<
 ==== NSRAR (RV32)
 
 ===== Encoding
@@ -18801,6 +19149,7 @@ NSRAR performs a 64-bit *rounded* arithmetic right shift of the register-pair
 source by a shift amount from `rs2` and returns the rounded low 32-bit result.
 
 
+<<<
 === Narrowing Clip
 
 ==== PNCLIPI.B (RV32)
@@ -18869,6 +19218,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
   `rs1_p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
+<<<
 ==== PNCLIP.BS
 
 ===== Encoding
@@ -18925,6 +19275,7 @@ arithmetically right-shifted by the amount in `rs2[4:0]`, then clamped to the
 signed 8-bit range [-128, 127]. Four byte results are packed into `rd`. If any
 element saturates, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PNCLIPRI.B (RV32)
 
 ===== Encoding
@@ -18997,6 +19348,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
   `rs1_p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
+<<<
 ==== PNCLIPR.BS (RV32)
 
 ===== Encoding
@@ -19067,6 +19419,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
   `rs1_p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
+<<<
 ==== PNCLIPIU.B (RV32)
 
 ===== Encoding
@@ -19130,6 +19483,7 @@ When clipping occurs for any lane, the `vxsat` sticky flag is set to 1.
   `rs1_p=0`, the source is treated as zero.
 * `vxsat` is set if any lane saturates; it is not cleared by this instruction.
 
+<<<
 ==== PNCLIPU.BS (RV32)
 
 ===== Encoding
@@ -19184,6 +19538,7 @@ PNCLIPU.BS performs a per-lane logical right shift of four 16-bit lanes from a
 is clipped to the unsigned 8-bit range [0, 255] and packed into `rd`. The `vxsat`
 sticky flag is set if any lane saturates.
 
+<<<
 ==== PNCLIPRIU.B (RV32)
 
 ===== Encoding
@@ -19243,6 +19598,7 @@ from a 64-bit register-pair source using an immediate shift amount. Each rounded
 shifted value is clipped to the unsigned 8-bit range [0, 255] and packed into
 `rd`. The `vxsat` sticky flag is set if any lane saturates.
 
+<<<
 ==== PNCLIPRU.BS (RV32)
 
 ===== Encoding
@@ -19299,6 +19655,7 @@ from a 64-bit register-pair source using a shift amount from `rs2`. Each rounded
 shifted value is clipped to [0, 255] and packed into `rd`. The `vxsat` sticky
 flag is set if any lane saturates.
 
+<<<
 ==== PNCLIPI.H
 
 ===== Encoding
@@ -19355,6 +19712,7 @@ arithmetically right-shifted by the 5-bit immediate, then clamped to the signed
 16-bit range [-32768, 32767]. Two halfword results are packed into `rd`. If any
 element saturates, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PNCLIP.HS
 
 ===== Encoding
@@ -19411,6 +19769,7 @@ arithmetically right-shifted by the amount in `rs2[4:0]`, then clamped to the
 signed 16-bit range [-32768, 32767]. Two halfword results are packed into `rd`.
 If any element saturates, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PNCLIPRI.H
 
 ===== Encoding
@@ -19469,6 +19828,7 @@ element is arithmetically right-shifted with round-to-nearest-up, then clamped
 to the signed 16-bit range [-32768, 32767]. Two halfword results are packed
 into `rd`. If any element saturates, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PNCLIPR.HS
 
 ===== Encoding
@@ -19528,6 +19888,7 @@ in `rs2[4:0]`, then clamped to the signed 16-bit range [-32768, 32767]. Two
 halfword results are packed into `rd`. If any element saturates, `vxsat` is
 set. Available only in RV32.
 
+<<<
 ==== PNCLIPIU.H (RV32)
 
 ===== Encoding
@@ -19582,6 +19943,7 @@ logically by an immediate amount, then clips each shifted value to unsigned
 16-bit and packs the two halfwords into `rd`. The `vxsat` sticky flag is set if
 any lane saturates.
 
+<<<
 ==== PNCLIPU.HS (RV32)
 
 ===== Encoding
@@ -19634,6 +19996,7 @@ PNCLIPU.HS performs a per-word logical right shift of a 64-bit register-pair
 source using `rs2` as the shift amount, clips each lane to unsigned 16-bit, and
 packs the results into `rd`. The `vxsat` sticky flag is set on saturation.
 
+<<<
 ==== PNCLIPRIU.H
 
 ===== Encoding
@@ -19691,6 +20054,7 @@ element is logically right-shifted with round-to-nearest-up, then clamped to
 the unsigned 16-bit range [0, 65535]. Two halfword results are packed into
 `rd`. If any element saturates, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== PNCLIPRU.HS
 
 ===== Encoding
@@ -19749,6 +20113,7 @@ element is logically right-shifted with round-to-nearest-up by the amount in
 results are packed into `rd`. If any element saturates, `vxsat` is set.
 Available only in RV32.
 
+<<<
 ==== NCLIPI
 
 ===== Encoding
@@ -19801,6 +20166,7 @@ amount. The 64-bit source is read from the register pair designated by
 clamped to the signed 32-bit range [-2^31, 2^31 - 1]. The 32-bit result is
 written to `rd`. If saturation occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIP
 
 ===== Encoding
@@ -19853,6 +20219,7 @@ value is arithmetically right-shifted by the amount in `rs2[5:0]`, then clamped
 to the signed 32-bit range [-2^31, 2^31 - 1]. The 32-bit result is written to
 `rd`. If saturation occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIPRI
 
 ===== Encoding
@@ -19908,6 +20275,7 @@ round-to-nearest-up by the 6-bit immediate, then clamped to the signed 32-bit
 range [-2^31, 2^31 - 1]. The 32-bit result is written to `rd`. If saturation
 occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIPR
 
 ===== Encoding
@@ -19963,6 +20331,7 @@ the amount in `rs2[5:0]`, then clamped to the signed 32-bit range
 [-2^31, 2^31 - 1]. The 32-bit result is written to `rd`. If saturation occurs,
 `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIPIU
 
 ===== Encoding
@@ -20013,6 +20382,7 @@ amount. The 64-bit source is read from the register pair designated by
 clamped to the unsigned 32-bit range [0, 2^32 - 1]. The 32-bit result is
 written to `rd`. If saturation occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIPU (RV32)
 
 ===== Encoding
@@ -20062,6 +20432,7 @@ NCLIPU performs a 64-bit logical right shift of the register-pair source and cli
 the result to 32-bit unsigned. The `vxsat` sticky flag is set if clipping occurs.
 
 
+<<<
 ==== NCLIPRIU
 
 ===== Encoding
@@ -20115,6 +20486,7 @@ round-to-nearest-up by the 6-bit immediate, then clamped to the unsigned
 32-bit range [0, 2^32 - 1]. The 32-bit result is written to `rd`. If
 saturation occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 ==== NCLIPRU
 
 ===== Encoding
@@ -20168,6 +20540,7 @@ round-to-nearest-up by the amount in `rs2[5:0]`, then clamped to the unsigned
 32-bit range [0, 2^32 - 1]. The 32-bit result is written to `rd`. If
 saturation occurs, `vxsat` is set. Available only in RV32.
 
+<<<
 === Multiply High (same-width)
 
 ==== PMULH.H
@@ -20223,6 +20596,7 @@ written to the corresponding 16-bit element of `rd`.
 * The result is equivalent to arithmetic right shift by 16 of the full 32-bit
   product, keeping the upper half.
 
+<<<
 ==== PMULHR.H
 
 ===== Encoding
@@ -20278,6 +20652,7 @@ element of `rd`, implementing rounding when extracting the high half.
 * The per-lane result corresponds to rounding the 32-bit product before
   extracting bits [31:16].
 
+<<<
 ==== PMULHSU.H
 
 ===== Encoding
@@ -20333,6 +20708,7 @@ the corresponding 16-bit element of `rd`.
 * The result is equivalent to extracting bits [31:16] of the full 32-bit
   mixed signed×unsigned product.
 
+<<<
 ==== PMULHRSU.H
 
 ===== Encoding
@@ -20430,6 +20806,7 @@ PMULQR.H:
     }
     X[rd] = d;
 
+<<<
 ==== PMULHU.H
 
 ===== Encoding
@@ -20475,6 +20852,7 @@ PMULHU.H multiplies corresponding unsigned packed 16-bit halfword elements of
 `rs1` and `rs2`, producing 32-bit intermediate products, and writes the upper
 16 bits of each product to the corresponding halfword element of `rd`.
 
+<<<
 ==== PMULHRU.H
 
 ===== Encoding
@@ -20530,6 +20908,7 @@ element of `rd`, implementing rounding when extracting the high half.
 * The per-lane result corresponds to rounding the unsigned product before
   extracting bits [31:16].
 
+<<<
 ==== PMULH.W
 
 ===== Encoding
@@ -20577,6 +20956,7 @@ and `rs2`, producing 64-bit intermediate products, and writes the upper 32 bits
 of each product to the corresponding word element of `rd`. This instruction is
 available only on RV64.
 
+<<<
 ==== PMULHR.W
 
 ===== Encoding
@@ -20624,6 +21004,7 @@ and `rs2`, producing 64-bit intermediate products, adds a rounding constant
 of 2^31, and writes the upper 32 bits of each rounded product to the
 corresponding word element of `rd`. This instruction is available only on RV64.
 
+<<<
 ==== PMULHSU.W (RV64)
 
 ===== Encoding
@@ -20669,6 +21050,7 @@ The PMULHSU.W instruction multiplies corresponding 32-bit elements of `rs1`
 (signed) and `rs2` (unsigned), and writes the upper 32 bits of each product
 to `rd`.
 
+<<<
 ==== PMULHRSU.W (RV64)
 
 ===== Encoding
@@ -20719,6 +21101,7 @@ to `rd`.
 
 * Rounding is performed by adding 2^31 before extracting bits [63:32].
 
+<<<
 ==== PMULHU.W (RV64)
 
 ===== Encoding
@@ -20763,6 +21146,7 @@ pmulhu.w _rd_, _rs1_, _rs2_
 The PMULHU.W instruction multiplies corresponding unsigned 32-bit elements of
 `rs1` and `rs2`, writing the upper 32 bits of each product to `rd`.
 
+<<<
 ==== PMULHRU.W (RV64)
 
 ===== Encoding
@@ -20812,6 +21196,7 @@ applies rounding, and writes the upper 32 bits of each product to `rd`.
 
 * Rounding is performed by adding 2^31.
 
+<<<
 ==== MULHR
 
 ===== Encoding
@@ -20853,6 +21238,7 @@ MULHR multiplies the full signed XLEN-bit values of `rs1` and `rs2`, producing
 a 2*XLEN-bit intermediate product, adds a rounding constant of 2^(XLEN-1),
 and writes the upper XLEN bits of the rounded product to `rd`.
 
+<<<
 ==== MULHRSU (RV32)
 
 ===== Encoding
@@ -20898,6 +21284,7 @@ result to `rd`.
 
 * Rounding is performed by adding 2^31 before extracting bits [63:32].
 
+<<<
 ==== MULHRU (RV32)
 
 ===== Encoding
@@ -20938,6 +21325,7 @@ mulhru _rd_, _rs1_, _rs2_
 The MULHRU instruction multiplie
 
 
+<<<
 === Q-format Multiply
 
 ==== PMULQ.H
@@ -20990,6 +21378,7 @@ halfword elements of `rs1` and `rs2`. It computes `(a * b) << 1` and keeps the
 upper 16 bits. When both inputs are the most negative value (0x8000), the
 result saturates to 0x7FFF and the `vxsat` overflow flag is set.
 
+<<<
 ==== PMULQR.H
 
 ===== Encoding
@@ -21052,6 +21441,7 @@ right shift by 15). If both inputs are `0x8000`, the result saturates to
   multiplication: (-1.0)×(-1.0).
 
 
+<<<
 ==== PMULQ.W
 
 ===== Encoding
@@ -21104,6 +21494,7 @@ upper 32 bits. When both inputs are the most negative value (0x80000000), the
 result saturates to 0x7FFFFFFF and the `vxsat` overflow flag is set. This
 instruction is available only on RV64.
 
+<<<
 ==== PMULQR.W
 
 ===== Encoding
@@ -21157,6 +21548,7 @@ both inputs are the most negative value (0x80000000), the result saturates to
 0x7FFFFFFF and the `vxsat` overflow flag is set. This instruction is available
 only on RV64.
 
+<<<
 ==== MULQ
 
 ===== Encoding
@@ -21211,6 +21603,7 @@ and `rs2`. It computes `(a * b) << 1` and keeps the upper XLEN bits. When both
 inputs are the most negative value, the result saturates to the most positive
 value and the `vxsat` overflow flag is set.
 
+<<<
 ==== MULQR
 
 ===== Encoding
@@ -21266,6 +21659,7 @@ of `rs1` and `rs2`. It computes `(a * b) << 1`, adds a rounding constant of
 are the most negative value, the result saturates to the most positive value
 and the `vxsat` overflow flag is set.
 
+<<<
 === Multiply-High Accumulate
 
 ==== PMHACC.H
@@ -21325,6 +21719,7 @@ accumulated packed result is written back to `rd`.
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHRACC.H
 
 ===== Encoding
@@ -21383,6 +21778,7 @@ implementing rounding when extracting the high half.
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHACCSU.H
 
 ===== Encoding
@@ -21441,6 +21837,7 @@ result is written back to `rd`.
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHRACCSU.H
 
 ===== Encoding
@@ -21500,6 +21897,7 @@ rounding when extracting the high half.
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHACCU.H
 
 ===== Encoding
@@ -21557,6 +21955,7 @@ product and accumulates that value into the corresponding 16-bit element of
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHRACCU.H
 
 ===== Encoding
@@ -21615,6 +22014,7 @@ back to `rd`, implementing rounding when extracting the high half.
 * This instruction does not set `vxsat`.
 * The per-lane add wraps modulo 2^16.
 
+<<<
 ==== PMHACC.W (RV64)
 
 ===== Encoding
@@ -21666,6 +22066,7 @@ accumulates the upper 32 bits of each product into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHRACC.W (RV64)
 
 ===== Encoding
@@ -21713,6 +22114,7 @@ pmhracc.w _rd_, _rs1_, _rs2_
 The PMHRACC.W instruction performs signed packed multiplication with rounding
 and accumulates the upper 32 bits of each product into `rd`.
 
+<<<
 ==== PMHACCSU.W (RV64)
 
 ===== Encoding
@@ -21760,6 +22162,7 @@ pmhaccsu.w _rd_, _rs1_, _rs2_
 The PMHACCSU.W instruction multiplies signed elements of `rs1` with unsigned
 elements of `rs2` and accumulates the upper 32 bits into `rd`.
 
+<<<
 ==== PMHRACCSU.W (RV64)
 
 ===== Encoding
@@ -21807,6 +22210,7 @@ pmhraccsu.w _rd_, _rs1_, _rs2_
 The PMHRACCSU.W instruction performs signed×unsigned packed multiplication with
 rounding and accumulates the upper 32 bits into `rd`.
 
+<<<
 ==== PMHACCU.W (RV64)
 
 ===== Encoding
@@ -21854,6 +22258,7 @@ pmhaccu.w _rd_, _rs1_, _rs2_
 The PMHACCU.W instruction multiplies unsigned packed 32-bit elements and
 accumulates the upper 32 bits of each product into `rd`.
 
+<<<
 ==== PMHRACCU.W (RV64)
 
 ===== Encoding
@@ -21901,6 +22306,7 @@ pmhraccu.w _rd_, _rs1_, _rs2_
 The PMHRACCU.W instruction multiplies unsigned packed 32-bit elements with
 rounding and accumulates the upper 32 bits of each product into `rd`.
 
+<<<
 ==== MHACC (RV32)
 
 ===== Encoding
@@ -21945,6 +22351,7 @@ the upper 32 bits of the product, and accumulates the result into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MHRACC (RV32)
 
 ===== Encoding
@@ -21990,6 +22397,7 @@ rounds the product, and accumulates the upper 32 bits into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^31.
 
+<<<
 ==== MHACCSU (RV32)
 
 ===== Encoding
@@ -22030,6 +22438,7 @@ mhaccsu _rd_, _rs1_, _rs2_
 The MHACCSU instruction multiplies `rs1` as signed by `rs2` as unsigned,
 extracts the upper 32 bits of the product, and accumulates the result.
 
+<<<
 ==== MHRACCSU (RV32)
 
 ===== Encoding
@@ -22070,6 +22479,7 @@ mhraccsu _rd_, _rs1_, _rs2_
 The MHRACCSU instruction performs a signed×unsigned multiply, rounds the
 product, and accumulates the upper 32 bits into `rd`.
 
+<<<
 ==== MHACCU (RV32)
 
 ===== Encoding
@@ -22110,6 +22520,7 @@ mhaccu _rd_, _rs1_, _rs2_
 The MHACCU instruction multiplies `rs1` and `rs2` as unsigned values and
 accumulates the upper 32 bits of the product into `rd`.
 
+<<<
 ==== MHRACCU (RV32)
 
 ===== Encoding
@@ -22151,6 +22562,7 @@ The MHRACCU instruction multiplies `rs1` and `rs2` as unsigned values,
 rounds the product, and accumulates the upper 32 bits into `rd`.
 
 
+<<<
 === Q-format Multiply-Accumulate
 
 ==== MQACC.H00 (RV32)
@@ -22198,6 +22610,7 @@ the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQACC.H01 (RV32)
 
 ===== Encoding
@@ -22244,6 +22657,7 @@ value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQACC.H11 (RV32)
 
 ===== Encoding
@@ -22289,6 +22703,7 @@ the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQRACC.H00 (RV32)
 
 ===== Encoding
@@ -22334,6 +22749,7 @@ The MQRACC.H00 instruction is like MQACC.H00 but applies rounding by adding
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== MQRACC.H01 (RV32)
 
 ===== Encoding
@@ -22379,6 +22795,7 @@ The MQRACC.H01 instruction is like MQACC.H01 but applies rounding by adding
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== MQRACC.H11 (RV32)
 
 ===== Encoding
@@ -22424,6 +22841,7 @@ The MQRACC.H11 instruction is like MQACC.H11 but applies rounding by adding
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== PMQACC.W.H00 (RV64)
 
 ===== Encoding
@@ -22476,6 +22894,7 @@ product, and accumulates into the corresponding 32-bit element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMQACC.W.H01 (RV64)
 
 ===== Encoding
@@ -22524,6 +22943,7 @@ The PMQACC.W.H01 instruction, for each 32-bit lane, multiplies the low halfword
 of `rs1` by the high halfword of `rs2` (both signed), extracts bits [46:15] of
 the product, and accumulates into `rd`.
 
+<<<
 ==== PMQACC.W.H11 (RV64)
 
 ===== Encoding
@@ -22572,6 +22992,7 @@ The PMQACC.W.H11 instruction, for each 32-bit lane, multiplies the high 16-bit
 halfwords of `rs1` and `rs2` as signed values, extracts bits [46:15] of the
 product, and accumulates into `rd`.
 
+<<<
 ==== PMQRACC.W.H00 (RV64)
 
 ===== Encoding
@@ -22624,6 +23045,7 @@ adding 2^14 before extracting bits [46:15], and then accumulates into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== PMQRACC.W.H01 (RV64)
 
 ===== Encoding
@@ -22676,6 +23098,7 @@ adding 2^14 before extracting bits [46:15], and then accumulates into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== PMQRACC.W.H11 (RV64)
 
 ===== Encoding
@@ -22728,6 +23151,7 @@ adding 2^14 before extracting bits [46:15], and then accumulates into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== PMQ2ADD.H
 
 ===== Encoding
@@ -22779,6 +23203,7 @@ The PMQ2ADD.H instruction computes, for each 32-bit lane, the sum of two
 Q-format multiply-high results: one from the low halfword pair and one from the
 high halfword pair, and writes the packed 32-bit sums to `rd`.
 
+<<<
 ==== PMQ2ADDA.H
 
 ===== Encoding
@@ -22834,6 +23259,7 @@ packed 32-bit elements of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMQR2ADD.H
 
 ===== Encoding
@@ -22889,6 +23315,7 @@ terms per 32-bit lane.
 
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== PMQR2ADDA.H
 
 ===== Encoding
@@ -22945,6 +23372,7 @@ packed 32-bit elements of `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^14.
 
+<<<
 ==== MQACC.W00 (RV64)
 
 ===== Encoding
@@ -22990,6 +23418,7 @@ extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQACC.W01 (RV64)
 
 ===== Encoding
@@ -23035,6 +23464,7 @@ into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQACC.W11 (RV64)
 
 ===== Encoding
@@ -23080,6 +23510,7 @@ into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MQRACC.W00 (RV64)
 
 ===== Encoding
@@ -23126,6 +23557,7 @@ before extracting bits [94:31], and then accumulates the extracted value into
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^30.
 
+<<<
 ==== MQRACC.W01 (RV64)
 
 ===== Encoding
@@ -23171,6 +23603,7 @@ before extracting bits [94:31], and then accumulates into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^30.
 
+<<<
 ==== MQRACC.W11 (RV64)
 
 ===== Encoding
@@ -23216,6 +23649,7 @@ before extracting bits [94:31], and then accumulates into `rd`.
 * This instruction reads and writes `rd`.
 * Rounding is performed by adding 2^30.
 
+<<<
 ==== PMQ2ADD.W (RV64)
 
 ===== Encoding
@@ -23262,6 +23696,7 @@ The PMQ2ADD.W instruction multiplies the low words and the high words of `rs1`
 and `rs2` as signed 32-bit values, extracts bits [94:31] from each product, and
 adds the two extracted values to produce the result in `rd`.
 
+<<<
 ==== PMQ2ADDA.W (RV64)
 
 ===== Encoding
@@ -23310,6 +23745,7 @@ The PMQ2ADDA.W instruction adds the PMQ2ADD.W result into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMQR2ADD.W (RV64)
 
 ===== Encoding
@@ -23359,6 +23795,7 @@ values.
 
 * Rounding is performed by adding 2^30.
 
+<<<
 ==== PMQR2ADDA.W (RV64)
 
 ===== Encoding
@@ -23409,6 +23846,7 @@ The PMQR2ADDA.W instruction adds the PMQR2ADD.W result into `rd`.
 * Rounding is performed by adding 2^30.
 
 
+<<<
 === Cross-element Multiply
 
 ==== PMUL.H.B00
@@ -23455,6 +23893,7 @@ pmul.h.b00 _rd_, _rs1_, _rs2_
 PMUL.H.B00 multiplies the low bytes of each 16-bit lane of `rs1` and `rs2` as
 signed 8-bit values and writes the 16-bit products to `rd`.
 
+<<<
 ==== PMUL.H.B01
 
 ===== Encoding
@@ -23500,6 +23939,7 @@ PMUL.H.B01 multiplies the low byte of each 16-bit lane of `rs1` by the high byte
 of the corresponding lane of `rs2` (signed×signed), producing packed 16-bit
 products in `rd`.
 
+<<<
 ==== PMUL.H.B11
 
 ===== Encoding
@@ -23544,6 +23984,7 @@ pmul.h.b11 _rd_, _rs1_, _rs2_
 PMUL.H.B11 multiplies the high bytes of each 16-bit lane of `rs1` and `rs2`
 as signed 8-bit values and writes packed 16-bit products to `rd`.
 
+<<<
 ==== PMULSU.H.B00
 
 ===== Encoding
@@ -23588,6 +24029,7 @@ pmulsu.h.b00 _rd_, _rs1_, _rs2_
 PMULSU.H.B00 multiplies the low bytes of each 16-bit lane of `rs1` (signed) and
 `rs2` (unsigned), producing packed 16-bit products in `rd`.
 
+<<<
 ==== PMULSU.H.B11
 
 ===== Encoding
@@ -23632,6 +24074,7 @@ pmulsu.h.b11 _rd_, _rs1_, _rs2_
 PMULSU.H.B11 multiplies the high bytes of each 16-bit lane of `rs1` (signed) and
 `rs2` (unsigned), producing packed 16-bit products in `rd`.
 
+<<<
 ==== PMULU.H.B00
 
 ===== Encoding
@@ -23676,6 +24119,7 @@ pmulu.h.b00 _rd_, _rs1_, _rs2_
 PMULU.H.B00 multiplies the low bytes of each 16-bit lane of `rs1` and `rs2`
 as unsigned 8-bit values, producing packed 16-bit products in `rd`.
 
+<<<
 ==== PMULU.H.B01
 
 ===== Encoding
@@ -23721,6 +24165,7 @@ PMULU.H.B01 multiplies the low byte of each 16-bit lane of `rs1` by the high
 byte of the corresponding lane of `rs2` (unsigned×unsigned), producing packed
 16-bit products in `rd`.
 
+<<<
 ==== PMULU.H.B11
 
 ===== Encoding
@@ -23765,6 +24210,7 @@ pmulu.h.b11 _rd_, _rs1_, _rs2_
 PMULU.H.B11 multiplies the high bytes of each 16-bit lane of `rs1` and `rs2`
 as unsigned 8-bit values, producing packed 16-bit products in `rd`.
 
+<<<
 ==== MUL.H00
 
 ===== Encoding
@@ -23805,6 +24251,7 @@ MUL.H00 multiplies the low 16-bit halfword (h0) of `rs1` by the low 16-bit
 halfword (h0) of `rs2`, both treated as signed, producing a full 32-bit signed
 product that is written to `rd`.
 
+<<<
 ==== MUL.H01
 
 ===== Encoding
@@ -23845,6 +24292,7 @@ MUL.H01 multiplies the low 16-bit halfword (h0) of `rs1` by the high 16-bit
 halfword (h1) of `rs2`, both treated as signed, producing a full 32-bit signed
 product that is written to `rd`.
 
+<<<
 ==== MUL.H11
 
 ===== Encoding
@@ -23885,6 +24333,7 @@ MUL.H11 multiplies the high 16-bit halfword (h1) of `rs1` by the high 16-bit
 halfword (h1) of `rs2`, both treated as signed, producing a full 32-bit signed
 product that is written to `rd`.
 
+<<<
 ==== MULSU.H00 (RV32)
 
 ===== Encoding
@@ -23924,6 +24373,7 @@ mulsu.h00 _rd_, _rs1_, _rs2_
 MULSU.H00 multiplies `rs1[15:0]` (signed) by `rs2[15:0]` (unsigned) and writes
 the 32-bit product to `rd`.
 
+<<<
 ==== MULSU.H11 (RV32)
 
 ===== Encoding
@@ -23963,6 +24413,7 @@ mulsu.h11 _rd_, _rs1_, _rs2_
 MULSU.H11 multiplies `rs1[31:16]` (signed) by `rs2[31:16]` (unsigned) and writes
 the 32-bit product to `rd`.
 
+<<<
 ==== MULU.H00 (RV32)
 
 ===== Encoding
@@ -24002,6 +24453,7 @@ mulu.h00 _rd_, _rs1_, _rs2_
 MULU.H00 multiplies `rs1[15:0]` and `rs2[15:0]` as unsigned halfwords and writes
 the 32-bit product to `rd`.
 
+<<<
 ==== MULU.H01 (RV32)
 
 ===== Encoding
@@ -24041,6 +24493,7 @@ mulu.h01 _rd_, _rs1_, _rs2_
 MULU.H01 multiplies `rs1[15:0]` by `rs2[31:16]` as unsigned halfwords and writes
 the 32-bit product to `rd`.
 
+<<<
 ==== MULU.H11 (RV32)
 
 ===== Encoding
@@ -24080,6 +24533,7 @@ mulu.h11 _rd_, _rs1_, _rs2_
 MULU.H11 multiplies `rs1[31:16]` and `rs2[31:16]` as unsigned halfwords and
 writes the 32-bit product to `rd`.
 
+<<<
 ==== PMUL.W.H00
 
 ===== Encoding
@@ -24123,6 +24577,7 @@ in `rs1` by the low halfword (h0) of the corresponding word element in `rs2`,
 both treated as signed, producing a 32-bit product per element that is written
 to the corresponding word of `rd`. This instruction is available only on RV64.
 
+<<<
 ==== PMUL.W.H01
 
 ===== Encoding
@@ -24166,6 +24621,7 @@ in `rs1` by the high halfword (h1) of the corresponding word element in `rs2`,
 both treated as signed, producing a 32-bit product per element that is written
 to the corresponding word of `rd`. This instruction is available only on RV64.
 
+<<<
 ==== PMUL.W.H11
 
 ===== Encoding
@@ -24210,6 +24666,7 @@ element in `rs1` by the high halfword (h1) of the corresponding word element in
 written to the corresponding word of `rd`. This instruction is available only
 on RV64.
 
+<<<
 ==== PMULSU.W.H00 (RV64)
 
 ===== Encoding
@@ -24253,6 +24710,7 @@ pmulsu.w.h00 _rd_, _rs1_, _rs2_
 PMULSU.W.H00 multiplies, per 32-bit lane, the low halfwords of `rs1` (signed)
 and `rs2` (unsigned) and writes packed 32-bit products to `rd`.
 
+<<<
 ==== PMULSU.W.H11 (RV64)
 
 ===== Encoding
@@ -24296,6 +24754,7 @@ pmulsu.w.h11 _rd_, _rs1_, _rs2_
 PMULSU.W.H11 multiplies, per 32-bit lane, the high halfwords of `rs1` (signed)
 and `rs2` (unsigned) and writes packed 32-bit products to `rd`.
 
+<<<
 ==== PMULU.W.H00 (RV64)
 
 ===== Encoding
@@ -24339,6 +24798,7 @@ pmulu.w.h00 _rd_, _rs1_, _rs2_
 PMULU.W.H00 multiplies, per 32-bit lane, the low halfwords of `rs1` and `rs2` as
 unsigned values and writes packed 32-bit products to `rd`.
 
+<<<
 ==== PMULU.W.H01 (RV64)
 
 ===== Encoding
@@ -24382,6 +24842,7 @@ pmulu.w.h01 _rd_, _rs1_, _rs2_
 PMULU.W.H01 multiplies, per 32-bit lane, the low halfword of `rs1` by the high
 halfword of `rs2` (unsigned×unsigned) and writes packed 32-bit products to `rd`.
 
+<<<
 ==== PMULU.W.H11 (RV64)
 
 ===== Encoding
@@ -24425,6 +24886,7 @@ pmulu.w.h11 _rd_, _rs1_, _rs2_
 PMULU.W.H11 multiplies, per 32-bit lane, the high halfwords of `rs1` and `rs2`
 as unsigned values and writes packed 32-bit products to `rd`.
 
+<<<
 ==== MUL.W00
 
 ===== Encoding
@@ -24465,6 +24927,7 @@ MUL.W00 multiplies the low 32-bit word (w0) of `rs1` by the low 32-bit word
 (w0) of `rs2`, both treated as signed, producing a full 64-bit signed product
 that is written to `rd`. This instruction is available only on RV64.
 
+<<<
 ==== MUL.W01
 
 ===== Encoding
@@ -24505,6 +24968,7 @@ MUL.W01 multiplies the low 32-bit word (w0) of `rs1` by the high 32-bit word
 (w1) of `rs2`, both treated as signed, producing a full 64-bit signed product
 that is written to `rd`. This instruction is available only on RV64.
 
+<<<
 ==== MUL.W11
 
 ===== Encoding
@@ -24545,6 +25009,7 @@ MUL.W11 multiplies the high 32-bit word (w1) of `rs1` by the high 32-bit word
 (w1) of `rs2`, both treated as signed, producing a full 64-bit signed product
 that is written to `rd`. This instruction is available only on RV64.
 
+<<<
 ==== MULSU.W00 (RV64)
 
 ===== Encoding
@@ -24584,6 +25049,7 @@ mulsu.w00 _rd_, _rs1_, _rs2_
 MULSU.W00 multiplies `rs1[31:0]` (signed) by `rs2[31:0]` (unsigned) and writes
 the 64-bit product to `rd`.
 
+<<<
 ==== MULSU.W11 (RV64)
 
 ===== Encoding
@@ -24623,6 +25089,7 @@ mulsu.w11 _rd_, _rs1_, _rs2_
 MULSU.W11 multiplies `rs1[63:32]` (signed) by `rs2[63:32]` (unsigned) and writes
 the 64-bit product to `rd`.
 
+<<<
 ==== MULU.W00 (RV64)
 
 ===== Encoding
@@ -24662,6 +25129,7 @@ mulu.w00 _rd_, _rs1_, _rs2_
 MULU.W00 multiplies `rs1[31:0]` and `rs2[31:0]` as unsigned 32-bit values and
 writes the 64-bit product to `rd`.
 
+<<<
 ==== MULU.W01 (RV64)
 
 ===== Encoding
@@ -24701,6 +25169,7 @@ mulu.w01 _rd_, _rs1_, _rs2_
 MULU.W01 multiplies `rs1[31:0]` by `rs2[63:32]` as unsigned 32-bit values and
 writes the 64-bit product to `rd`.
 
+<<<
 ==== MULU.W11 (RV64)
 
 ===== Encoding
@@ -24741,6 +25210,7 @@ MULU.W11 multiplies `rs1[63:32]` and `rs2[63:32]` as unsigned 32-bit values and
 writes the 64-bit product to `rd`.
 
 
+<<<
 === Cross-element Multiply-Accumulate
 
 ==== MACC.H00 (RV32)
@@ -24786,6 +25256,7 @@ MACC.H00 multiplies `rs1[15:0]` and `rs2[15:0]` as signed halfwords and adds the
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACC.H01 (RV32)
 
 ===== Encoding
@@ -24829,6 +25300,7 @@ MACC.H01 multiplies `rs1[15:0]` by `rs2[31:16]` as signed halfwords and adds the
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACC.H11 (RV32)
 
 ===== Encoding
@@ -24872,6 +25344,7 @@ the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCSU.H00 (RV32)
 
 ===== Encoding
@@ -24915,6 +25388,7 @@ the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCSU.H11 (RV32)
 
 ===== Encoding
@@ -24958,6 +25432,7 @@ the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.H00 (RV32)
 
 ===== Encoding
@@ -25001,6 +25476,7 @@ the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.H01 (RV32)
 
 ===== Encoding
@@ -25044,6 +25520,7 @@ the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.H11 (RV32)
 
 ===== Encoding
@@ -25087,6 +25564,7 @@ adds the 32-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACC.W.H00 (RV64)
 
 ===== Encoding
@@ -25135,6 +25613,7 @@ signed values and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACC.W.H01 (RV64)
 
 ===== Encoding
@@ -25183,6 +25662,7 @@ halfword of `rs2` (signed×signed) and accumulates the 32-bit products into `rd`
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACC.W.H11 (RV64)
 
 ===== Encoding
@@ -25231,6 +25711,7 @@ as signed values and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACCSU.W.H00 (RV64)
 
 ===== Encoding
@@ -25279,6 +25760,7 @@ and `rs2` (unsigned) and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACCSU.W.H11 (RV64)
 
 ===== Encoding
@@ -25327,6 +25809,7 @@ and `rs2` (unsigned) and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACCU.W.H00 (RV64)
 
 ===== Encoding
@@ -25375,6 +25858,7 @@ as unsigned values and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACCU.W.H01 (RV64)
 
 ===== Encoding
@@ -25424,6 +25908,7 @@ halfword of `rs2` (unsigned×unsigned) and accumulates the 32-bit products into
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMACCU.W.H11 (RV64)
 
 ===== Encoding
@@ -25472,6 +25957,7 @@ as unsigned values and accumulates the 32-bit products into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACC.W00 (RV64)
 
 ===== Encoding
@@ -25515,6 +26001,7 @@ the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACC.W01 (RV64)
 
 ===== Encoding
@@ -25558,6 +26045,7 @@ the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACC.W11 (RV64)
 
 ===== Encoding
@@ -25601,6 +26089,7 @@ adds the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCSU.W00 (RV64)
 
 ===== Encoding
@@ -25644,6 +26133,7 @@ MACCSU.W00 multiplies `rs1[31:0]` (signed) by `rs2[31:0]` (unsigned) and adds th
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCSU.W11 (RV64)
 
 ===== Encoding
@@ -25687,6 +26177,7 @@ the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.W00 (RV64)
 
 ===== Encoding
@@ -25730,6 +26221,7 @@ adds the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.W01 (RV64)
 
 ===== Encoding
@@ -25773,6 +26265,7 @@ adds the 64-bit product to `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MACCU.W11 (RV64)
 
 ===== Encoding
@@ -25817,6 +26310,7 @@ adds the 64-bit product to `rd`.
 * This instruction reads and writes `rd`.
 
 
+<<<
 === PM2 Horizontal Multiply-Add/Subtract
 
 ==== PM2ADD.H
@@ -25869,6 +26363,7 @@ The PM2ADD.H instruction multiplies corresponding packed halfwords in each
 32-bit lane (low×low and high×high), and adds the two 32-bit products to form
 each packed 32-bit result in `rd`.
 
+<<<
 ==== PM2ADDA.H
 
 ===== Encoding
@@ -25923,6 +26418,7 @@ The PM2ADDA.H instruction adds the PM2ADD.H result into the corresponding packed
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2ADDSU.H
 
 ===== Encoding
@@ -25973,6 +26469,7 @@ The PM2ADDSU.H instruction performs signed×unsigned halfword multiplications
 (low×low and high×high within each 32-bit lane) and sums the two 32-bit products
 to produce each packed 32-bit result in `rd`.
 
+<<<
 ==== PM2ADDASU.H
 
 ===== Encoding
@@ -26027,6 +26524,7 @@ packed 32-bit elements of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2ADDU.H
 
 ===== Encoding
@@ -26077,6 +26575,7 @@ The PM2ADDU.H instruction performs unsigned×unsigned halfword multiplications
 (low×low and high×high within each 32-bit lane) and sums the two 32-bit products
 to produce each packed 32-bit result in `rd`.
 
+<<<
 ==== PM2ADDAU.H
 
 ===== Encoding
@@ -26131,6 +26630,7 @@ packed 32-bit elements of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2ADD.HX
 
 ===== Encoding
@@ -26181,6 +26681,7 @@ The PM2ADD.HX instruction multiplies cross halfword pairs within each 32-bit
 lane (low of `rs1` × high of `rs2`, and high of `rs1` × low of `rs2`) and sums the
 two 32-bit products to produce each packed 32-bit result in `rd`.
 
+<<<
 ==== PM2ADDA.HX
 
 ===== Encoding
@@ -26235,6 +26736,7 @@ packed 32-bit elements of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2SUBA.H
 
 ===== Encoding
@@ -26289,6 +26791,7 @@ the low×low halfword product and subtracting the high×high halfword product.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2SUBA.HX
 
 ===== Encoding
@@ -26344,6 +26847,7 @@ the low×high cross product and subtracting the high×low cross product.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2SUB.H
 
 ===== Encoding
@@ -26396,6 +26900,7 @@ PM2SUB.H multiplies two pairs of signed 16-bit halfword elements from `rs1` and
 product. The 32-bit difference for each group is written to the corresponding
 32-bit position in `rd`.
 
+<<<
 ==== PM2SUB.HX
 
 ===== Encoding
@@ -26451,6 +26956,7 @@ multiplied with the upper halfword of `rs2`, and vice versa. The 32-bit
 difference for each group is written to the corresponding 32-bit position
 in `rd`.
 
+<<<
 ==== PM2SADD.H
 
 ===== Encoding
@@ -26503,6 +27009,7 @@ and `rs2` within each 32-bit group, sums the two products, and saturates the
 result to the signed 32-bit range [-2^31, 2^31-1]. The saturated 32-bit result
 for each group is written to the corresponding 32-bit position in `rd`.
 
+<<<
 ==== PM2SADD.HX
 
 ===== Encoding
@@ -26557,6 +27064,7 @@ The lower halfword of `rs1` is multiplied with the upper halfword of `rs2`, and
 vice versa. The saturated 32-bit result for each group is written to the
 corresponding 32-bit position in `rd`.
 
+<<<
 ==== PM2ADD.W (RV64)
 
 ===== Encoding
@@ -26599,6 +27107,7 @@ pm2add.w _rd_, _rs1_, _rs2_
 PM2ADD.W multiplies the low words and high words of `rs1` and `rs2` as signed
 32-bit values and adds the two 64-bit products to produce the result in `rd`.
 
+<<<
 ==== PM2ADDA.W
 
 ===== Encoding
@@ -26643,6 +27152,7 @@ PM2ADDA.W (RV64 only) multiplies two pairs of signed 32-bit word elements from
 `rs1` and `rs2`, sums the two 64-bit products, and accumulates the result into
 `rd`. This instruction is the accumulating variant of PM2ADD.W.
 
+<<<
 ==== PM2ADDSU.W (RV64)
 
 ===== Encoding
@@ -26685,6 +27195,7 @@ pm2addsu.w _rd_, _rs1_, _rs2_
 PM2ADDSU.W multiplies corresponding word pairs as signed×unsigned (low×low and
 high×high) and adds the two 64-bit products to produce the result in `rd`.
 
+<<<
 ==== PM2ADDASU.W (RV64)
 
 ===== Encoding
@@ -26730,6 +27241,7 @@ PM2ADDASU.W adds the PM2ADDSU.W result into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2ADDU.W (RV64)
 
 ===== Encoding
@@ -26772,6 +27284,7 @@ pm2addu.w _rd_, _rs1_, _rs2_
 PM2ADDU.W multiplies corresponding word pairs as unsigned×unsigned and adds the
 two 64-bit products to produce the result in `rd`.
 
+<<<
 ==== PM2ADDAU.W
 
 ===== Encoding
@@ -26816,6 +27329,7 @@ PM2ADDAU.W (RV64 only) multiplies two pairs of unsigned 32-bit word elements
 from `rs1` and `rs2`, sums the two 64-bit products, and accumulates the result
 into `rd`. This instruction is the unsigned accumulating variant of PM2ADDU.W.
 
+<<<
 ==== PM2ADD.WX (RV64)
 
 ===== Encoding
@@ -26858,6 +27372,7 @@ pm2add.wx _rd_, _rs1_, _rs2_
 PM2ADD.WX multiplies cross word pairs (low of `rs1` × high of `rs2`, and high of
 `rs1` × low of `rs2`) as signed values and sums the two 64-bit products.
 
+<<<
 ==== PM2ADDA.WX (RV64)
 
 ===== Encoding
@@ -26903,6 +27418,7 @@ PM2ADDA.WX adds the PM2ADD.WX result into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2SUBA.W (RV64)
 
 ===== Encoding
@@ -26949,6 +27465,7 @@ the high×high signed word product.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM2SUBA.WX (RV64)
 
 ===== Encoding
@@ -26996,6 +27513,7 @@ subtracting the high×low signed word product.
 * This instruction reads and writes `rd`.
 
 
+<<<
 ==== PM2SUB.W
 
 ===== Encoding
@@ -27039,6 +27557,7 @@ PM2SUB.W (RV64 only) multiplies two pairs of signed 32-bit word elements from
 `rs1` and `rs2`, then subtracts the upper product from the lower product. The
 64-bit difference is written to `rd`.
 
+<<<
 ==== PM2SUB.WX
 
 ===== Encoding
@@ -27084,6 +27603,7 @@ PM2SUB.WX (RV64 only) multiplies two pairs of signed 32-bit word elements from
 from the lower product. The lower word of `rs1` is multiplied with the upper
 word of `rs2`, and vice versa. The 64-bit difference is written to `rd`.
 
+<<<
 === PM4 Horizontal Multiply-Add
 
 ==== PM4ADD.B
@@ -27141,6 +27661,7 @@ The PM4ADD.B instruction multiplies corresponding packed bytes within each
 32-bit lane as signed values and sums the four 32-bit products to produce one
 packed 32-bit result per lane in `rd`.
 
+<<<
 ==== PM4ADDSU.B
 
 ===== Encoding
@@ -27196,6 +27717,7 @@ The PM4ADDSU.B instruction multiplies corresponding packed bytes within each
 32-bit lane as signed×unsigned and sums the four 32-bit products to form one
 packed 32-bit result per lane in `rd`.
 
+<<<
 ==== PM4ADDU.B
 
 ===== Encoding
@@ -27251,6 +27773,7 @@ The PM4ADDU.B instruction multiplies corresponding packed bytes within each
 32-bit lane as unsigned values and sums the four 32-bit products to produce one
 packed 32-bit result per lane in `rd`.
 
+<<<
 ==== PM4ADDA.B
 
 ===== Encoding
@@ -27311,6 +27834,7 @@ PM4ADDA.B multiplies four pairs of signed 8-bit byte elements from `rs1` and
 result into the corresponding 32-bit element of `rd`. This instruction is the
 accumulating variant of PM4ADD.B.
 
+<<<
 ==== PM4ADDASU.B
 
 ===== Encoding
@@ -27372,6 +27896,7 @@ PM4ADDASU.B multiplies four pairs of byte elements from `rs1` (signed) and
 accumulates the result into the corresponding 32-bit element of `rd`. This
 instruction is the signed-unsigned accumulating variant of PM4ADDSU.B.
 
+<<<
 ==== PM4ADDAU.B
 
 ===== Encoding
@@ -27433,6 +27958,7 @@ PM4ADDAU.B multiplies four pairs of unsigned 8-bit byte elements from `rs1` and
 result into the corresponding 32-bit element of `rd`. This instruction is the
 unsigned accumulating variant of PM4ADDU.B.
 
+<<<
 ==== PM4ADD.H (RV64)
 
 ===== Encoding
@@ -27478,6 +28004,7 @@ The PM4ADD.H instruction multiplies the four packed 16-bit halfwords of `rs1`
 and `rs2` as signed values and sums the four 64-bit products to produce the
 result in `rd`.
 
+<<<
 ==== PM4ADDSU.H (RV64)
 
 ===== Encoding
@@ -27523,6 +28050,7 @@ The PM4ADDSU.H instruction multiplies the four packed halfwords of `rs1` (signed
 with the four packed halfwords of `rs2` (unsigned) and sums the products to
 produce the 64-bit result in `rd`.
 
+<<<
 ==== PM4ADDASU.H (RV64)
 
 ===== Encoding
@@ -27571,6 +28099,7 @@ The PM4ADDASU.H instruction adds the PM4ADDSU.H sum-of-products result into `rd`
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PM4ADDU.H (RV64)
 
 ===== Encoding
@@ -27616,6 +28145,7 @@ The PM4ADDU.H instruction multiplies the four packed 16-bit halfwords of `rs1`
 and `rs2` as unsigned values and sums the products to produce the 64-bit result
 in `rd`.
 
+<<<
 ==== PM4ADDAU.H (RV64)
 
 ===== Encoding
@@ -27665,6 +28195,7 @@ The PM4ADDAU.H instruction adds the PM4ADDU.H sum-of-products result into `rd`.
 * This instruction reads and writes `rd`.
 
 
+<<<
 ==== PM4ADDA.H
 
 ===== Encoding
@@ -27712,6 +28243,7 @@ PM4ADDA.H (RV64 only) multiplies four pairs of signed 16-bit halfword elements
 from `rs1` and `rs2`, sums the four 64-bit products, and accumulates the result
 into `rd`. This instruction is the accumulating variant of PM4ADD.H.
 
+<<<
 === Mixed-width Multiply-High
 
 ==== PMULH.H.B0
@@ -27763,6 +28295,7 @@ The PMULH.H.B0 instruction multiplies each packed 16-bit element of `rs1` by the
 low byte of the corresponding element of `rs2` (signed×signed) and writes the
 upper 16 bits of each 24-bit product into `rd`.
 
+<<<
 ==== PMULH.H.B1
 
 ===== Encoding
@@ -27812,6 +28345,7 @@ The PMULH.H.B1 instruction multiplies each packed 16-bit element of `rs1` by the
 high byte of the corresponding element of `rs2` (signed×signed) and writes the
 upper 16 bits of each 24-bit product into `rd`.
 
+<<<
 ==== PMULHSU.H.B0
 
 ===== Encoding
@@ -27861,6 +28395,7 @@ The PMULHSU.H.B0 instruction multiplies each packed 16-bit element of `rs1`
 (signed) by the low byte of the corresponding element of `rs2` (unsigned), and
 writes the upper 16 bits of each 24-bit product into `rd`.
 
+<<<
 ==== PMULHSU.H.B1
 
 ===== Encoding
@@ -27910,6 +28445,7 @@ The PMULHSU.H.B1 instruction multiplies each packed 16-bit element of `rs1`
 (signed) by the high byte of the corresponding element of `rs2` (unsigned), and
 writes the upper 16 bits of each 24-bit product into `rd`.
 
+<<<
 ==== PMHACC.H.B0
 
 ===== Encoding
@@ -27964,6 +28500,7 @@ halfword element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACC.H.B1
 
 ===== Encoding
@@ -28018,6 +28555,7 @@ halfword element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACCSU.H.B0
 
 ===== Encoding
@@ -28071,6 +28609,7 @@ the upper 16 bits of the 24-bit product, and accumulates it into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACCSU.H.B1
 
 ===== Encoding
@@ -28124,6 +28663,7 @@ the upper 16 bits of the 24-bit product, and accumulates it into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MULH.H0
 
 ===== Encoding
@@ -28164,6 +28704,7 @@ halfword (h0) of `rs2` treated as signed, producing a (XLEN+16)-bit
 intermediate product, and writes bits [47:16] to `rd`, effectively providing
 the upper XLEN bits of the product after discarding the low 16 bits.
 
+<<<
 ==== MULH.H1
 
 ===== Encoding
@@ -28204,6 +28745,7 @@ halfword (h1) of `rs2` treated as signed, producing a (XLEN+16)-bit
 intermediate product, and writes bits [47:16] to `rd`, effectively providing
 the upper XLEN bits of the product after discarding the low 16 bits.
 
+<<<
 ==== MULHSU.H0 (RV32)
 
 ===== Encoding
@@ -28247,6 +28789,7 @@ MULHSU.H0 multiplies the 32-bit signed value in `rs1` by the low halfword of
 `rs2` treated as unsigned, and writes bits [47:16] of the 48-bit product to
 `rd`.
 
+<<<
 ==== MULHSU.H1 (RV32)
 
 ===== Encoding
@@ -28290,6 +28833,7 @@ MULHSU.H1 multiplies the 32-bit signed value in `rs1` by the high halfword of
 `rs2` treated as unsigned, and writes bits [47:16] of the 48-bit product to
 `rd`.
 
+<<<
 ==== MHACC.H0 (RV32)
 
 ===== Encoding
@@ -28336,6 +28880,7 @@ accumulates the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MHACC.H1 (RV32)
 
 ===== Encoding
@@ -28382,6 +28927,7 @@ accumulates the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MHACCSU.H0 (RV32)
 
 ===== Encoding
@@ -28428,6 +28974,7 @@ accumulates the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== MHACCSU.H1 (RV32)
 
 ===== Encoding
@@ -28474,6 +29021,7 @@ accumulates the extracted value into `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMULH.W.H0
 
 ===== Encoding
@@ -28518,6 +29066,7 @@ producing a 48-bit intermediate product per element, and writes bits [47:16] of
 each product to the corresponding word of `rd`. This instruction is available
 only on RV64.
 
+<<<
 ==== PMULH.W.H1
 
 ===== Encoding
@@ -28562,6 +29111,7 @@ signed, producing a 48-bit intermediate product per element, and writes bits
 [47:16] of each product to the corresponding word of `rd`. This instruction is
 available only on RV64.
 
+<<<
 ==== PMULHSU.W.H0 (RV64)
 
 ===== Encoding
@@ -28610,6 +29160,7 @@ PMULHSU.W.H0 multiplies each 32-bit word of `rs1` (signed) by the low halfword o
 the corresponding 32-bit word of `rs2` (unsigned), extracts bits [47:16] of each
 48-bit product, and packs the two 32-bit results into `rd`.
 
+<<<
 ==== PMULHSU.W.H1 (RV64)
 
 ===== Encoding
@@ -28658,6 +29209,7 @@ PMULHSU.W.H1 multiplies each 32-bit word of `rs1` (signed) by the high halfword
 of the corresponding 32-bit word of `rs2` (unsigned), extracts bits [47:16] of
 each 48-bit product, and packs the two 32-bit results into `rd`.
 
+<<<
 ==== PMHACC.W.H0 (RV64)
 
 ===== Encoding
@@ -28714,6 +29266,7 @@ result into the corresponding 32-bit element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACC.W.H1 (RV64)
 
 ===== Encoding
@@ -28770,6 +29323,7 @@ corresponding 32-bit element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACCSU.W.H0 (RV64)
 
 ===== Encoding
@@ -28826,6 +29380,7 @@ the corresponding 32-bit element of `rd`.
 
 * This instruction reads and writes `rd`.
 
+<<<
 ==== PMHACCSU.W.H1 (RV64)
 
 ===== Encoding
@@ -28883,6 +29438,7 @@ the corresponding 32-bit element of `rd`.
 * This instruction reads and writes `rd`.
 
 
+<<<
 === Widening Multiply
 
 ==== PWMUL.B
@@ -28937,6 +29493,7 @@ byte element pairs from `rs1` and `rs2`. Each pair of signed bytes produces a
 signed 16-bit halfword product. The four halfword results are written as a
 64-bit register pair `rd_p`. If `rd_p` is 0, the result is discarded.
 
+<<<
 ==== PWMULSU.B (RV32)
 
 ===== Encoding
@@ -28992,6 +29549,7 @@ by `rd_p`.
 * If `rd_p=0`, the result is not written (no architectural destination).
 * The destination is the register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== PWMULU.B
 
 ===== Encoding
@@ -29045,6 +29603,7 @@ produces an unsigned 16-bit halfword product. The four halfword results are
 written as a 64-bit register pair `rd_p`. If `rd_p` is 0, the result is
 discarded.
 
+<<<
 ==== PWMUL.H
 
 ===== Encoding
@@ -29095,6 +29654,7 @@ halfword element pairs from `rs1` and `rs2`. Each pair of signed halfwords
 produces a signed 32-bit word product. The two word results are written as a
 64-bit register pair `rd_p`. If `rd_p` is 0, the result is discarded.
 
+<<<
 ==== PWMULSU.H (RV32)
 
 ===== Encoding
@@ -29148,6 +29708,7 @@ is written to `X[2*rd_p+1]`.
 * If `rd_p=0`, the result is not written.
 * The destination is the register pair `X[2*rd_p]` and `X[2*rd_p+1]`.
 
+<<<
 ==== PWMULU.H
 
 ===== Encoding
@@ -29199,6 +29760,7 @@ halfwords produces an unsigned 32-bit word product. The two word results are
 written as a 64-bit register pair `rd_p`. If `rd_p` is 0, the result is
 discarded.
 
+<<<
 ==== WMUL
 
 ===== Encoding
@@ -29244,6 +29806,7 @@ values in `rs1` and `rs2`, producing a 64-bit signed product. The result is
 written as a 64-bit register pair `rd_p`. If `rd_p` is 0, the result is
 discarded.
 
+<<<
 ==== WMULSU (RV32)
 
 ===== Encoding
@@ -29294,6 +29857,7 @@ the destination register pair selected by `rd_p`.
 * The destination is the register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
 
+<<<
 ==== WMULU
 
 ===== Encoding
@@ -29340,6 +29904,7 @@ values in `rs1` and `rs2`, producing a 64-bit unsigned product. The result is
 written as a 64-bit register pair `rd_p`. If `rd_p` is 0, the result is
 discarded.
 
+<<<
 === Widening Multiply-Accumulate
 
 ==== PWMACC.H (RV32)
@@ -29398,6 +29963,7 @@ The PWMACC.H instruction multiplies corresponding signed 16-bit halfwords of
 * If `rd_p=0`, the instruction does not write back; the upper accumulator input is
   treated as zero.
 
+<<<
 ==== PWMACCSU.H (RV32)
 
 ===== Encoding
@@ -29454,6 +30020,7 @@ the destination register pair selected by `rd_p`.
 * If `rd_p=0`, the instruction does not write back; the upper accumulator input is
   treated as zero.
 
+<<<
 ==== PWMACCU.H (RV32)
 
 ===== Encoding
@@ -29510,6 +30077,7 @@ destination register pair selected by `rd_p`.
 * If `rd_p=0`, the instruction does not write back; the upper accumulator input is
   treated as zero.
 
+<<<
 ==== WMACC
 
 ===== Encoding
@@ -29560,6 +30128,7 @@ product, and adds the product to the existing 64-bit value in register pair
 `rd_p`. The result is written back to register pair `rd_p`. If `rd_p` is 0,
 the result is discarded.
 
+<<<
 ==== WMACCSU (RV32)
 
 ===== Encoding
@@ -29612,6 +30181,7 @@ the destination register pair selected by `rd_p`.
 * If `rd_p=0`, the accumulator is treated as zero and no result is written back.
 
 
+<<<
 ==== WMACCU
 
 ===== Encoding
@@ -29662,6 +30232,7 @@ multiplies the full 32-bit unsigned values in `rs1` and `rs2`, producing a
 register pair `rd_p`. The result is written back to register pair `rd_p`. If
 `rd_p` is 0, the result is discarded.
 
+<<<
 === Widening Q-format Multiply-Accumulate
 
 ==== PMQWACC.H (RV32)
@@ -29727,6 +30298,7 @@ accumulator held in the destination register pair selected by `rd_p`.
   back (i.e., the instruction has no architectural destination).
 * The destination is a register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== PMQRWACC.H (RV32)
 
 ===== Encoding
@@ -29786,6 +30358,7 @@ result into the 64-bit destination register pair selected by `rd_p`.
   back.
 * The destination is a register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== MQWACC (RV32)
 
 ===== Encoding
@@ -29843,6 +30416,7 @@ pair selected by `rd_p`.
   back.
 * The destination is a register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== MQRWACC (RV32)
 
 ===== Encoding
@@ -29900,6 +30474,7 @@ the destination register pair selected by `rd_p`.
 * The destination is a register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
 
+<<<
 === Widening PM2 Multiply-Add/Subtract
 
 ==== PM2WADD.H (RV32)
@@ -29956,6 +30531,7 @@ writes the 64-bit result to the destination register pair selected by `rd_p`.
 * If `rd_p=0`, no result is written.
 * The destination is the register pair `{X[2*rd_p+1], X[2*rd_p]}`.
 
+<<<
 ==== PM2WADDSU.H (RV32)
 
 ===== Encoding
@@ -30005,6 +30581,7 @@ PM2WADDSU.H multiplies each signed 16-bit halfword of `rs1` by the corresponding
 unsigned 16-bit halfword of `rs2`, sums the two 64-bit products, and writes the
 64-bit result to the destination register pair selected by `rd_p`.
 
+<<<
 ==== PM2WADDASU.H (RV32)
 
 ===== Encoding
@@ -30061,6 +30638,7 @@ accumulator held in the destination register pair selected by `rd_p`.
 * This instruction reads and writes the destination register pair.
 * If `rd_p=0`, the accumulator is treated as zero and no result is written back.
 
+<<<
 ==== PM2WADDU.H (RV32)
 
 ===== Encoding
@@ -30110,6 +30688,7 @@ PM2WADDU.H multiplies corresponding unsigned 16-bit halfwords of `rs1` and `rs2`
 sums the two 64-bit products, and writes the 64-bit result to the destination
 register pair selected by `rd_p`.
 
+<<<
 ==== PM2WADDAU.H (RV32)
 
 ===== Encoding
@@ -30166,6 +30745,7 @@ accumulator held in the destination register pair selected by `rd_p`.
 * This instruction reads and writes the destination register pair.
 * If `rd_p=0`, the accumulator is treated as zero and no result is written back.
 
+<<<
 ==== PM2WADD.HX (RV32)
 
 ===== Encoding
@@ -30216,6 +30796,7 @@ the high halfword of `rs1` by the low halfword of `rs2` (both signed), sums the
 two 64-bit products, and writes the 64-bit result to the destination register
 pair selected by `rd_p`.
 
+<<<
 ==== PM2WSUB.H (RV32)
 
 ===== Encoding
@@ -30265,6 +30846,7 @@ PM2WSUB.H multiplies corresponding signed halfwords of `rs1` and `rs2` and
 computes (low×low) minus (high×high), writing the 64-bit result to the register
 pair selected by `rd_p`.
 
+<<<
 ==== PM2WSUB.HX (RV32)
 
 ===== Encoding
@@ -30315,6 +30897,7 @@ PM2WSUB.HX multiplies cross halfword pairs and computes (h0 of `rs1` × h1 of
 destination register pair selected by `rd_p`.
 
 
+<<<
 ==== PM2WADDA.H
 
 ===== Encoding
@@ -30368,6 +30951,7 @@ PM2WADDA.H multiplies corresponding signed 16-bit halfwords of `rs1` and `rs2`
 accumulates the sum into the 64-bit accumulator held in the destination register
 pair selected by `rd_p`.
 
+<<<
 ==== PM2WADDA.HX
 
 ===== Encoding
@@ -30421,6 +31005,7 @@ PM2WADDA.HX multiplies cross halfword pairs of `rs1` and `rs2` (low halfword of
 `rs2`), both signed, sums the two 64-bit products, and accumulates the sum into
 the 64-bit accumulator held in the destination register pair selected by `rd_p`.
 
+<<<
 ==== PM2WSUBA.H
 
 ===== Encoding
@@ -30473,6 +31058,7 @@ PM2WSUBA.H multiplies corresponding signed 16-bit halfwords of `rs1` and `rs2`,
 computes (low*low) minus (high*high), and accumulates the 64-bit difference into
 the accumulator held in the destination register pair selected by `rd_p`.
 
+<<<
 ==== PM2WSUBA.HX
 
 ===== Encoding
@@ -30527,6 +31113,7 @@ PM2WSUBA.HX multiplies cross halfword pairs of `rs1` and `rs2` (low halfword of
 accumulates the result into the accumulator held in the destination register pair
 selected by `rd_p`.
 
+<<<
 === RV32 Double-Register Equivalences
 
 Some RV32 Base P instructions operate on a double-wide packed value held in an
