@@ -721,9 +721,9 @@ register other than `x0`, the notation `rd+`, `rs1+`, or `rs2+` denotes
 the next higher-numbered (odd) register. If the register is `x0`, the
 corresponding `rd+`, `rs1+`, or `rs2+` also denotes `x0`.
 
+<<<
 == Detailed Instruction Descriptions
 
-<<<
 === Load Immediate
 
 
